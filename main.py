@@ -6,6 +6,7 @@ import urllib.request
 
 from detection.eye_detection import EyeDetector
 from detection.mouth_detection import MouthDetector
+from detection.hand_detection import HandDetector
 
 MODEL_PATH = 'face_landmarker.task'
 MODEL_URL = (
@@ -24,8 +25,6 @@ BaseOptions = mp.tasks.BaseOptions
 FaceLandmarker = mp.tasks.vision.FaceLandmarker
 FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
 VisionRunningMode = mp.tasks.vision.RunningMode
-
-
 def draw_landmarks(image, face_landmarks_list):
     h, w = image.shape[:2]
     for face_landmarks in face_landmarks_list:
@@ -50,6 +49,7 @@ cap = cv2.VideoCapture(0)  # 0 = first camera found (your webcam)
 start_time = time.time()
 eye_detector = EyeDetector()
 mouth_detector = MouthDetector()
+hand_detector = HandDetector()
 
 with FaceLandmarker.create_from_options(options) as landmarker:
     while cap.isOpened():
@@ -96,7 +96,23 @@ with FaceLandmarker.create_from_options(options) as landmarker:
                 cv2.putText(frame, "LIP COMPRESSION DETECTED", (10, 150),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
-        cv2.imshow('Anxiety Detection - Phase 2', frame)
+        hand_flagged, jitter, hand_results = hand_detector.update(rgb_frame, timestamp_ms)
+
+        if hand_results.hand_landmarks:
+            h, w = frame.shape[:2]
+            for hand_lms in hand_results.hand_landmarks:
+                for lm in hand_lms:
+                    cx, cy = int(lm.x * w), int(lm.y * h)
+                    cv2.circle(frame, (cx, cy), 3, (0, 255, 0), -1)
+
+        cv2.putText(frame, f"Hand jitter: {jitter:.1f}", (10, 180),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+
+        if hand_flagged:
+            cv2.putText(frame, "HAND TREMOR DETECTED", (10, 210),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+        cv2.imshow('Anxiety Detection - Phase 4', frame)
 
         if cv2.waitKey(5) & 0xFF == ord('q'):  # check every 5ms if Q was pressed
             break
