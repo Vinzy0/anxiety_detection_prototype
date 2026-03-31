@@ -73,23 +73,20 @@ Press **Q** to quit.
 ## Project Structure
 
 ```
-AnxietyDetectionPrototype/
-├── README.md                        # this file
-├── anxiety_detection_prototype_guide.md  # full step-by-step build guide
+anxiety_detection/
+├── main.py                      # entry point — runs the camera loop (background thread) and launches settings panel
+├── coping_tips.py               # coping tip strings and symptom-to-tip selection logic
 │
-└── anxiety_detection/               # main project folder (run from here)
-    ├── main.py                      # entry point — runs the webcam loop, wires all detectors together
-    ├── coping_tips.py               # coping tip strings and symptom-to-tip selection logic
-    │
-    ├── detection/
-    │   ├── eye_detection.py         # rapid blinking via Eye Aspect Ratio (EAR)
-    │   ├── mouth_detection.py       # lip compression via Mouth Aspect Ratio (MAR)
-    │   ├── hand_detection.py        # hand tremor via per-hand wrist jitter tracking
-    │   ├── body_detection.py        # restlessness (wrist reversal rate) + breathing (FFT on shoulder Y)
-    │   └── symptom_checker.py       # combines all 5 flags, fires anxiety alert when >= 2 are active
-    │
-    └── ui/
-        └── display.py               # draws the sidebar panel next to the video feed
+├── detection/
+│   ├── eye_detection.py         # rapid blinking via Eye Aspect Ratio (EAR)
+│   ├── mouth_detection.py       # lip compression via Mouth Aspect Ratio (MAR)
+│   ├── hand_detection.py        # hand tremor via per-hand wrist jitter tracking
+│   ├── body_detection.py        # restlessness (wrist reversal rate) + breathing (FFT on shoulder Y)
+│   └── symptom_checker.py       # combines all 5 flags, fires anxiety alert when >= 2 are active
+│
+└── ui/
+    ├── display.py               # draws the sidebar panel next to the video feed
+    └── settings_panel.py        # live threshold adjustment window (tkinter, separate window)
 ```
 
 ---
@@ -111,6 +108,35 @@ AnxietyDetectionPrototype/
 `symptom_checker.py` fires the overall anxiety alert when **2 or more symptoms are active simultaneously**. A single symptom alone is not enough — this reduces false positives from things like blinking in bright light or natural hand movement.
 
 When the alert fires, a coping tip is selected based on whichever symptom is considered most actionable (breathing → breathing tip, restlessness → grounding, etc.).
+
+---
+
+## Live Settings Panel
+
+A separate **Detection Thresholds** window opens alongside the camera feed. It lets you tune every detection parameter in real time without restarting the program.
+
+- **Changes take effect immediately** on the next processed frame
+- **Not persistent** — closing and reopening the program resets everything to the hardcoded defaults
+- Drag any slider or **type a value directly** into the number field and press Enter
+- **Reset All to Defaults** button restores every slider at once
+- The window is resizable and scrollable with the mouse wheel
+
+### Adjustable parameters
+
+| Section | Parameter | What it controls |
+|---|---|---|
+| Eye | EAR Threshold | How closed the eye must be to count as a blink |
+| Eye | Blink Rate / 10s | How many blinks in the window triggers the flag |
+| Eye | Blink Window (s) | How many seconds of history to count blinks over |
+| Mouth | MAR Threshold | How compressed lips must be |
+| Mouth | Sustain Frames | How many consecutive frames of compression before flagging |
+| Hand | Jitter Threshold | Mean wrist displacement (px/frame) that flags tremor |
+| Body | Restlessness | Direction reversals per second to flag restlessness |
+| Body | Rest. Noise Floor | Movements below this px count are ignored as tracking noise |
+| Body | Rest. Max Delta | Movements above this px count are ignored as intentional |
+| Body | Breathing (Hz) | Dominant breathing frequency that flags rapid breathing |
+| Body | Breathing Amp. Floor | Minimum FFT signal strength before breathing rate is trusted |
+| Alert | Symptoms Required | How many symptoms must be active to trigger the anxiety alert |
 
 ---
 
@@ -136,4 +162,4 @@ When the alert fires, a coping tip is selected based on whichever symptom is con
 | 5 | Body restlessness + breathing | Done |
 | 6 | Symptom checker + coping tips | Done |
 | 7 | UI panel | Done |
-| 8 | Testing & calibration | Pending |
+| 8 | Testing, calibration & live settings panel | Done |
