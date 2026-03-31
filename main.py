@@ -7,6 +7,7 @@ import urllib.request
 from detection.eye_detection import EyeDetector
 from detection.mouth_detection import MouthDetector
 from detection.hand_detection import HandDetector
+from detection.body_detection import BodyDetector
 
 MODEL_PATH = 'face_landmarker.task'
 MODEL_URL = (
@@ -50,6 +51,7 @@ start_time = time.time()
 eye_detector = EyeDetector()
 mouth_detector = MouthDetector()
 hand_detector = HandDetector()
+body_detector = BodyDetector()
 
 with FaceLandmarker.create_from_options(options) as landmarker:
     while cap.isOpened():
@@ -112,7 +114,28 @@ with FaceLandmarker.create_from_options(options) as landmarker:
             cv2.putText(frame, "HAND TREMOR DETECTED", (10, 210),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
-        cv2.imshow('Anxiety Detection - Phase 4', frame)
+        rest_flagged, breath_flagged, rest_val, breath_val, pose_results = body_detector.update(rgb_frame, timestamp_ms)
+
+        if pose_results.pose_landmarks:
+            h, w = frame.shape[:2]
+            for lm in pose_results.pose_landmarks[0]:
+                cx, cy = int(lm.x * w), int(lm.y * h)
+                cv2.circle(frame, (cx, cy), 2, (0, 255, 0), -1)
+
+        cv2.putText(frame, f"Restlessness: {rest_val:.1f}", (10, 240),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+        cv2.putText(frame, f"Breathing Hz: {breath_val:.2f}", (10, 270),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+
+        if rest_flagged:
+            cv2.putText(frame, "RESTLESSNESS DETECTED", (10, 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+        if breath_flagged:
+            cv2.putText(frame, "RAPID BREATHING DETECTED", (10, 330),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+        cv2.imshow('Anxiety Detection - Phase 5', frame)
 
         if cv2.waitKey(5) & 0xFF == ord('q'):  # check every 5ms if Q was pressed
             break
