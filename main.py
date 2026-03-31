@@ -8,6 +8,8 @@ from detection.eye_detection import EyeDetector
 from detection.mouth_detection import MouthDetector
 from detection.hand_detection import HandDetector
 from detection.body_detection import BodyDetector
+from detection.symptom_checker import SymptomChecker, SYMPTOM_NAMES
+from coping_tips import get_tip
 
 MODEL_PATH = 'face_landmarker.task'
 MODEL_URL = (
@@ -52,6 +54,7 @@ eye_detector = EyeDetector()
 mouth_detector = MouthDetector()
 hand_detector = HandDetector()
 body_detector = BodyDetector()
+symptom_checker = SymptomChecker()
 
 with FaceLandmarker.create_from_options(options) as landmarker:
     while cap.isOpened():
@@ -66,6 +69,9 @@ with FaceLandmarker.create_from_options(options) as landmarker:
         timestamp_ms = int((time.time() - start_time) * 1000)
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
         result = landmarker.detect_for_video(mp_image, timestamp_ms)  # send frame to MediaPipe, get back 478 face point locations
+
+        flagged = False
+        mouth_flagged = False
 
         if result.face_landmarks:
             draw_landmarks(frame, result.face_landmarks)
@@ -134,6 +140,18 @@ with FaceLandmarker.create_from_options(options) as landmarker:
         if breath_flagged:
             cv2.putText(frame, "RAPID BREATHING DETECTED", (10, 330),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+        anxiety_detected, active_symptoms = symptom_checker.update(
+            flagged, mouth_flagged, hand_flagged, rest_flagged, breath_flagged
+        )
+
+        if anxiety_detected:
+            symptom_labels = ", ".join(SYMPTOM_NAMES[s] for s in active_symptoms)
+            cv2.putText(frame, f"ANXIETY DETECTED: {symptom_labels}", (10, 390),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+            tip = get_tip(active_symptoms)
+            cv2.putText(frame, tip, (10, 420),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
 
         cv2.imshow('Anxiety Detection - Phase 5', frame)
 
