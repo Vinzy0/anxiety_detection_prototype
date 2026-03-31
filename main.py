@@ -11,7 +11,7 @@ from detection.hand_detection import HandDetector
 from detection.body_detection import BodyDetector
 from detection.symptom_checker import SymptomChecker
 
-from coping_tips import get_tip
+from coping_tips import COPING_TIPS
 from ui.display import draw_symptom_panel
 from ui.settings_panel import launch_settings_panel
 
@@ -51,8 +51,11 @@ def camera_loop():
         min_tracking_confidence=0.5,
     )
 
-    cap        = cv2.VideoCapture(0)
-    start_time = time.time()
+    cap           = cv2.VideoCapture(0)
+    start_time    = time.time()
+    tip_index     = 0
+    last_tip_time = time.time()
+    TIP_INTERVAL  = 15  # seconds per tip
 
     eye_detector    = EyeDetector()
     mouth_detector  = MouthDetector()
@@ -108,7 +111,11 @@ def camera_loop():
                 flagged, mouth_flagged, hand_flagged, rest_flagged, breath_flagged
             )
 
-            tip = get_tip(active_symptoms) if anxiety_detected else ""
+            now = time.time()
+            if now - last_tip_time >= TIP_INTERVAL:
+                tip_index     = (tip_index + 1) % len(COPING_TIPS)
+                last_tip_time = now
+            tip = COPING_TIPS[tip_index]
 
             # ── UI panel ───────────────────────────────────────────────────────
             metrics = [
@@ -120,7 +127,7 @@ def camera_loop():
 
             frame = draw_symptom_panel(frame, active_symptoms, anxiety_detected, tip, metrics)
 
-            cv2.imshow('Anxiety Detection', frame)
+            cv2.imshow('Symptom Monitor', frame)
 
             if cv2.waitKey(5) & 0xFF == ord('q'):
                 break

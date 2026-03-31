@@ -54,10 +54,6 @@ def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, met
     canvas = np.full((fh, fw + PANEL_W, 3), BG, dtype=np.uint8)
     canvas[:, :fw] = frame
 
-    # Thin red border around the video when anxiety is active
-    if anxiety_detected:
-        cv2.rectangle(canvas, (0, 0), (fw - 1, fh - 1), RED, 3)
-
     # Thin separator line between video and panel
     cv2.line(canvas, (fw, 0), (fw, fh), SEP, 1)
 
@@ -66,7 +62,7 @@ def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, met
     bar_w = PANEL_W - 32
 
     # ── Header ───────────────────────────────────────────────────────────────
-    _text(canvas, "ANXIETY MONITOR", px, 28, WHITE, scale=0.50, thickness=1)
+    _text(canvas, "SYMPTOM MONITOR", px, 28, WHITE, scale=0.50, thickness=1)
     accent = RED if anxiety_detected else TEAL
     cv2.line(canvas, (fw + 8, 36), (fw + PANEL_W - 8, 36), accent, 2)
 
@@ -108,27 +104,21 @@ def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, met
     _hline(canvas, y + 6, fw + 8, fw + PANEL_W - 8)
     y += 24
 
-    if anxiety_detected:
-        _text(canvas, "ANXIETY DETECTED", px, y, RED, scale=0.52, thickness=2)
-        y += 28
+    if coping_tip:
+        _text(canvas, "Tip:", px, y, YELLOW, scale=0.40)
+        y += 18
 
-        if coping_tip:
-            _text(canvas, "Tip:", px, y, YELLOW, scale=0.40)
-            y += 18
-
-            # Word-wrap the coping tip
-            words, line = coping_tip.split(), ""
-            for word in words:
-                if len(line) + len(word) + 1 <= 30:
-                    line += word + " "
-                else:
-                    _text(canvas, line.strip(), px, y, WHITE, scale=0.38)
-                    y += 16
-                    line = word + " "
-            if line:
+        # Word-wrap the coping tip
+        words, line = coping_tip.split(), ""
+        for word in words:
+            if len(line) + len(word) + 1 <= 30:
+                line += word + " "
+            else:
                 _text(canvas, line.strip(), px, y, WHITE, scale=0.38)
-    else:
-        _text(canvas, "Status: Normal", px, y, TEAL, scale=0.50)
+                y += 16
+                line = word + " "
+        if line:
+            _text(canvas, line.strip(), px, y, WHITE, scale=0.38)
 
     # ── Footer ───────────────────────────────────────────────────────────────
     _text(canvas, "Press Q to quit", fw + 14, fh - 12, MUTED, scale=0.38)

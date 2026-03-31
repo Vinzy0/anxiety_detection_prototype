@@ -170,7 +170,7 @@ class SettingsPanel:
         # ── Alert ─────────────────────────────────────────────────────────────
         self._section(content, "ALERT SENSITIVITY", "alert")
         self._slider(content, "symptoms_required", "Symptoms Required", "alert",
-                     1, 5, 1, "How many symptoms trigger the anxiety alert",
+                     1, 5, 1, "How many symptoms must be active to trigger a response",
                      lambda v: setattr(symptom_mod, "SYMPTOMS_REQUIRED", int(float(v))))
 
         # Reset button

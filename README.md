@@ -1,4 +1,4 @@
-# Anxiety Detection Prototype
+# Symptom Monitor Prototype
 
 A real-time webcam-based prototype that detects physical anxiety symptoms using computer vision and MediaPipe landmark tracking. Built as a thesis project exploring affective computing for anxiety symptom recognition.
 
@@ -16,7 +16,7 @@ The program opens your webcam and tracks five physical symptoms commonly associa
 - Body restlessness (wrist fidgeting)
 - Rapid breathing (elevated breathing rate)
 
-When two or more symptoms are active at the same time, the system flags an anxiety response and displays a relevant coping tip.
+A coping tip is always displayed and updates based on which symptoms are currently active.
 
 ---
 
@@ -82,7 +82,7 @@ anxiety_detection/
 │   ├── mouth_detection.py       # lip compression via Mouth Aspect Ratio (MAR)
 │   ├── hand_detection.py        # hand tremor via per-hand wrist jitter tracking
 │   ├── body_detection.py        # restlessness (wrist reversal rate) + breathing (FFT on shoulder Y)
-│   └── symptom_checker.py       # combines all 5 flags, fires anxiety alert when >= 2 are active
+│   └── symptom_checker.py       # combines all 5 flags, triggers coping tip response when >= 2 are active
 │
 └── ui/
     ├── display.py               # draws the sidebar panel next to the video feed
@@ -103,11 +103,11 @@ anxiety_detection/
 
 ---
 
-## Anxiety Alert Logic
+## Response Logic
 
-`symptom_checker.py` fires the overall anxiety alert when **2 or more symptoms are active simultaneously**. A single symptom alone is not enough — this reduces false positives from things like blinking in bright light or natural hand movement.
+`symptom_checker.py` triggers a coping tip response when **2 or more symptoms are active simultaneously**. A single symptom alone is not enough — this reduces false positives from things like blinking in bright light or natural hand movement.
 
-When the alert fires, a coping tip is selected based on whichever symptom is considered most actionable (breathing → breathing tip, restlessness → grounding, etc.).
+A coping tip is always shown and is selected based on whichever symptom is considered most actionable (breathing → breathing tip, restlessness → grounding, etc.). When no symptoms are active, a default tip is shown.
 
 ---
 
@@ -136,7 +136,7 @@ A separate **Detection Thresholds** window opens alongside the camera feed. It l
 | Body | Rest. Max Delta | Movements above this px count are ignored as intentional |
 | Body | Breathing (Hz) | Dominant breathing frequency that flags rapid breathing |
 | Body | Breathing Amp. Floor | Minimum FFT signal strength before breathing rate is trusted |
-| Alert | Symptoms Required | How many symptoms must be active to trigger the anxiety alert |
+| Alert | Symptoms Required | How many symptoms must be active to trigger a response |
 
 ---
 
