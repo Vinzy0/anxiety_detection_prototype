@@ -10,6 +10,7 @@ BREATHING_BUFFER       = 300   # 10 seconds at ~30fps
 # Restlessness: direction-reversal rate threshold (reversals per second)
 RESTLESSNESS_THRESHOLD  = 1.5
 RESTLESSNESS_MIN_DELTA  = 3.0    # pixels — ignore sub-pixel jitter from MediaPipe tracking
+RESTLESSNESS_MAX_DELTA  = 30.0   # pixels — ignore large intentional movements (reaching, typing)
 
 # Breathing: FFT-based frequency thresholds
 BREATHING_FREQ_MIN  = 0.1    # Hz — floor of valid band (6 bpm)
@@ -17,6 +18,7 @@ BREATHING_FREQ_MAX  = 1.0    # Hz — ceiling of valid band (60 bpm); excludes d
 BREATHING_THRESHOLD = 0.4    # Hz — >= this flags anxious breathing rate (24 bpm)
 MIN_BREATHING_AMP   = 2.0    # FFT amplitude noise floor in pixel units
 NOMINAL_FPS         = 30.0   # fallback if timestamp duration is zero
+BREATHING_SMOOTH_K  = 7      # moving-average kernel size to reduce pose model jitter before FFT
 
 POSE_MODEL_PATH = 'pose_landmarker_lite.task'
 POSE_MODEL_URL = (
@@ -102,7 +104,10 @@ class BodyDetector:
         if len(self.arm_activity_history) >= RESTLESSNESS_BUFFER:
             arr    = np.array(self.arm_activity_history)
             deltas = np.diff(arr)
-            significant = deltas[np.abs(deltas) > RESTLESSNESS_MIN_DELTA]
+            # Keep only small movements: above noise floor but below intentional-movement ceiling.
+            # Small + rapid + many = fidget. Large = reaching/typing/purposeful movement.
+            mask = (np.abs(deltas) > RESTLESSNESS_MIN_DELTA) & (np.abs(deltas) < RESTLESSNESS_MAX_DELTA)
+            significant = deltas[mask]
             if len(significant) > 1:
                 reversals = float(np.sum(np.diff(np.sign(significant)) != 0))
             else:
@@ -116,6 +121,12 @@ class BodyDetector:
             arr       = np.array(self.shoulder_history, dtype=np.float32)
             elapsed_s = (self.shoulder_ts_history[-1] - self.shoulder_ts_history[0]) / 1000.0
             fps       = (len(arr) - 1) / elapsed_s if elapsed_s > 0 else NOMINAL_FPS
+
+            # Smooth out frame-to-frame pose jitter before FFT — kernel averages
+            # BREATHING_SMOOTH_K consecutive frames, killing high-freq noise while
+            # preserving the slow breathing rhythm we actually want to detect.
+            kernel = np.ones(BREATHING_SMOOTH_K) / BREATHING_SMOOTH_K
+            arr    = np.convolve(arr, kernel, mode='same')
 
             arr -= arr.mean()                      # remove DC offset
             arr_w = arr * np.hanning(len(arr))     # reduce spectral leakage

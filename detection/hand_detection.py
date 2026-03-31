@@ -38,7 +38,10 @@ class HandDetector:
             min_tracking_confidence=0.5,
         )
         self.landmarker = HandLandmarker.create_from_options(options)
-        self.position_history = deque(maxlen=HISTORY_LENGTH)
+        self.position_history = {
+            "Left":  deque(maxlen=HISTORY_LENGTH),
+            "Right": deque(maxlen=HISTORY_LENGTH),
+        }
         self.flagged = False
         self.jitter_value = 0.0
 
@@ -47,22 +50,28 @@ class HandDetector:
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
         result = self.landmarker.detect_for_video(mp_image, timestamp_ms)
 
+        # NOTE: if two-hand tracking causes issues, fallback is to just use
+        # result.hand_landmarks[0][0] and track only the first detected hand.
+        # Tremors are physiological so both hands are affected anyway.
         if result.hand_landmarks:
-            for hand_landmarks in result.hand_landmarks:
+            h, w = rgb_frame.shape[:2]
+            for i, hand_landmarks in enumerate(result.hand_landmarks):
+                label = result.handedness[i][0].category_name  # "Left" or "Right"
                 wrist = hand_landmarks[0]
-                h, w = rgb_frame.shape[:2]
-                wrist_x = int(wrist.x * w)
-                wrist_y = int(wrist.y * h)
-                self.position_history.append((wrist_x, wrist_y))
+                self.position_history[label].append((int(wrist.x * w), int(wrist.y * h)))
 
-        if len(self.position_history) >= HISTORY_LENGTH:
-            positions = np.array(self.position_history)
-            deltas = np.diff(positions, axis=0)
-            distances = np.linalg.norm(deltas, axis=1)
-            self.jitter_value = float(np.mean(distances))
-            self.flagged = self.jitter_value > JITTER_THRESHOLD
+        hand_jitters = []
+        for buf in self.position_history.values():
+            if len(buf) >= HISTORY_LENGTH:
+                positions = np.array(buf)
+                deltas    = np.diff(positions, axis=0)
+                hand_jitters.append(float(np.mean(np.linalg.norm(deltas, axis=1))))
+
+        if hand_jitters:
+            self.jitter_value = max(hand_jitters)
+            self.flagged      = self.jitter_value > JITTER_THRESHOLD
         else:
             self.jitter_value = 0.0
-            self.flagged = False
+            self.flagged      = False
 
         return self.flagged, self.jitter_value, result
