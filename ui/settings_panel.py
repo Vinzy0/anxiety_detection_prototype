@@ -43,9 +43,8 @@ DEFAULTS = {
     # Hand
     "jitter_threshold":       8.0,
     # Body
-    "restlessness_threshold": 1.5,
-    "rest_min_delta":         3.0,
-    "rest_max_delta":         30.0,
+    "restlessness_threshold": 3.0,    # RESTLESS_THRESHOLD — reversals/sec to flag
+    "min_restless_amplitude": 15.0,   # MIN_RESTLESS_AMPLITUDE — px gate for reversal counting
     "breathing_threshold":    0.4,
     "min_breathing_amp":      2.0,
     # Alert
@@ -151,13 +150,10 @@ class SettingsPanel:
         self._section(content, "BODY DETECTION", "body")
         self._slider(content, "restlessness_threshold", "Restlessness", "body",
                      0.5, 5.0, 0.1, "Reversals/sec  —  higher  →  less sensitive",
-                     lambda v: setattr(body_mod, "RESTLESSNESS_THRESHOLD", float(v)))
-        self._slider(content, "rest_min_delta", "Rest. Noise Floor (px)", "body",
-                     1.0, 15.0, 0.5, "Movements below this are ignored as tracking noise",
-                     lambda v: setattr(body_mod, "RESTLESSNESS_MIN_DELTA", float(v)))
-        self._slider(content, "rest_max_delta", "Rest. Max Delta (px)", "body",
-                     10.0, 80.0, 1.0, "Movements above this are ignored as intentional",
-                     lambda v: setattr(body_mod, "RESTLESSNESS_MAX_DELTA", float(v)))
+                     lambda v: setattr(body_mod, "RESTLESS_THRESHOLD", float(v)))
+        self._slider(content, "min_restless_amplitude", "Amplitude Gate (px)", "body",
+                     5.0, 30.0, 1.0, "Min movement size to count as a reversal (filters noise)",
+                     lambda v: setattr(body_mod, "MIN_RESTLESS_AMPLITUDE", float(v)))
         self._slider(content, "breathing_threshold", "Breathing (Hz)", "body",
                      0.2, 0.8, 0.05, "Lower  →  flags slower breathing rates",
                      lambda v: setattr(body_mod, "BREATHING_THRESHOLD", float(v)))
@@ -287,9 +283,8 @@ class SettingsPanel:
         mouth_mod.MAR_THRESHOLD                = DEFAULTS["mar_threshold"]
         mouth_mod.COMPRESSION_FRAME_THRESHOLD  = DEFAULTS["compression_frames"]
         hand_mod.JITTER_THRESHOLD              = DEFAULTS["jitter_threshold"]
-        body_mod.RESTLESSNESS_THRESHOLD        = DEFAULTS["restlessness_threshold"]
-        body_mod.RESTLESSNESS_MIN_DELTA        = DEFAULTS["rest_min_delta"]
-        body_mod.RESTLESSNESS_MAX_DELTA        = DEFAULTS["rest_max_delta"]
+        body_mod.RESTLESS_THRESHOLD            = DEFAULTS["restlessness_threshold"]
+        body_mod.MIN_RESTLESS_AMPLITUDE        = DEFAULTS["min_restless_amplitude"]
         body_mod.BREATHING_THRESHOLD           = DEFAULTS["breathing_threshold"]
         body_mod.MIN_BREATHING_AMP             = DEFAULTS["min_breathing_amp"]
         symptom_mod.SYMPTOMS_REQUIRED          = DEFAULTS["symptoms_required"]
