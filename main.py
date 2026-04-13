@@ -14,6 +14,7 @@ from detection.symptom_checker import SymptomChecker
 from coping_tips import COPING_TIPS
 from ui.display import draw_symptom_panel
 from ui.settings_panel import launch_settings_panel
+from logger import AnxietyLogger
 
 MODEL_PATH = 'face_landmarker.task'
 MODEL_URL = (
@@ -62,6 +63,7 @@ def camera_loop():
     hand_detector   = HandDetector()
     body_detector   = BodyDetector()
     symptom_checker = SymptomChecker()
+    anxiety_logger  = AnxietyLogger()
 
     with FaceLandmarker.create_from_options(options) as landmarker:
         while cap.isOpened():
@@ -110,6 +112,8 @@ def camera_loop():
             anxiety_detected, active_symptoms = symptom_checker.update(
                 flagged, mouth_flagged, hand_flagged, rest_flagged, breath_flagged
             )
+
+            anxiety_logger.update(anxiety_detected, active_symptoms)
 
             now = time.time()
             if now - last_tip_time >= TIP_INTERVAL:
