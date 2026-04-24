@@ -13,6 +13,9 @@ import detection.mouth_detection as mouth_mod
 import detection.hand_detection  as hand_mod
 import detection.body_detection  as body_mod
 import detection.symptom_checker as symptom_mod
+import threading
+
+_settings_lock = threading.Lock()
 
 # ── Palette ───────────────────────────────────────────────────────────────────
 BG        = "#0f0e17"   # window background
@@ -40,8 +43,9 @@ DEFAULTS = {
     # Mouth
     "mar_threshold":          0.10,
     "compression_frames":     15,
-    # Hand
-    "jitter_threshold":       8.0,
+    # Hand (FFT-based tremor detection)
+    "min_tremor_amp":         10.0,
+    "tremor_rel_power":       0.35,
     # Body
     "restlessness_threshold": 3.0,    # RESTLESS_THRESHOLD — reversals/sec to flag
     "min_restless_amplitude": 15.0,   # MIN_RESTLESS_AMPLITUDE — px gate for reversal counting
@@ -140,9 +144,12 @@ class SettingsPanel:
 
         # ── Hand ──────────────────────────────────────────────────────────────
         self._section(content, "HAND DETECTION", "hand")
-        self._slider(content, "jitter_threshold", "Jitter Threshold", "hand",
-                     2.0, 30.0, 0.5, "px/frame  —  higher  →  less sensitive",
-                     lambda v: setattr(hand_mod, "JITTER_THRESHOLD", float(v)))
+        self._slider(content, "min_tremor_amp", "Min Tremor Amplitude", "hand",
+                     1.0, 50.0, 1.0, "FFT peak amplitude floor  —  higher  →  less sensitive",
+                     lambda v: setattr(hand_mod, "MIN_TREMOR_AMP", float(v)))
+        self._slider(content, "tremor_rel_power", "Relative Power Threshold", "hand",
+                     0.05, 0.80, 0.05, "Fraction of total spectral power in the tremor band",
+                     lambda v: setattr(hand_mod, "TREMOR_RELATIVE_POWER_THRESHOLD", float(v)))
 
         self._divider(content)
 
@@ -253,7 +260,8 @@ class SettingsPanel:
         # ── Wiring: slider → entry, entry → slider ────────────────────────────
         def on_slide(v):
             val_var.set(fmt(float(v)))
-            on_change(v)
+            with _settings_lock:
+                on_change(v)
 
         scale.config(command=on_slide)
 
@@ -262,7 +270,8 @@ class SettingsPanel:
                 v = snap(float(val_var.get()))
                 scale.set(v)
                 val_var.set(fmt(v))
-                on_change(v)
+                with _settings_lock:
+                    on_change(v)
             except ValueError:
                 val_var.set(fmt(scale.get()))  # revert to last good value
 
@@ -277,17 +286,19 @@ class SettingsPanel:
     # ── Reset ──────────────────────────────────────────────────────────────────
 
     def _reset_all(self):
-        eye_mod.EAR_THRESHOLD                  = DEFAULTS["ear_threshold"]
-        eye_mod.BLINK_RATE_THRESHOLD           = DEFAULTS["blink_rate_threshold"]
-        eye_mod.TIME_WINDOW                    = DEFAULTS["time_window"]
-        mouth_mod.MAR_THRESHOLD                = DEFAULTS["mar_threshold"]
-        mouth_mod.COMPRESSION_FRAME_THRESHOLD  = DEFAULTS["compression_frames"]
-        hand_mod.JITTER_THRESHOLD              = DEFAULTS["jitter_threshold"]
-        body_mod.RESTLESS_THRESHOLD            = DEFAULTS["restlessness_threshold"]
-        body_mod.MIN_RESTLESS_AMPLITUDE        = DEFAULTS["min_restless_amplitude"]
-        body_mod.BREATHING_THRESHOLD           = DEFAULTS["breathing_threshold"]
-        body_mod.MIN_BREATHING_AMP             = DEFAULTS["min_breathing_amp"]
-        symptom_mod.SYMPTOMS_REQUIRED          = DEFAULTS["symptoms_required"]
+        with _settings_lock:
+            eye_mod.EAR_THRESHOLD                  = DEFAULTS["ear_threshold"]
+            eye_mod.BLINK_RATE_THRESHOLD           = DEFAULTS["blink_rate_threshold"]
+            eye_mod.TIME_WINDOW                    = DEFAULTS["time_window"]
+            mouth_mod.MAR_THRESHOLD                = DEFAULTS["mar_threshold"]
+            mouth_mod.COMPRESSION_FRAME_THRESHOLD  = DEFAULTS["compression_frames"]
+            hand_mod.MIN_TREMOR_AMP                = DEFAULTS["min_tremor_amp"]
+            hand_mod.TREMOR_RELATIVE_POWER_THRESHOLD = DEFAULTS["tremor_rel_power"]
+            body_mod.RESTLESS_THRESHOLD            = DEFAULTS["restlessness_threshold"]
+            body_mod.MIN_RESTLESS_AMPLITUDE        = DEFAULTS["min_restless_amplitude"]
+            body_mod.BREATHING_THRESHOLD           = DEFAULTS["breathing_threshold"]
+            body_mod.MIN_BREATHING_AMP             = DEFAULTS["min_breathing_amp"]
+            symptom_mod.SYMPTOMS_REQUIRED          = DEFAULTS["symptoms_required"]
 
         for key, scale in self.sliders.items():
             scale.set(DEFAULTS[key])

@@ -23,13 +23,13 @@ class AnxietyLogger:
         state_changed = (self._prev_state is None) or (anxiety_detected != self._prev_state)
         periodic_due = (self._last_log_time is None) or (now - self._last_log_time >= LOG_INTERVAL)
 
-        if state_changed:
-            self._state_start = now
-
         if state_changed or periodic_due:
             duration = round(now - self._state_start, 1)
             self._write_row(anxiety_detected, active_symptoms, duration)
             self._last_log_time = now
+
+        if state_changed:
+            self._state_start = now
 
         self._prev_state = anxiety_detected
 

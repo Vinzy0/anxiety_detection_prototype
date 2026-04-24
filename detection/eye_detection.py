@@ -20,6 +20,11 @@ import numpy as np
 from collections import deque
 import time
 
+# Module-level constants below are written by the settings panel (main thread)
+# and read by the camera loop (daemon thread). Writes are locked via
+# settings_panel._settings_lock. Reads are not locked — safe under CPython's GIL
+# for simple scalar assignment, but not guaranteed under GIL-free runtimes.
+
 # =============================================================================
 # LANDMARK INDICES
 # =============================================================================
@@ -49,6 +54,8 @@ RIGHT_EYE = [33, 160, 158, 133, 153, 144]
 #   We use 0.22 as a balance between sensitivity and false positive rate.
 
 EAR_THRESHOLD = 0.22
+# TODO: 0.22 is near the open-eye floor for narrow-eye morphologies. Consider
+# a per-subject calibration pass (mean open-eye EAR × 0.65) for production use.
 
 # BLINK_RATE_THRESHOLD: How many blinks must occur within the time window
 #   to trigger the "rapid blinking" flag. 5 blinks in 10 seconds is
@@ -178,6 +185,8 @@ class EyeDetector:
                 - ear:         Current average Eye Aspect Ratio across both eyes
                 - blink_count: Number of blinks in the last TIME_WINDOW seconds
         """
+        current_time = time.time()
+
         # Extract the 6 landmark coordinates for each eye and convert to pixels
         left_eye = get_eye_landmarks(face_landmarks, LEFT_EYE, frame_w, frame_h)
         right_eye = get_eye_landmarks(face_landmarks, RIGHT_EYE, frame_w, frame_h)
@@ -198,7 +207,8 @@ class EyeDetector:
         #
         # If we just checked "is EAR below threshold?" every frame, we'd count
         # one blink as ~3-5 frames of closure. By tracking eye_closed state,
-        # we only count when the eye RE-OPENS (closed=True → closed=False).
+        # we only count the open→closed transition as a single blink.
+        # Blink is counted at the moment of closing (open→closed transition), not at reopen.
         # -------------------------------------------------------------------------
 
         if avg_ear < EAR_THRESHOLD:
@@ -207,7 +217,7 @@ class EyeDetector:
                 # This is a NEW blink — eye was open last frame, but closed now.
                 # Record the timestamp of this blink.
                 self.eye_closed = True
-                self.blink_timestamps.append(time.time())
+                self.blink_timestamps.append(current_time)
         else:
             # Eye is open
             self.eye_closed = False
@@ -217,7 +227,6 @@ class EyeDetector:
         # -------------------------------------------------------------------------
         # We only want to count blinks within the last TIME_WINDOW seconds.
         # Discard any blink timestamps that are older than that window.
-        current_time = time.time()
         while self.blink_timestamps and current_time - self.blink_timestamps[0] > TIME_WINDOW:
             self.blink_timestamps.popleft()
 

@@ -3,6 +3,11 @@ import numpy as np
 from collections import deque
 import mediapipe as mp
 
+# Module-level constants below are written by the settings panel (main thread)
+# and read by the camera loop (daemon thread). Writes are locked via
+# settings_panel._settings_lock. Reads are not locked — safe under CPython's GIL
+# for simple scalar assignment, but not guaranteed under GIL-free runtimes.
+
 # Buffer sizes
 RESTLESSNESS_BUFFER    = 150   # 5 seconds at ~30fps
 BREATHING_BUFFER       = 300   # 10 seconds at ~30fps
@@ -29,6 +34,8 @@ HEAD_THRESHOLD          = 3.0    # reversals per second — head fidgeting thres
 BREATHING_FREQ_MIN  = 0.1    # Hz — floor of valid band (6 bpm)
 BREATHING_FREQ_MAX  = 1.0    # Hz — ceiling of valid band (60 bpm); excludes deliberate fast pumps
 BREATHING_THRESHOLD = 0.4    # Hz — >= this flags anxious breathing rate (24 bpm)
+# 0.4 Hz = 24 bpm. Clinical tachypnea threshold is 20 bpm (0.33 Hz). Set to 24 bpm
+# to reduce false positives from normal exertion. Lower to 0.33 for earlier detection.
 MIN_BREATHING_AMP   = 2.0    # FFT amplitude noise floor in pixel units
 NOMINAL_FPS         = 30.0   # fallback if timestamp duration is zero
 
@@ -96,6 +103,8 @@ class BodyDetector:
         # so only already-smoothed values ever reach the FFT.
         self.breath_smooth_buffer = deque(maxlen=BREATH_SMOOTH_WINDOW)
 
+        self.frames_since_pose_seen = 0
+
         self.restlessness_flagged      = False
         self.breathing_flagged         = False
         self.restlessness_value        = 0.0
@@ -106,6 +115,19 @@ class BodyDetector:
         rgb_frame.flags.writeable = False
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
         result = self.landmarker.detect_for_video(mp_image, timestamp_ms)
+
+        if result.pose_landmarks:
+            self.frames_since_pose_seen = 0
+        else:
+            self.frames_since_pose_seen += 1
+            if self.frames_since_pose_seen >= 10:
+                self.arm_activity_history.clear()
+                self.arm_ts_history.clear()
+                self.head_history.clear()
+                self.head_ts_history.clear()
+                self.shoulder_history.clear()
+                self.shoulder_ts_history.clear()
+                self.breath_smooth_buffer.clear()
 
         if result.pose_landmarks:
             h, w = rgb_frame.shape[:2]
@@ -276,7 +298,9 @@ class BodyDetector:
                 if peak_amp < MIN_BREATHING_AMP:
                     # Amplitude too low for FFT to be meaningful — use ZCR estimate
                     # directly (counts half-cycles, divides by 2 to get full breaths/sec).
-                    zero_crossings  = np.sum(np.diff(np.sign(arr)) != 0) / 2.0
+                    _sign = np.sign(arr)
+                    _sign[_sign == 0] = 1
+                    zero_crossings  = np.sum(np.diff(_sign) != 0) / 2.0
                     breaths_per_sec = zero_crossings / elapsed_s if elapsed_s > 0 else 0.0
                     self.breathing_value   = breaths_per_sec
                     self.breathing_flagged = breaths_per_sec > BREATHING_THRESHOLD
@@ -287,7 +311,9 @@ class BodyDetector:
                     # whether it falls in the acceptance band [f×(2−tol), f×(2+tol)].
                     # If it does, the FFT and time-domain signals agree → accept.
                     # If it doesn't, noise is likely dominating → hold the last accepted value.
-                    zero_crossings = np.sum(np.diff(np.sign(arr)) != 0)
+                    _sign = np.sign(arr)
+                    _sign[_sign == 0] = 1
+                    zero_crossings = np.sum(np.diff(_sign) != 0)
                     zcr = zero_crossings / elapsed_s if elapsed_s > 0 else 0.0
 
                     zcr_lo = peak_freq * (2.0 - BREATH_ZCR_TOLERANCE)  # = peak_freq × 1.5

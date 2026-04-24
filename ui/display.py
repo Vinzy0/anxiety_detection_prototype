@@ -32,13 +32,17 @@ def _hline(canvas, y, x0, x1):
     cv2.line(canvas, (x0, y), (x1, y), SEP, 1)
 
 
-def _bar(canvas, x, y, w, value, max_val):
-    """Thin progress bar, 6 px tall."""
+def _bar(canvas, x, y, w, value, max_val, force_color=None):
+    """Thin progress bar, 6 px tall.
+    force_color overrides the automatic TEAL/AMBER/RED logic."""
     h = 6
     cv2.rectangle(canvas, (x, y), (x + w, y + h), CARD, -1)
     ratio   = min(value / max_val, 1.0) if max_val > 0 else 0.0
     fill_px = int(w * ratio)
-    color   = RED if ratio > 0.75 else (AMBER if ratio > 0.45 else TEAL)
+    if force_color is not None:
+        color = force_color
+    else:
+        color = RED if ratio > 0.75 else (AMBER if ratio > 0.45 else TEAL)
     if fill_px > 0:
         cv2.rectangle(canvas, (x, y), (x + fill_px, y + h), color, -1)
 
@@ -97,7 +101,10 @@ def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, met
             _text(canvas, label, px, y, MUTED, scale=0.36)
             _text(canvas, val_str, rx - len(val_str) * 7, y, MUTED, scale=0.36)
             y += 13
-            _bar(canvas, px, y, bar_w, value, max_val)
+            # During warmup, force the bar color to TEAL so it doesn't turn red
+            # as the buffer fills past 75%.
+            bar_color = TEAL if "warmup" in label.lower() else None
+            _bar(canvas, px, y, bar_w, value, max_val, force_color=bar_color)
             y += 18
 
     # ── Status section ───────────────────────────────────────────────────────

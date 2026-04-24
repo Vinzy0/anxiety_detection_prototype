@@ -7,7 +7,7 @@ import urllib.request
 
 from detection.eye_detection import EyeDetector
 from detection.mouth_detection import MouthDetector
-from detection.hand_detection import HandDetector
+from detection.hand_detection import HandDetector, HISTORY_LENGTH
 from detection.body_detection import BodyDetector
 from detection.symptom_checker import SymptomChecker
 
@@ -92,6 +92,8 @@ def camera_loop():
                 draw_landmarks(frame, result.face_landmarks)
                 flagged,       ear, blink_count = eye_detector.update(result.face_landmarks[0], w, h)
                 mouth_flagged, mar              = mouth_detector.update(result.face_landmarks[0], w, h)
+            else:
+                mouth_detector.reset()
 
             # ── Hands ──────────────────────────────────────────────────────────
             hand_flagged, jitter, hand_results = hand_detector.update(rgb_frame, timestamp_ms)
@@ -122,11 +124,24 @@ def camera_loop():
             tip = COPING_TIPS[tip_index]
 
             # ── UI panel ───────────────────────────────────────────────────────
+            # Hand tremor: show buffer fill progress during warmup, then FFT amplitude.
+            # FFT magnitudes are on a different scale than the old mean-displacement
+            # (which used 16.0 as threshold). Typical FFT peak_amp ranges 0-300+.
+            if hand_detector.buffer_progress < HISTORY_LENGTH:
+                hand_label = f"Hand tremor (warmup {hand_detector.buffer_progress}/{HISTORY_LENGTH})"
+                hand_val   = float(hand_detector.buffer_progress)
+                hand_max   = float(HISTORY_LENGTH)
+            else:
+                hand_label = "Hand tremor"
+                hand_val   = jitter
+                hand_max   = 100.0  # display scale for FFT peak amplitude
+
             metrics = [
                 ("Blinks / 10s",   float(blink_count), 10.0),
+                ("Lip Compression (MAR)", mar, 0.30),
                 ("Restlessness",   rest_val,             3.0),
                 ("Breathing (Hz)", breath_val,           0.8),
-                ("Hand jitter",    jitter,               16.0),
+                (hand_label,       hand_val,             hand_max),
             ]
 
             frame = draw_symptom_panel(frame, active_symptoms, anxiety_detected, tip, metrics)
