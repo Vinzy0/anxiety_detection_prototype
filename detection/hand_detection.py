@@ -12,13 +12,18 @@ HISTORY_LENGTH = 64
 JITTER_THRESHOLD = 8.0  # unused/deprecated — kept for backward compatibility
 # JITTER_THRESHOLD removed — superseded by FFT-based tremor detection (MIN_TREMOR_AMP)
 
-TREMOR_FREQ_MIN = 4.0
+TREMOR_FREQ_MIN = 8.0
 TREMOR_FREQ_MAX = 12.0
 MIN_TREMOR_AMP = 10.0
 # TODO: threshold was calibrated against single-bin amplitude ratio (old formula).
 # Now uses band_power/total_power (magnitude²). Needs empirical re-tuning — 0.35
 # may be too high or too low under the new scale. Run qa_tremor_fft.py after tuning.
 TREMOR_RELATIVE_POWER_THRESHOLD = 0.35
+
+# Sustained window: fraction of recent analysis windows that must show tremor
+# to trigger the flag. Prevents false positives from transient bursts.
+# At 30fps, maxlen=300 holds ~10 seconds of per-frame history.
+TREMOR_SUSTAINED_RATIO = 0.5
 
 # If a hand disappears for more than this many frames, clear its buffer so that
 # old timestamps don't corrupt the FPS calculation when the hand returns.
@@ -48,7 +53,7 @@ def _analyze_tremor_buffer(positions, timestamps):
     Parameters
     ----------
     positions : list or array of shape (N, 2)
-        Raw (x, y) wrist pixel coordinates.
+        Raw (x, y) wrist or fingertip pixel coordinates.
     timestamps : list or array of shape (N,)
         Frame timestamps in milliseconds.
 
@@ -116,11 +121,25 @@ class HandDetector:
             "Left":  deque(maxlen=HISTORY_LENGTH),
             "Right": deque(maxlen=HISTORY_LENGTH),
         }
+        # Wrist cross-validation buffer: tracks wrist (landmark 0) alongside
+        # fingertip (landmark 8). Tremor must appear in BOTH to flag — filters
+        # out fingertip-only noise from typing, tapping, or gesturing.
+        self.wrist_history = {
+            "Left":  deque(maxlen=HISTORY_LENGTH),
+            "Right": deque(maxlen=HISTORY_LENGTH),
+        }
         self.frames_since_seen = {"Left": 0, "Right": 0}
         self.flagged = False
         self.jitter_value = 0.0
         self.peak_freq = 0.0
         self.buffer_progress = 0  # 0-64, for warmup UI feedback
+        # Sustained window: only flag if tremor appears in a majority of recent
+        # analysis windows. Per-hand to avoid cross-contamination.
+        # At 30fps, maxlen=300 holds ~10 seconds of history.
+        self.tremor_detections = {
+            "Left":  deque(maxlen=300),
+            "Right": deque(maxlen=300),
+        }
 
     def update(self, rgb_frame, timestamp_ms):
         rgb_frame.flags.writeable = False
@@ -134,9 +153,14 @@ class HandDetector:
                 label = result.handedness[i][0].category_name  # "Left" or "Right"
                 seen_this_frame.add(label)
                 self.frames_since_seen[label] = 0
-                wrist = hand_landmarks[0]
-                self.position_history[label].append((int(wrist.x * w), int(wrist.y * h)))
+                # Track index fingertip (landmark 8) — farther from pivot = tremor amplified
+                # Wrist (landmark 0) is the most stable point; fingertip is the least stable.
+                index_tip = hand_landmarks[8]
+                self.position_history[label].append((int(index_tip.x * w), int(index_tip.y * h)))
                 self.timestamp_history[label].append(timestamp_ms)
+                # Also track wrist for cross-validation
+                wrist = hand_landmarks[0]
+                self.wrist_history[label].append((int(wrist.x * w), int(wrist.y * h)))
                 if DEBUG:
                     print(f"[HAND] Detected {label} hand — buffer {len(self.position_history[label])}/{HISTORY_LENGTH}")
         elif DEBUG:
@@ -151,6 +175,8 @@ class HandDetector:
                 if self.frames_since_seen[label] >= HAND_LOSS_RESET_FRAMES:
                     self.position_history[label].clear()
                     self.timestamp_history[label].clear()
+                    self.wrist_history[label].clear()
+                    self.tremor_detections[label].clear()
                     if DEBUG:
                         print(f"[RESET] Cleared {label} buffer after {HAND_LOSS_RESET_FRAMES} frames missing")
 
@@ -161,10 +187,21 @@ class HandDetector:
             ts  = self.timestamp_history[label]
             max_buf_len = max(max_buf_len, len(buf))
             if len(buf) >= HISTORY_LENGTH:
-                tremor_detected, peak_amp, peak_freq = _analyze_tremor_buffer(list(buf), list(ts))
-                hand_results.append((tremor_detected, peak_amp, peak_freq))
+                finger_tremor, peak_amp, peak_freq = _analyze_tremor_buffer(list(buf), list(ts))
+                # Cross-validate: check if wrist also shows tremor
+                wrist_buf = self.wrist_history[label]
+                if len(wrist_buf) >= HISTORY_LENGTH:
+                    wrist_tremor, _, _ = _analyze_tremor_buffer(list(wrist_buf), list(ts))
+                else:
+                    wrist_tremor = False
+                # Only flag if BOTH show tremor — filters out fingertip-only noise
+                # (typing, tapping, pen fidgeting)
+                both_detected = finger_tremor and wrist_tremor
+                hand_results.append((both_detected, peak_amp, peak_freq))
+                # Update per-hand sustained window
+                self.tremor_detections[label].append(1 if both_detected else 0)
                 if DEBUG:
-                    print(f"[FFT {label}] freq={peak_freq:.2f}Hz  amp={peak_amp:.2f}  detected={tremor_detected}")
+                    print(f"[FFT {label}] freq={peak_freq:.2f}Hz  amp={peak_amp:.2f}  detected={both_detected}")
             elif DEBUG:
                 print(f"[FFT {label}] Buffer not full yet ({len(buf)}/{HISTORY_LENGTH}) — waiting...")
 
@@ -177,8 +214,14 @@ class HandDetector:
             self.jitter_value = strongest_overall[1]
             self.peak_freq = strongest_overall[2]
 
-            tremor_flags = [r[0] for r in hand_results]
-            self.flagged = any(tremor_flags)
+            # Sustained window: flag if ANY hand shows sustained tremor
+            any_hand_sustained = False
+            for label in ("Left", "Right"):
+                if len(self.tremor_detections[label]) >= 150:
+                    ratio = sum(self.tremor_detections[label]) / len(self.tremor_detections[label])
+                    if ratio >= TREMOR_SUSTAINED_RATIO:
+                        any_hand_sustained = True
+            self.flagged = any_hand_sustained
             if DEBUG:
                 if self.flagged:
                     print(f"[TREMOR] FLAGGED — strongest hand: amp={self.jitter_value:.2f}  freq={self.peak_freq:.2f}Hz")

@@ -46,9 +46,12 @@ DEFAULTS = {
     # Hand (FFT-based tremor detection)
     "min_tremor_amp":         10.0,
     "tremor_rel_power":       0.35,
+    "tremor_sustained_ratio": 0.5,    # TREMOR_SUSTAINED_RATIO — fraction of windows that must show tremor
     # Body
     "restlessness_threshold": 3.0,    # RESTLESS_THRESHOLD — reversals/sec to flag
     "min_restless_amplitude": 15.0,   # MIN_RESTLESS_AMPLITUDE — px gate for reversal counting
+    "jerk_threshold":        -5.0,    # JERK_THRESHOLD — LDJ cutoff (higher = jerkier = anxious)
+    "restless_sustained_ratio": 0.4,  # RESTLESS_SUSTAINED_RATIO — fraction of frames that must show elevated activity
     "breathing_threshold":    0.4,
     "min_breathing_amp":      2.0,
     # Alert
@@ -150,6 +153,9 @@ class SettingsPanel:
         self._slider(content, "tremor_rel_power", "Relative Power Threshold", "hand",
                      0.05, 0.80, 0.05, "Fraction of total spectral power in the tremor band",
                      lambda v: setattr(hand_mod, "TREMOR_RELATIVE_POWER_THRESHOLD", float(v)))
+        self._slider(content, "tremor_sustained_ratio", "Sustained Ratio", "hand",
+                     0.1, 1.0, 0.05, "Fraction of recent windows that must show tremor to flag",
+                     lambda v: setattr(hand_mod, "TREMOR_SUSTAINED_RATIO", float(v)))
 
         self._divider(content)
 
@@ -161,6 +167,12 @@ class SettingsPanel:
         self._slider(content, "min_restless_amplitude", "Amplitude Gate (px)", "body",
                      5.0, 30.0, 1.0, "Min movement size to count as a reversal (filters noise)",
                      lambda v: setattr(body_mod, "MIN_RESTLESS_AMPLITUDE", float(v)))
+        self._slider(content, "jerk_threshold", "Jerk Threshold (LDJ)", "body",
+                     -12.0, 0.0, 0.5, "Higher  →  requires jerkier movement to flag (smoother = lower)",
+                     lambda v: setattr(body_mod, "JERK_THRESHOLD", float(v)))
+        self._slider(content, "restless_sustained_ratio", "Sustained Ratio", "body",
+                     0.1, 1.0, 0.05, "Fraction of recent frames that must show elevated activity",
+                     lambda v: setattr(body_mod, "RESTLESS_SUSTAINED_RATIO", float(v)))
         self._slider(content, "breathing_threshold", "Breathing (Hz)", "body",
                      0.2, 0.8, 0.05, "Lower  →  flags slower breathing rates",
                      lambda v: setattr(body_mod, "BREATHING_THRESHOLD", float(v)))
@@ -294,8 +306,11 @@ class SettingsPanel:
             mouth_mod.COMPRESSION_FRAME_THRESHOLD  = DEFAULTS["compression_frames"]
             hand_mod.MIN_TREMOR_AMP                = DEFAULTS["min_tremor_amp"]
             hand_mod.TREMOR_RELATIVE_POWER_THRESHOLD = DEFAULTS["tremor_rel_power"]
+            hand_mod.TREMOR_SUSTAINED_RATIO        = DEFAULTS["tremor_sustained_ratio"]
             body_mod.RESTLESS_THRESHOLD            = DEFAULTS["restlessness_threshold"]
             body_mod.MIN_RESTLESS_AMPLITUDE        = DEFAULTS["min_restless_amplitude"]
+            body_mod.JERK_THRESHOLD                = DEFAULTS["jerk_threshold"]
+            body_mod.RESTLESS_SUSTAINED_RATIO      = DEFAULTS["restless_sustained_ratio"]
             body_mod.BREATHING_THRESHOLD           = DEFAULTS["breathing_threshold"]
             body_mod.MIN_BREATHING_AMP             = DEFAULTS["min_breathing_amp"]
             symptom_mod.SYMPTOMS_REQUIRED          = DEFAULTS["symptoms_required"]

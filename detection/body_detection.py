@@ -49,6 +49,16 @@ BREATH_SMOOTH_WINDOW  = 7    # frames — width of the upstream smoothing window
 # We accept the FFT reading when ZCR falls within [f×(2−tol), f×(2+tol)].
 BREATH_ZCR_TOLERANCE  = 0.5  # tunable — widens/narrows the acceptance band
 
+# Jerk analysis: movement quality filter for restlessness
+# JERK_THRESHOLD: LDJ cutoff — movements jerkier than this are considered anxious
+# Higher (less negative) = requires jerkier movement to flag
+# Lower (more negative) = flags smoother movement as restlessness
+JERK_THRESHOLD = -5.0
+
+# Sustained window: fraction of recent frames that must show elevated activity
+# to trigger the restlessness flag. Prevents false positives from transient spikes.
+RESTLESS_SUSTAINED_RATIO = 0.4
+
 POSE_MODEL_PATH = 'pose_landmarker_lite.task'
 POSE_MODEL_URL = (
     'https://storage.googleapis.com/mediapipe-models/'
@@ -60,6 +70,70 @@ RIGHT_SHOULDER = 12
 LEFT_WRIST     = 15
 RIGHT_WRIST    = 16
 NOSE_TIP       = 0   # nose tip landmark (index 0 in pose landmarks)
+
+
+def compute_jerk_score(positions, timestamps):
+    """
+    Compute Log Dimensionless Jerk (LDJ) from a sequence of 2D positions.
+
+    LDJ measures movement smoothness independent of speed and distance.
+    Higher (less negative) = jerkier = more anxious fidgeting.
+    Lower (more negative) = smoother = intentional fluid movement.
+
+    Typical ranges:
+        - Smooth intentional movement: LDJ < -10
+        - Normal resting: LDJ around -8 to -6
+        - Anxious fidgeting: LDJ > -5
+
+    Parameters
+    ----------
+    positions : array of shape (N, 2)
+        (x, y) pixel coordinates over time
+    timestamps : array of shape (N,)
+        Timestamps in milliseconds
+
+    Returns
+    -------
+    float : LDJ score (unitless, higher = jerkier)
+    """
+    positions = np.array(positions, dtype=np.float64)
+    timestamps = np.array(timestamps, dtype=np.float64)
+
+    if len(positions) < 5:
+        return -12.0  # not enough data, return "very smooth" default
+
+    # Compute dt from timestamps (convert ms to seconds)
+    dt = np.diff(timestamps) / 1000.0
+    dt_mean = np.mean(dt) if len(dt) > 0 else 1/30
+
+    # Velocity (1st derivative)
+    vel = np.diff(positions, axis=0) / dt[:, np.newaxis]
+
+    # Acceleration (2nd derivative)
+    dt2 = dt[:-1]
+    accel = np.diff(vel, axis=0) / dt2[:, np.newaxis]
+
+    # Jerk (3rd derivative)
+    dt3 = dt2[:-1]
+    jerk = np.diff(accel, axis=0) / dt3[:, np.newaxis]
+
+    # Jerk magnitude per frame
+    jerk_mag = np.linalg.norm(jerk, axis=1)
+
+    # Log Dimensionless Jerk formula
+    # LDJ = -ln( t_max^3 / v_max^2 * integral(jerk^2 dt) )
+    t_max = (timestamps[-1] - timestamps[0]) / 1000.0
+    v_max = np.max(np.linalg.norm(vel, axis=1)) if len(vel) > 0 else 1.0
+
+    # Integral of jerk^2 (trapezoidal approximation)
+    jerk_squared_integral = np.sum(jerk_mag ** 2) * dt_mean
+
+    # Avoid log(0) or division by zero
+    if v_max < 1e-6 or t_max < 1e-6 or jerk_squared_integral < 1e-10:
+        return -12.0
+
+    ldj = -np.log((t_max ** 3) / (v_max ** 2) * jerk_squared_integral)
+    return float(ldj)
 
 
 def ensure_pose_model():
@@ -90,6 +164,10 @@ class BodyDetector:
         self.arm_activity_history = deque(maxlen=RESTLESSNESS_BUFFER)
         self.arm_ts_history       = deque(maxlen=RESTLESSNESS_BUFFER)
 
+        # Jerk analysis: track raw wrist 2D positions for movement quality
+        self.wrist_pos_history    = deque(maxlen=RESTLESSNESS_BUFFER)
+        self.wrist_jerk_ts        = deque(maxlen=RESTLESSNESS_BUFFER)
+
         # Head micro-movement: track nose tip Y position for restlessness
         self.head_history         = deque(maxlen=HEAD_BUFFER)
         self.head_ts_history      = deque(maxlen=HEAD_BUFFER)
@@ -110,6 +188,11 @@ class BodyDetector:
         self.restlessness_value        = 0.0
         self.breathing_value           = 0.0
         self.last_valid_breathing_value = 0.0  # held when ZCR validation rejects FFT
+        self.jerk_value                = -12.0  # default to "very smooth"
+
+        # Sustained window for restlessness debouncing
+        # At 30fps, maxlen=300 holds ~10 seconds of per-frame scores
+        self.restlessness_scores       = deque(maxlen=300)
 
     def update(self, rgb_frame, timestamp_ms):
         rgb_frame.flags.writeable = False
@@ -128,6 +211,9 @@ class BodyDetector:
                 self.shoulder_history.clear()
                 self.shoulder_ts_history.clear()
                 self.breath_smooth_buffer.clear()
+                self.wrist_pos_history.clear()
+                self.wrist_jerk_ts.clear()
+                self.restlessness_scores.clear()
 
         if result.pose_landmarks:
             h, w = rgb_frame.shape[:2]
@@ -146,6 +232,11 @@ class BodyDetector:
             arm_activity = (np.linalg.norm(lw_rel) + np.linalg.norm(rw_rel)) / 2.0
             self.arm_activity_history.append(arm_activity)
             self.arm_ts_history.append(timestamp_ms)
+
+            # Store wrist midpoint (x, y) for jerk analysis
+            wrist_mid = (lw_rel + rw_rel) / 2.0
+            self.wrist_pos_history.append(wrist_mid)
+            self.wrist_jerk_ts.append(timestamp_ms)
 
             # Shoulder height for breathing frequency analysis.
             # Stage 1: push raw Y into the smoothing window, then append the window
@@ -262,11 +353,31 @@ class BodyDetector:
         else:
             head_reversals_per_sec = 0.0
 
-        # Combine arm and head restlessness (either can trigger)
-        # Uses RESTLESS_THRESHOLD (3.0) for arms and HEAD_THRESHOLD (3.0) for head
-        self.restlessness_value   = max(arm_reversals_per_sec, head_reversals_per_sec)
-        self.restlessness_flagged = (arm_reversals_per_sec > RESTLESS_THRESHOLD or
-                                     head_reversals_per_sec > HEAD_THRESHOLD)
+        # Jerk analysis: filter by movement quality
+        # LDJ measures smoothness — high LDJ = jerky (anxious), low LDJ = smooth (intentional)
+        if len(self.wrist_pos_history) >= RESTLESSNESS_BUFFER:
+            ldj = compute_jerk_score(list(self.wrist_pos_history), list(self.wrist_jerk_ts))
+        else:
+            ldj = -12.0  # default to "very smooth" during warmup
+        self.jerk_value = ldj
+
+        # Combined flag: requires BOTH high reversal rate AND jerky movement
+        # This filters out smooth intentional movement (reaching for coffee, gesturing)
+        self.restlessness_value = max(arm_reversals_per_sec, head_reversals_per_sec)
+
+        frame_elevated = (
+            (arm_reversals_per_sec > RESTLESS_THRESHOLD or
+             head_reversals_per_sec > HEAD_THRESHOLD)
+            and ldj > JERK_THRESHOLD
+        )
+        self.restlessness_scores.append(1 if frame_elevated else 0)
+
+        # Sustained window: only flag if elevated activity persists
+        if len(self.restlessness_scores) >= 150:
+            ratio = sum(self.restlessness_scores) / len(self.restlessness_scores)
+            self.restlessness_flagged = ratio > RESTLESS_SUSTAINED_RATIO
+        else:
+            self.restlessness_flagged = False
 
         # Breathing: FFT dominant frequency over 10-second window.
         # Guard: fewer than 30 frames means the buffer just started filling —
