@@ -6,11 +6,11 @@ import threading
 import urllib.request
 
 from detection.hand_detection import HandDetector, HISTORY_LENGTH
-from detection.body_detection import BodyDetector
+from detection.body_detection import FPS, BodyDetector
 from detection.symptom_checker import SymptomChecker
 
 from coping_tips import COPING_TIPS
-from ui.display import draw_symptom_panel
+from ui.display import draw_symptom_panel, _text, MUTED
 from ui.settings_panel import launch_settings_panel
 from logger import AnxietyLogger
 
@@ -73,15 +73,17 @@ def camera_loop():
                         cv2.circle(frame, (int(lm.x * w), int(lm.y * h)), 3, (0, 200, 0), -1)
 
             # ── Body ───────────────────────────────────────────────────────────
-            rest_flagged, breath_flagged, rest_val, breath_val, pose_results = body_detector.update(rgb_frame, timestamp_ms)
+            breath_val, frame = body_detector.process_frame(frame, rgb_frame, timestamp_ms)
 
-            if pose_results.pose_landmarks:
-                for lm in pose_results.pose_landmarks[0]:
-                    cv2.circle(frame, (int(lm.x * w), int(lm.y * h)), 2, (0, 200, 0), -1)
+            if breath_val is None:
+                breath_val    = 0.0
+                breath_flagged = False
+            else:
+                breath_flagged = body_detector.breathing_flagged
 
             # ── Symptom checker ────────────────────────────────────────────────
             anxiety_detected, active_symptoms = symptom_checker.update(
-                hand_flagged, rest_flagged, breath_flagged
+                hand_flagged, False, breath_flagged
             )
 
             anxiety_logger.update(anxiety_detected, active_symptoms)
@@ -102,13 +104,14 @@ def camera_loop():
                 hand_val   = jitter
                 hand_max   = 100.0
 
+            warmup = body_detector.is_warming_up
+            warmup_remaining = max(0, 10 - len(body_detector.shoulder_y_history) // FPS)
             metrics = [
-                ("Restlessness",   rest_val,   3.0),
-                ("Breathing (Hz)", breath_val, 0.8),
+                ("Breathing", breath_val, 20.0),
                 (hand_label,       hand_val,   hand_max),
             ]
 
-            frame = draw_symptom_panel(frame, active_symptoms, anxiety_detected, tip, metrics)
+            frame = draw_symptom_panel(frame, active_symptoms, anxiety_detected, tip, metrics, warmup=warmup, warmup_remaining=warmup_remaining)
 
             cv2.imshow('Symptom Monitor', frame)
 
