@@ -72,7 +72,7 @@ class BodyDetector:
         signal = -signal # Invert the signal because not moving is 0.0. Inhaling = shoulders go up, which is a negative change in y-value
 
         min_distance = FPS * 1.5 # Minimum gap between breaths = 1.5 secs
-        peaks, _ = find_peaks(signal, distance=min_distance, prominence=0.01) # Finds peaks (inhales) in the shoulder movement signal. Prominence = filters out small peaks
+        peaks, _ = find_peaks(signal, distance=min_distance, prominence=0.005) # Finds peaks (inhales) in the shoulder movement signal. Prominence = filters out small peaks
         
         if len(peaks) < 2:
             return None  # Not enough peaks to calculate BPM

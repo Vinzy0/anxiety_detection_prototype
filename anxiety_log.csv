@@ -158,3 +158,10 @@ timestamp,anxiety_detected,active_symptoms,duration_seconds
 2026-05-03 22:28:17,False,,0.6
 2026-05-03 22:29:36,False,,0.7
 2026-05-03 22:30:06,False,rapid_breathing,30.0
+2026-05-03 22:39:18,False,,0.6
+2026-05-03 22:39:48,False,,30.0
+2026-05-03 22:40:18,False,,60.0
+2026-05-03 22:42:48,False,,0.6
+2026-05-03 22:43:18,False,,30.0
+2026-05-03 22:43:49,False,,0.5
+2026-05-03 22:44:19,False,rapid_breathing,30.0
