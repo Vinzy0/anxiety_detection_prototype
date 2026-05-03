@@ -12,9 +12,9 @@ HISTORY_LENGTH = 64
 JITTER_THRESHOLD = 8.0  # unused/deprecated — kept for backward compatibility
 # JITTER_THRESHOLD removed — superseded by FFT-based tremor detection (MIN_TREMOR_AMP)
 
-TREMOR_FREQ_MIN = 8.0
+TREMOR_FREQ_MIN = 7.5   # 0.5 Hz buffer below clinical 8 Hz lower bound to absorb FFT bin-edge quantization
 TREMOR_FREQ_MAX = 12.0
-MIN_TREMOR_AMP = 10.0
+MIN_TREMOR_AMP = 50.0
 # TODO: threshold was calibrated against single-bin amplitude ratio (old formula).
 # Now uses band_power/total_power (magnitude²). Needs empirical re-tuning — 0.35
 # may be too high or too low under the new scale. Run qa_tremor_fft.py after tuning.
@@ -50,10 +50,19 @@ def _analyze_tremor_buffer(positions, timestamps):
     """
     Run the FFT tremor detection pipeline on a single hand's buffer.
 
+    Operates on raw POSITION (where the hand is), not displacement (how much
+    it moved each frame). This prevents big slow sweeping movements from
+    triggering false positives: a slow sweep is a low-frequency position signal
+    with no energy at 8-12 Hz, whereas displacement of a constant-speed sweep
+    is a square wave whose harmonics bleed into the tremor band.
+
+    Linear detrending removes any steady drift or sweep before the FFT, leaving
+    only the oscillatory content (tremor) in the signal.
+
     Parameters
     ----------
     positions : list or array of shape (N, 2)
-        Raw (x, y) wrist or fingertip pixel coordinates.
+        Raw (x, y) fingertip or wrist pixel coordinates.
     timestamps : list or array of shape (N,)
         Frame timestamps in milliseconds.
 
@@ -64,36 +73,67 @@ def _analyze_tremor_buffer(positions, timestamps):
         peak_amp        : float — FFT magnitude of the dominant peak
         peak_freq       : float — frequency (Hz) of the dominant peak
     """
-    positions = np.array(positions)  # shape (N, 2)
-    deltas = np.diff(positions, axis=0)
-    displacement = np.linalg.norm(deltas, axis=1)  # shape (N-1,)
-    displacement = displacement - np.mean(displacement)  # remove DC offset
-    windowed = displacement * np.hanning(len(displacement))  # reduce spectral leakage
+    positions = np.array(positions, dtype=np.float64)  # shape (N, 2)
+    N = len(positions)
 
-    # Compute real FPS from elapsed time between frames — webcam FPS can vary
-    # due to processing load, so we measure it directly instead of assuming 30.
+    x = positions[:, 0]
+    y = positions[:, 1]
+
+    # Linear detrend each axis — removes steady sweeps and slow drifts.
+    # Subtracts the straight line from the first to the last sample,
+    # leaving only oscillations (tremor) around that trend.
+    t_idx = np.arange(N, dtype=np.float64)
+    x -= np.polyval(np.polyfit(t_idx, x, 1), t_idx)
+    y -= np.polyval(np.polyfit(t_idx, y, 1), t_idx)
+
+    # Remove any remaining DC offset
+    x -= np.mean(x)
+    y -= np.mean(y)
+
+    # Hanning window to reduce spectral leakage
+    window = np.hanning(N)
+    x_w = x * window
+    y_w = y * window
+
+    # Compute real FPS from elapsed timestamps — webcam FPS varies under load
     elapsed_s = (timestamps[-1] - timestamps[0]) / 1000.0
-    real_fps = len(displacement) / elapsed_s if elapsed_s > 0 else 30.0
-    # N-1 displacements over N-1 timestamp intervals → correct FPS, not off-by-one
+    real_fps = (N - 1) / elapsed_s if elapsed_s > 0 else 30.0
 
-    fft_mag = np.abs(np.fft.rfft(windowed))
-    freqs = np.fft.rfftfreq(len(windowed), d=1.0 / real_fps)
-
+    freqs = np.fft.rfftfreq(N, d=1.0 / real_fps)
     band_mask = (freqs >= TREMOR_FREQ_MIN) & (freqs <= TREMOR_FREQ_MAX)
-    band_mags = fft_mag[band_mask]
-    band_freqs = freqs[band_mask]
 
-    if len(band_mags) == 0:
+    if not np.any(band_mask):
         return False, 0.0, 0.0
 
-    peak_idx = np.argmax(band_mags)
-    peak_freq = band_freqs[peak_idx]
-    peak_amp = band_mags[peak_idx]
-    band_power = np.sum(band_mags ** 2)
-    total_power = np.sum(fft_mag ** 2)
-    relative_power = band_power / total_power if total_power > 0 else 0
+    band_freqs = freqs[band_mask]
+
+    # FFT on each axis separately — picks up tremor even if only one axis
+    # is visible (e.g. hand seen edge-on due to camera angle)
+    fft_x = np.abs(np.fft.rfft(x_w))
+    fft_y = np.abs(np.fft.rfft(y_w))
+
+    band_x = fft_x[band_mask]
+    band_y = fft_y[band_mask]
+
+    peak_amp_x = float(np.max(band_x))
+    peak_amp_y = float(np.max(band_y))
+
+    # Use whichever axis shows the stronger tremor signal
+    if peak_amp_x >= peak_amp_y:
+        peak_amp  = peak_amp_x
+        peak_freq = float(band_freqs[np.argmax(band_x)])
+        fft_full  = fft_x
+    else:
+        peak_amp  = peak_amp_y
+        peak_freq = float(band_freqs[np.argmax(band_y)])
+        fft_full  = fft_y
+
+    band_power    = float(np.sum(fft_full[band_mask] ** 2))
+    total_power   = float(np.sum(fft_full ** 2))
+    relative_power = band_power / total_power if total_power > 0 else 0.0
+
     tremor_detected = (peak_amp >= MIN_TREMOR_AMP) and (relative_power > TREMOR_RELATIVE_POWER_THRESHOLD)
-    return bool(tremor_detected), float(peak_amp), float(peak_freq)
+    return bool(tremor_detected), peak_amp, peak_freq
 
 
 class HandDetector:

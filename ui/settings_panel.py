@@ -1,34 +1,33 @@
 """
-Settings Panel — Phase 8 of Anxiety Detection Prototype
+Settings Panel — Anxiety Detection Prototype
 
 Live threshold adjustment window. Changes take effect immediately on the next
 processed frame. Nothing is saved — closing and reopening the program resets
 everything back to the defaults coded in each detection module.
+
+Active detectors: Hand Tremor, Breathing
+Archived detectors: Eye (EAR), Mouth (MAR), Restlessness — see detection/archived/
 """
 
 import tkinter as tk
+import threading
 
-import detection.eye_detection   as eye_mod
-import detection.mouth_detection as mouth_mod
 import detection.hand_detection  as hand_mod
 import detection.body_detection  as body_mod
 import detection.symptom_checker as symptom_mod
-import threading
 
 _settings_lock = threading.Lock()
 
 # ── Palette ───────────────────────────────────────────────────────────────────
-BG        = "#0f0e17"   # window background
-CARD_BG   = "#1a1929"   # slider card background
-ENTRY_BG  = "#232235"   # entry field background (slightly lighter than card)
-TROUGH    = "#45436a"   # slider trough — clearly visible against card
-SEP       = "#2a293a"   # thin divider lines
+BG        = "#0f0e17"
+CARD_BG   = "#1a1929"
+ENTRY_BG  = "#232235"
+TROUGH    = "#45436a"
+SEP       = "#2a293a"
 TEXT      = "#fffffe"
 SUBTEXT   = "#6e6d85"
 
 COLORS = {
-    "eye":   "#2cb67d",
-    "mouth": "#ff8906",
     "hand":  "#7f5af0",
     "body":  "#3da9fc",
     "alert": "#f25f4c",
@@ -36,22 +35,11 @@ COLORS = {
 
 # ── Defaults (mirrors each module's hardcoded constant) ───────────────────────
 DEFAULTS = {
-    # Eye
-    "ear_threshold":          0.22,
-    "blink_rate_threshold":   5,
-    "time_window":            10,
-    # Mouth
-    "mar_threshold":          0.10,
-    "compression_frames":     15,
     # Hand (FFT-based tremor detection)
-    "min_tremor_amp":         10.0,
+    "min_tremor_amp":         50.0,
     "tremor_rel_power":       0.35,
-    "tremor_sustained_ratio": 0.5,    # TREMOR_SUSTAINED_RATIO — fraction of windows that must show tremor
-    # Body
-    "restlessness_threshold": 3.0,    # RESTLESS_THRESHOLD — reversals/sec to flag
-    "min_restless_amplitude": 15.0,   # MIN_RESTLESS_AMPLITUDE — px gate for reversal counting
-    "jerk_threshold":        -5.0,    # JERK_THRESHOLD — LDJ cutoff (higher = jerkier = anxious)
-    "restless_sustained_ratio": 0.4,  # RESTLESS_SUSTAINED_RATIO — fraction of frames that must show elevated activity
+    "tremor_sustained_ratio": 0.5,
+    # Body — breathing only (restlessness disabled)
     "breathing_threshold":    0.4,
     "min_breathing_amp":      2.0,
     # Alert
@@ -66,20 +54,16 @@ class SettingsPanel:
         self._build_window()
         self._build_ui()
 
-    # ── Window chrome ──────────────────────────────────────────────────────────
-
     def _build_window(self):
         self.root.title("Detection Settings")
         self.root.configure(bg=BG)
         self.root.resizable(True, True)
         self.root.attributes("-topmost", True)
         self.root.minsize(360, 300)
-        self.root.geometry("380x600")
-
-    # ── Full UI ────────────────────────────────────────────────────────────────
+        self.root.geometry("380x420")
 
     def _build_ui(self):
-        # ── Header (fixed, outside scroll area) ───────────────────────────────
+        # ── Header ────────────────────────────────────────────────────────────
         hdr = tk.Frame(self.root, bg=BG)
         hdr.pack(fill="x", padx=20, pady=(16, 4))
         tk.Label(hdr, text="Detection Thresholds",
@@ -105,50 +89,22 @@ class SettingsPanel:
         content = tk.Frame(canvas, bg=BG, padx=14)
         content_id = canvas.create_window((0, 0), window=content, anchor="nw")
 
-        # Keep the inner frame the same width as the canvas
         def _on_canvas_resize(event):
             canvas.itemconfig(content_id, width=event.width)
         canvas.bind("<Configure>", _on_canvas_resize)
 
-        # Update scroll region whenever content size changes
         def _on_content_resize(event):
             canvas.configure(scrollregion=canvas.bbox("all"))
         content.bind("<Configure>", _on_content_resize)
 
-        # Mouse wheel scrolling
         def _on_mousewheel(event):
             canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
         canvas.bind_all("<MouseWheel>", _on_mousewheel)
 
-        # ── Eye ───────────────────────────────────────────────────────────────
-        self._section(content, "EYE DETECTION", "eye")
-        self._slider(content, "ear_threshold", "EAR Threshold", "eye",
-                     0.10, 0.40, 0.01, "Lower  →  more sensitive to closed eyes",
-                     lambda v: setattr(eye_mod, "EAR_THRESHOLD", float(v)))
-        self._slider(content, "blink_rate_threshold", "Blink Rate / 10s", "eye",
-                     1, 15, 1, "Higher  →  requires more blinks to flag",
-                     lambda v: setattr(eye_mod, "BLINK_RATE_THRESHOLD", int(float(v))))
-        self._slider(content, "time_window", "Blink Window (s)", "eye",
-                     5, 30, 1, "Seconds to count blinks over",
-                     lambda v: setattr(eye_mod, "TIME_WINDOW", int(float(v))))
-
-        self._divider(content)
-
-        # ── Mouth ─────────────────────────────────────────────────────────────
-        self._section(content, "MOUTH DETECTION", "mouth")
-        self._slider(content, "mar_threshold", "MAR Threshold", "mouth",
-                     0.05, 0.30, 0.01, "Lower  →  tighter lip compression needed",
-                     lambda v: setattr(mouth_mod, "MAR_THRESHOLD", float(v)))
-        self._slider(content, "compression_frames", "Sustain Frames", "mouth",
-                     5, 60, 1, "Frames lips must stay compressed before flagging",
-                     lambda v: setattr(mouth_mod, "COMPRESSION_FRAME_THRESHOLD", int(float(v))))
-
-        self._divider(content)
-
         # ── Hand ──────────────────────────────────────────────────────────────
-        self._section(content, "HAND DETECTION", "hand")
+        self._section(content, "HAND TREMOR", "hand")
         self._slider(content, "min_tremor_amp", "Min Tremor Amplitude", "hand",
-                     1.0, 50.0, 1.0, "FFT peak amplitude floor  —  higher  →  less sensitive",
+                     1.0, 200.0, 1.0, "FFT peak amplitude floor  —  higher = less sensitive",
                      lambda v: setattr(hand_mod, "MIN_TREMOR_AMP", float(v)))
         self._slider(content, "tremor_rel_power", "Relative Power Threshold", "hand",
                      0.05, 0.80, 0.05, "Fraction of total spectral power in the tremor band",
@@ -159,22 +115,10 @@ class SettingsPanel:
 
         self._divider(content)
 
-        # ── Body ──────────────────────────────────────────────────────────────
-        self._section(content, "BODY DETECTION", "body")
-        self._slider(content, "restlessness_threshold", "Restlessness", "body",
-                     0.5, 5.0, 0.1, "Reversals/sec  —  higher  →  less sensitive",
-                     lambda v: setattr(body_mod, "RESTLESS_THRESHOLD", float(v)))
-        self._slider(content, "min_restless_amplitude", "Amplitude Gate (px)", "body",
-                     5.0, 30.0, 1.0, "Min movement size to count as a reversal (filters noise)",
-                     lambda v: setattr(body_mod, "MIN_RESTLESS_AMPLITUDE", float(v)))
-        self._slider(content, "jerk_threshold", "Jerk Threshold (LDJ)", "body",
-                     -12.0, 0.0, 0.5, "Higher  →  requires jerkier movement to flag (smoother = lower)",
-                     lambda v: setattr(body_mod, "JERK_THRESHOLD", float(v)))
-        self._slider(content, "restless_sustained_ratio", "Sustained Ratio", "body",
-                     0.1, 1.0, 0.05, "Fraction of recent frames that must show elevated activity",
-                     lambda v: setattr(body_mod, "RESTLESS_SUSTAINED_RATIO", float(v)))
+        # ── Body — breathing only ─────────────────────────────────────────────
+        self._section(content, "BREATHING", "body")
         self._slider(content, "breathing_threshold", "Breathing (Hz)", "body",
-                     0.2, 0.8, 0.05, "Lower  →  flags slower breathing rates",
+                     0.2, 0.8, 0.05, "Lower = flags slower breathing rates",
                      lambda v: setattr(body_mod, "BREATHING_THRESHOLD", float(v)))
         self._slider(content, "min_breathing_amp", "Breathing Amp. Floor", "body",
                      0.5, 10.0, 0.5, "Min FFT amplitude — higher filters weak signals",
@@ -185,7 +129,7 @@ class SettingsPanel:
         # ── Alert ─────────────────────────────────────────────────────────────
         self._section(content, "ALERT SENSITIVITY", "alert")
         self._slider(content, "symptoms_required", "Symptoms Required", "alert",
-                     1, 5, 1, "How many symptoms must be active to trigger a response",
+                     1, 3, 1, "How many symptoms must be active to trigger a response",
                      lambda v: setattr(symptom_mod, "SYMPTOMS_REQUIRED", int(float(v))))
 
         # Reset button
@@ -198,8 +142,6 @@ class SettingsPanel:
             command=self._reset_all,
         ).pack(fill="x")
         tk.Frame(content, bg=BG, height=12).pack()
-
-    # ── Widget helpers ─────────────────────────────────────────────────────────
 
     def _section(self, parent, title: str, color_key: str):
         row = tk.Frame(parent, bg=BG)
@@ -221,60 +163,44 @@ class SettingsPanel:
             return f"{v:.1f}"
 
         def snap(v: float) -> float:
-            """Snap v to the nearest resolution step within [from_, to]."""
             v = max(from_, min(to, v))
             return round(round(v / resolution) * resolution, 10)
 
         card = tk.Frame(parent, bg=CARD_BG, padx=12, pady=8)
         card.pack(fill="x", pady=2)
 
-        # ── Top row: label + editable value ───────────────────────────────────
         top = tk.Frame(card, bg=CARD_BG)
         top.pack(fill="x")
         tk.Label(top, text=label, font=("Segoe UI", 9),
                  bg=CARD_BG, fg=TEXT, anchor="w").pack(side="left")
 
         val_var = tk.StringVar(value=fmt(default))
-
         entry = tk.Entry(
-            top,
-            textvariable=val_var,
-            width=7,
-            font=("Segoe UI", 9, "bold"),
-            bg=ENTRY_BG, fg=accent,
-            insertbackground=accent,
-            relief="flat", bd=0,
-            highlightthickness=1,
-            highlightcolor=accent,
-            highlightbackground=SEP,
-            justify="right",
+            top, textvariable=val_var, width=7,
+            font=("Segoe UI", 9, "bold"), bg=ENTRY_BG, fg=accent,
+            insertbackground=accent, relief="flat", bd=0,
+            highlightthickness=1, highlightcolor=accent,
+            highlightbackground=SEP, justify="right",
         )
         entry.pack(side="right")
 
-        # ── Slider ────────────────────────────────────────────────────────────
         scale = tk.Scale(
-            card,
-            from_=from_, to=to, resolution=resolution,
+            card, from_=from_, to=to, resolution=resolution,
             orient=tk.HORIZONTAL, showvalue=False,
-            bg=CARD_BG, fg=TEXT,
-            troughcolor=TROUGH,
-            activebackground=accent,
-            highlightthickness=0, bd=0, sliderrelief="flat",
-            width=10,
+            bg=CARD_BG, fg=TEXT, troughcolor=TROUGH,
+            activebackground=accent, highlightthickness=0,
+            bd=0, sliderrelief="flat", width=10,
         )
         scale.set(default)
         scale.pack(fill="x", pady=(4, 2))
 
-        # ── Hint ──────────────────────────────────────────────────────────────
         tk.Label(card, text=hint, font=("Segoe UI", 7),
                  bg=CARD_BG, fg=SUBTEXT, anchor="w").pack(fill="x")
 
-        # ── Wiring: slider → entry, entry → slider ────────────────────────────
         def on_slide(v):
             val_var.set(fmt(float(v)))
             with _settings_lock:
                 on_change(v)
-
         scale.config(command=on_slide)
 
         def apply_entry(event=None):
@@ -285,8 +211,7 @@ class SettingsPanel:
                 with _settings_lock:
                     on_change(v)
             except ValueError:
-                val_var.set(fmt(scale.get()))  # revert to last good value
-
+                val_var.set(fmt(scale.get()))
         entry.bind("<Return>",   apply_entry)
         entry.bind("<FocusOut>", apply_entry)
 
@@ -295,31 +220,18 @@ class SettingsPanel:
     def _divider(self, parent):
         tk.Frame(parent, bg=SEP, height=1).pack(fill="x", pady=(8, 0))
 
-    # ── Reset ──────────────────────────────────────────────────────────────────
-
     def _reset_all(self):
         with _settings_lock:
-            eye_mod.EAR_THRESHOLD                  = DEFAULTS["ear_threshold"]
-            eye_mod.BLINK_RATE_THRESHOLD           = DEFAULTS["blink_rate_threshold"]
-            eye_mod.TIME_WINDOW                    = DEFAULTS["time_window"]
-            mouth_mod.MAR_THRESHOLD                = DEFAULTS["mar_threshold"]
-            mouth_mod.COMPRESSION_FRAME_THRESHOLD  = DEFAULTS["compression_frames"]
-            hand_mod.MIN_TREMOR_AMP                = DEFAULTS["min_tremor_amp"]
+            hand_mod.MIN_TREMOR_AMP                  = DEFAULTS["min_tremor_amp"]
             hand_mod.TREMOR_RELATIVE_POWER_THRESHOLD = DEFAULTS["tremor_rel_power"]
-            hand_mod.TREMOR_SUSTAINED_RATIO        = DEFAULTS["tremor_sustained_ratio"]
-            body_mod.RESTLESS_THRESHOLD            = DEFAULTS["restlessness_threshold"]
-            body_mod.MIN_RESTLESS_AMPLITUDE        = DEFAULTS["min_restless_amplitude"]
-            body_mod.JERK_THRESHOLD                = DEFAULTS["jerk_threshold"]
-            body_mod.RESTLESS_SUSTAINED_RATIO      = DEFAULTS["restless_sustained_ratio"]
-            body_mod.BREATHING_THRESHOLD           = DEFAULTS["breathing_threshold"]
-            body_mod.MIN_BREATHING_AMP             = DEFAULTS["min_breathing_amp"]
-            symptom_mod.SYMPTOMS_REQUIRED          = DEFAULTS["symptoms_required"]
+            hand_mod.TREMOR_SUSTAINED_RATIO          = DEFAULTS["tremor_sustained_ratio"]
+            body_mod.BREATHING_THRESHOLD             = DEFAULTS["breathing_threshold"]
+            body_mod.MIN_BREATHING_AMP               = DEFAULTS["min_breathing_amp"]
+            symptom_mod.SYMPTOMS_REQUIRED            = DEFAULTS["symptoms_required"]
 
         for key, scale in self.sliders.items():
             scale.set(DEFAULTS[key])
 
-
-# ── Entry point ────────────────────────────────────────────────────────────────
 
 def launch_settings_panel():
     """Create and run the settings window. Must be called from the main thread."""

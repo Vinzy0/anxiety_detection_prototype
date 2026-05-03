@@ -5,8 +5,6 @@ import time
 import threading
 import urllib.request
 
-from detection.eye_detection import EyeDetector
-from detection.mouth_detection import MouthDetector
 from detection.hand_detection import HandDetector, HISTORY_LENGTH
 from detection.body_detection import BodyDetector
 from detection.symptom_checker import SymptomChecker
@@ -33,15 +31,6 @@ FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
 VisionRunningMode     = mp.tasks.vision.RunningMode
 
 
-def draw_landmarks(image, face_landmarks_list):
-    h, w = image.shape[:2]
-    for face_landmarks in face_landmarks_list:
-        for lm in face_landmarks:
-            x = int(lm.x * w)
-            y = int(lm.y * h)
-            cv2.circle(image, (x, y), 1, (0, 200, 0), -1)
-
-
 def camera_loop():
     options = FaceLandmarkerOptions(
         base_options=BaseOptions(model_asset_path=MODEL_PATH),
@@ -58,8 +47,6 @@ def camera_loop():
     last_tip_time = time.time()
     TIP_INTERVAL  = 15  # seconds per tip
 
-    eye_detector    = EyeDetector()
-    mouth_detector  = MouthDetector()
     hand_detector   = HandDetector()
     body_detector   = BodyDetector()
     symptom_checker = SymptomChecker()
@@ -76,24 +63,6 @@ def camera_loop():
             rgb_frame    = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             h, w         = frame.shape[:2]
             timestamp_ms = int((time.time() - start_time) * 1000)
-
-            # Default metric values in case face / hands are not detected this frame
-            flagged       = False
-            mouth_flagged = False
-            ear           = 0.0
-            blink_count   = 0
-            mar           = 0.0
-
-            # ── Face ──────────────────────────────────────────────────────────
-            mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
-            result   = landmarker.detect_for_video(mp_image, timestamp_ms)
-
-            if result.face_landmarks:
-                draw_landmarks(frame, result.face_landmarks)
-                flagged,       ear, blink_count = eye_detector.update(result.face_landmarks[0], w, h)
-                mouth_flagged, mar              = mouth_detector.update(result.face_landmarks[0], w, h)
-            else:
-                mouth_detector.reset()
 
             # ── Hands ──────────────────────────────────────────────────────────
             hand_flagged, jitter, hand_results = hand_detector.update(rgb_frame, timestamp_ms)
@@ -112,7 +81,7 @@ def camera_loop():
 
             # ── Symptom checker ────────────────────────────────────────────────
             anxiety_detected, active_symptoms = symptom_checker.update(
-                flagged, mouth_flagged, hand_flagged, rest_flagged, breath_flagged
+                hand_flagged, rest_flagged, breath_flagged
             )
 
             anxiety_logger.update(anxiety_detected, active_symptoms)
@@ -124,9 +93,6 @@ def camera_loop():
             tip = COPING_TIPS[tip_index]
 
             # ── UI panel ───────────────────────────────────────────────────────
-            # Hand tremor: show buffer fill progress during warmup, then FFT amplitude.
-            # FFT magnitudes are on a different scale than the old mean-displacement
-            # (which used 16.0 as threshold). Typical FFT peak_amp ranges 0-300+.
             if hand_detector.buffer_progress < HISTORY_LENGTH:
                 hand_label = f"Hand tremor (warmup {hand_detector.buffer_progress}/{HISTORY_LENGTH})"
                 hand_val   = float(hand_detector.buffer_progress)
@@ -134,14 +100,12 @@ def camera_loop():
             else:
                 hand_label = "Hand tremor"
                 hand_val   = jitter
-                hand_max   = 100.0  # display scale for FFT peak amplitude
+                hand_max   = 100.0
 
             metrics = [
-                ("Blinks / 10s",   float(blink_count), 10.0),
-                ("Lip Compression (MAR)", mar, 0.30),
-                ("Restlessness",   rest_val,             3.0),
-                ("Breathing (Hz)", breath_val,           0.8),
-                (hand_label,       hand_val,             hand_max),
+                ("Restlessness",   rest_val,   3.0),
+                ("Breathing (Hz)", breath_val, 0.8),
+                (hand_label,       hand_val,   hand_max),
             ]
 
             frame = draw_symptom_panel(frame, active_symptoms, anxiety_detected, tip, metrics)

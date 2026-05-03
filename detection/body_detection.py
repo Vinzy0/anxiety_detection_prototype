@@ -9,7 +9,7 @@ import mediapipe as mp
 # for simple scalar assignment, but not guaranteed under GIL-free runtimes.
 
 # Buffer sizes
-RESTLESSNESS_BUFFER    = 150   # 5 seconds at ~30fps
+RESTLESSNESS_BUFFER    = 90    # 3 seconds at ~30fps (reduced from 5s for faster response)
 BREATHING_BUFFER       = 300   # 10 seconds at ~30fps
 
 # Restlessness: amplitude-gated direction-reversal detection
@@ -17,12 +17,11 @@ BREATHING_BUFFER       = 300   # 10 seconds at ~30fps
 #   Only movements exceeding this threshold are considered anxiety-related fidgeting.
 #   Below this = normal drift/noise. Above this = intentional movement worth counting.
 #   Tunable: lower = more sensitive, higher = less sensitive to small movements.
-MIN_RESTLESS_AMPLITUDE  = 15     # pixels — amplitude gate for reversal counting
+MIN_RESTLESS_AMPLITUDE  = 8      # pixels — amplitude gate for reversal counting (reduced from 15 for natural fidgeting)
 
 # RESTLESS_THRESHOLD: reversals per second that triggers the restlessness symptom.
-#   Set to 3.0 now that amplitude gating filters out noise — previously 1.5 was too
-#   sensitive because it counted all reversals including sub-threshold movements.
-RESTLESS_THRESHOLD      = 3.0    # reversals per second — flags restlessness
+#   Lowered from 3.0 to 2.0 for more natural fidgeting detection.
+RESTLESS_THRESHOLD      = 2.0    # reversals per second — flags restlessness
 
 # Head micro-movement tracking (secondary restlessness signal)
 # Uses same amplitude-gated approach as arm restlessness.
@@ -53,11 +52,13 @@ BREATH_ZCR_TOLERANCE  = 0.5  # tunable — widens/narrows the acceptance band
 # JERK_THRESHOLD: LDJ cutoff — movements jerkier than this are considered anxious
 # Higher (less negative) = requires jerkier movement to flag
 # Lower (more negative) = flags smoother movement as restlessness
-JERK_THRESHOLD = -5.0
+# Lowered from -5.0 to -8.0 to catch more natural fidgeting patterns
+JERK_THRESHOLD = -8.0
 
 # Sustained window: fraction of recent frames that must show elevated activity
 # to trigger the restlessness flag. Prevents false positives from transient spikes.
-RESTLESS_SUSTAINED_RATIO = 0.4
+# Lowered from 0.4 to 0.15 to catch bursty fidgeting patterns
+RESTLESS_SUSTAINED_RATIO = 0.15
 
 POSE_MODEL_PATH = 'pose_landmarker_lite.task'
 POSE_MODEL_URL = (
@@ -191,8 +192,8 @@ class BodyDetector:
         self.jerk_value                = -12.0  # default to "very smooth"
 
         # Sustained window for restlessness debouncing
-        # At 30fps, maxlen=300 holds ~10 seconds of per-frame scores
-        self.restlessness_scores       = deque(maxlen=300)
+        # At 30fps, maxlen=150 holds ~5 seconds of per-frame scores
+        self.restlessness_scores       = deque(maxlen=150)
 
     def update(self, rgb_frame, timestamp_ms):
         rgb_frame.flags.writeable = False
@@ -373,7 +374,7 @@ class BodyDetector:
         self.restlessness_scores.append(1 if frame_elevated else 0)
 
         # Sustained window: only flag if elevated activity persists
-        if len(self.restlessness_scores) >= 150:
+        if len(self.restlessness_scores) >= 75:
             ratio = sum(self.restlessness_scores) / len(self.restlessness_scores)
             self.restlessness_flagged = ratio > RESTLESS_SUSTAINED_RATIO
         else:
@@ -445,10 +446,11 @@ class BodyDetector:
                 self.breathing_value   = 0.0
                 self.breathing_flagged = False
 
+        # Restlessness disabled — shelved for future overhaul (see FUTURE_WORK.md)
         return (
-            self.restlessness_flagged,
+            False,
             self.breathing_flagged,
-            self.restlessness_value,
+            0.0,
             self.breathing_value,
             result
         )

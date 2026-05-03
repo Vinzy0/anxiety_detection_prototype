@@ -8,8 +8,6 @@ SYMPTOMS_REQUIRED = 2
 
 # Symptom names for display
 SYMPTOM_NAMES = {
-    "rapid_blinking":  "Rapid Blinking",
-    "lip_compression": "Lip Compression",
     "hand_tremor":     "Hand Tremors",
     "restlessness":    "Body Restlessness",
     "rapid_breathing": "Rapid Breathing",
@@ -21,13 +19,9 @@ class SymptomChecker:
         self.active_symptoms = []
         self.anxiety_detected = False
 
-    def update(self, eye_flagged, mouth_flagged, hand_flagged, rest_flagged, breath_flagged):
+    def update(self, hand_flagged, rest_flagged, breath_flagged):
         self.active_symptoms = []
 
-        if eye_flagged:
-            self.active_symptoms.append("rapid_blinking")
-        if mouth_flagged:
-            self.active_symptoms.append("lip_compression")
         if hand_flagged:
             self.active_symptoms.append("hand_tremor")
         if rest_flagged:
