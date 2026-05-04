@@ -45,7 +45,7 @@ def _bar(canvas, x, y, w, value, max_val, force_color=None):
         cv2.rectangle(canvas, (x, y), (x + fill_px, y + h), color, -1)
 
 
-def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, metrics=None):
+def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, metrics=None, warmup=False, warmup_remaining=0):
     """
     Returns a new canvas: the original video frame on the left,
     a dark status panel on the right — no overlap.
@@ -93,6 +93,10 @@ def draw_symptom_panel(frame, active_symptoms, anxiety_detected, coping_tip, met
         y += 22
         _text(canvas, "LIVE METRICS", px, y, MUTED, scale=0.38)
         y += 16
+
+        if warmup:
+            _text(canvas, f"Preparing breathing monitor... ({warmup_remaining}s)", px, y, MUTED, scale=0.36)
+            y += 16
 
         for label, value, max_val in metrics:
             val_str = f"{value:.2f}"
