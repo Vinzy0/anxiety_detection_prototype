@@ -163,3 +163,14 @@ A separate **Detection Thresholds** window opens alongside the camera feed. It l
 | 6 | Symptom checker + coping tips | Done |
 | 7 | UI panel | Done |
 | 8 | Testing, calibration & live settings panel | Done |
+
+---
+## Requirements
+tensorflow>=2.13.0 
+mediapipe>=0.10.0 
+opencv-python>=4.8.0
+numpy>=1.24.0 
+scikit-learn>=1.3.0 
+pandas>=2.0.0 
+h5py>=3.9.0 
+scipy>=1.11.0
