@@ -11,7 +11,7 @@ Archived detectors: Eye (EAR), Mouth (MAR), Restlessness — see detection/archi
 
 import tkinter as tk
 import threading
-
+import detection.facial_detection as facial_mod
 import detection.hand_detection  as hand_mod
 import detection.body_detection  as body_mod
 import detection.symptom_checker as symptom_mod
@@ -42,6 +42,8 @@ DEFAULTS = {
     # Body — breathing only (restlessness disabled)
     "breathing_threshold":    0.4,
     "min_breathing_amp":      2.0,
+    #face - facial tension model
+    "face_threshold": 0.58,
     # Alert
     "symptoms_required":      2,
 }
@@ -126,6 +128,18 @@ class SettingsPanel:
 
         self._divider(content)
 
+        # ── Face ─────────────────────────────────────────────────────────────
+        self._section(content, "FACIAL TENSION", "alert")
+        self._slider(
+            content,
+            "face_threshold",
+            "Face Tension Threshold",
+            "alert",
+            0.1, 0.95, 0.01,
+            "Probability threshold for facial tension detection",
+            lambda v: setattr(facial_mod, "FACE_THRESHOLD", float(v))
+        )
+        
         # ── Alert ─────────────────────────────────────────────────────────────
         self._section(content, "ALERT SENSITIVITY", "alert")
         self._slider(content, "symptoms_required", "Symptoms Required", "alert",
@@ -228,6 +242,7 @@ class SettingsPanel:
             body_mod.BREATHING_THRESHOLD             = DEFAULTS["breathing_threshold"]
             body_mod.MIN_BREATHING_AMP               = DEFAULTS["min_breathing_amp"]
             symptom_mod.SYMPTOMS_REQUIRED            = DEFAULTS["symptoms_required"]
+            facial_mod.FACIAL_TENSION_THRESHOLD        = DEFAULTS["face_tension_threshold"]
 
         for key, scale in self.sliders.items():
             scale.set(DEFAULTS[key])

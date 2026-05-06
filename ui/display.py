@@ -15,6 +15,7 @@ AMBER   = (11,  158, 245)   # #f59e0b — mid-level warning
 YELLOW  = (36,  191, 251)   # #fbbf24 — coping tip accent
 
 _SYMPTOMS = [
+    ("facial_tension", "Facial Tension"),
     ("hand_tremor",     "Hand Tremors"),
     ("restlessness",    "Body Restlessness"),
     ("rapid_breathing", "Rapid Breathing"),

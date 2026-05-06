@@ -5,6 +5,7 @@ import time
 import threading
 import urllib.request
 
+from detection.facial_detection import FacialTensionDetector
 from detection.hand_detection import HandDetector, HISTORY_LENGTH
 from detection.body_detection import FPS, BodyDetector
 from detection.symptom_checker import SymptomChecker
@@ -30,15 +31,22 @@ FaceLandmarker        = mp.tasks.vision.FaceLandmarker
 FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
 VisionRunningMode     = mp.tasks.vision.RunningMode
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def camera_loop():
     options = FaceLandmarkerOptions(
         base_options=BaseOptions(model_asset_path=MODEL_PATH),
         running_mode=VisionRunningMode.VIDEO,
         num_faces=1,
+        output_face_blendshapes=True,
         min_face_detection_confidence=0.5,
         min_face_presence_confidence=0.5,
         min_tracking_confidence=0.5,
+    )
+    facial_detector = FacialTensionDetector(
+    os.path.join(BASE_DIR, "tflite/facial_tension.tflite"),
+    os.path.join(BASE_DIR, "tflite/scaler_mean.npy"),
+    os.path.join(BASE_DIR, "tflite/scaler_std.npy")
     )
 
     cap           = cv2.VideoCapture(0)
@@ -64,6 +72,57 @@ def camera_loop():
             h, w         = frame.shape[:2]
             timestamp_ms = int((time.time() - start_time) * 1000)
 
+            
+            mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
+            face_result = landmarker.detect_for_video(mp_image, timestamp_ms)
+
+            row = {}
+
+            if face_result.face_landmarks:
+                lms = face_result.face_landmarks[0]
+
+                for idx in [55, 285, 159, 386]:
+                    row[f"lm{idx}_x"] = lms[idx].x
+                    row[f"lm{idx}_y"] = lms[idx].y
+
+                for lm in lms:
+                    x_px = int(lm.x * w)
+                    y_px = int(lm.y * h)
+
+                    cv2.circle(
+                        frame,
+                        (x_px, y_px),
+                        2,
+                        (0, 200, 0),
+                        -1
+                    )
+
+                row["face_detected"] = 1.0
+
+                if face_result.face_blendshapes:
+                    for cat in face_result.face_blendshapes[0]:
+                        row[f"bs_{cat.category_name}"] = cat.score
+            else:
+                row["face_detected"] = 0.0
+            
+            face_flagged = False
+            face_prob = 0.0
+
+            facial_result = facial_detector.predict(row)
+
+            if facial_result is not None:
+                face_flagged = facial_result["tense"]
+                face_prob = facial_result["probability"]
+
+            facial_result = facial_detector.predict(row)
+
+            if facial_result is None:
+                face_flagged = False
+                face_prob = 0.0
+            else:
+                face_flagged = facial_result["tense"]
+                face_prob = facial_result["probability"]
+
             # ── Hands ──────────────────────────────────────────────────────────
             hand_flagged, jitter, hand_results = hand_detector.update(rgb_frame, timestamp_ms)
 
@@ -83,7 +142,7 @@ def camera_loop():
 
             # ── Symptom checker ────────────────────────────────────────────────
             anxiety_detected, active_symptoms = symptom_checker.update(
-                hand_flagged, False, breath_flagged
+                hand_flagged, face_flagged, False, breath_flagged
             )
 
             anxiety_logger.update(anxiety_detected, active_symptoms)
@@ -107,6 +166,7 @@ def camera_loop():
             warmup = body_detector.is_warming_up
             warmup_remaining = max(0, 10 - len(body_detector.shoulder_y_history) // FPS)
             metrics = [
+                ("Facial tension", face_prob, 1.0),
                 ("Breathing", breath_val, 20.0),
                 (hand_label,       hand_val,   hand_max),
             ]
