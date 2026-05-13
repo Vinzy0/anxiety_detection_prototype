@@ -1,0 +1,132 @@
+PS C:\Users\Ian> & C:/Users/Ian/AppData/Local/Programs/Python/Python313/python.exe f:/Thesis/projectroot/training/train2.py
+2026-05-13 19:34:17.719263: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-13 19:34:24.645205: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+=================================================================
+FACIAL TENSION — EPOCH-VISIBLE TRAINING (train_b.py)
+Datasets: DISFA
+Val split: 20% of subjects held out
+Epochs: 60  Batch size: 64
+=================================================================
+
+Loading all datasets
+  Loading DISFA
+    DISFA: 52,007 windows loaded
+
+  Total windows: 52,007  |  Positive rate: 24.2%
+
+  Validation subjects: [np.str_('SN001'), np.str_('SN009'), np.str_('SN010'), np.str_('SN012'), np.str_('SN016'), np.str_('SN027')]
+  Train windows: 40,451  pos=26.3%
+  Val windows:   11,556  pos=16.6%
+2026-05-13 19:42:16.050067: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "facial_tension"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ dense (Dense)                        │ (None, 32)                  │             928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 32)                  │             128 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 32)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 16)                  │             528 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 16)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ output (Dense)                       │ (None, 1)                   │              17 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,601 (6.25 KB)
+ Trainable params: 1,537 (6.00 KB)
+ Non-trainable params: 64 (256.00 B)
+
+Training with epoch-by-epoch output:
+
+  Epoch  Train Loss  Train Acc  Val Loss  Val Acc  Val AUC
+  ------------------------------------------------------------
+      1      0.1734     0.6965    0.0718   0.8881   0.9036
+      2      0.0617     0.7935    0.0442   0.8615   0.9172
+      3      0.0516     0.8006    0.0408   0.8474   0.9161
+      4      0.0502     0.7970    0.0396   0.8431   0.9190
+      5      0.0499     0.8000    0.0418   0.8238   0.9110
+      6      0.0495     0.8010    0.0414   0.8183   0.9180
+      7      0.0490     0.8061    0.0422   0.8116   0.9037
+      8      0.0491     0.8051    0.0409   0.8294   0.9091
+      9      0.0491     0.8028    0.0399   0.8173   0.9160
+     10      0.0490     0.8061    0.0411   0.8229   0.9104
+
+Epoch 10: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+     11      0.0473     0.8141    0.0418   0.8172   0.9021
+     12      0.0466     0.8151    0.0411   0.8032   0.9028
+     13      0.0463     0.8177    0.0400   0.8286   0.9070
+     14      0.0463     0.8182    0.0407   0.8203   0.8976
+     15      0.0458     0.8206    0.0399   0.8244   0.8990
+     16      0.0458     0.8204    0.0409   0.7974   0.9042
+
+Epoch 16: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.
+Epoch 16: early stopping
+Restoring model weights from the end of the best epoch: 4.
+
+  Best epoch: 4  val_auc=0.9190  val_accuracy=0.8431
+
+Evaluating on validation set
+
+  Evaluation at optimal threshold 0.56:
+  F1      = 0.693
+  Accuracy = 0.892
+  Precision = 0.653
+  Recall   = 0.738
+
+  Confusion matrix:
+                    Predicted Relaxed   Predicted Tense
+    Actual Relaxed               8,887              751
+    Actual Tense                   502            1,416
+
+  Per-subject breakdown (validation DISFA subjects):
+  Subject   Pos%     F1    Acc   Prec    Rec
+  ------------------------------------------
+  SN001       1%   0.049  0.777  0.025  0.786
+  SN009       2%   0.110  0.966  0.121  0.100
+  SN010       8%   0.463  0.922  0.489  0.439
+  SN012      13%   0.663  0.906  0.601  0.740
+  SN016      63%   0.894  0.857  0.836  0.961
+  SN027      13%   0.746  0.937  0.806  0.694
+
+Converting to TFLite
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmp8tj7ylfx'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 28), dtype=tf.float32, name='input')
+Output Type:
+  TensorSpec(shape=(None, 1), dtype=tf.float32, name=None)
+Captures:
+  2626900979408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900981904: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900981136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900980944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900981328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900979984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900981712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900982672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900982480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2626900983056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1778672570.224177   12532 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1778672570.227526   12532 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-05-13 19:42:50.235134: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\Ian\AppData\Local\Temp\tmp8tj7ylfx
+2026-05-13 19:42:50.237296: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-05-13 19:42:50.237645: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\Ian\AppData\Local\Temp\tmp8tj7ylfx
+I0000 00:00:1778672570.247605   12532 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+2026-05-13 19:42:50.249895: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-05-13 19:42:50.340066: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\Ian\AppData\Local\Temp\tmp8tj7ylfx
+2026-05-13 19:42:50.358016: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 128088 microseconds.
+2026-05-13 19:42:50.573260: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+  TFLite saved: F:\Thesis\output/facial_tension_b.tflite (7 KB)
+
+=================================================================
+DONE
+  F1 (opt thr=0.56): 0.693
+  Accuracy:              0.892
+  Best epoch:            4/60
+  Val AUC:               0.9190
+PS C:\Users\Ian> 
