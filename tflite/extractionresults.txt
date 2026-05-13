@@ -1,0 +1,403 @@
+PS C:\Users\Ian> & C:/Users/Ian/AppData/Local/Programs/Python/Python313/python.exe f:/Thesis/projectroot/training/extract_landmarks.py
+2026-05-13 17:56:54.764585: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-13 17:56:58.610139: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+DISFA LANDMARK EXTRACTION Both Cameras + Baselines
+============================================================
+
+Found 27 subjects: SN001 … SN032
+Processing: LEFT + RIGHT camera per subject
+Output:     F:\Thesis\videos\data\landmarks
+
+Note: existing landmark/label CSVs are skipped automatically.
+      Only missing baseline CSVs will be newly created.
+
+
+[1/27] SN001:
+    LeftVideoSN001_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666221.396202   15356 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1778666221.407104   14524 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666221.424680    5404 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=40 (0.8%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4805 neutral frames. Saved to SN001_left_baseline.csv
+    RightVideoSN001_comp.avi: 4845 frames @ 20.02 FPS, 4845 AU4 labels
+W0000 00:00:1778666305.664698   15560 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666305.672531    4552 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666305.688202   14576 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=40 (0.8%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4805 neutral frames. Saved to SN001_right_baseline.csv
+
+[2/27] SN002:
+    LeftVideoSN002_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666397.867819   18328 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666397.875583   16796 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666397.889446    1180 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=23 (0.5%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4822 neutral frames. Saved to SN002_left_baseline.csv
+    RightVideoSN002_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666482.874003    3220 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666482.882839   16332 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666482.897434   16332 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=23 (0.5%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4822 neutral frames. Saved to SN002_right_baseline.csv
+
+[3/27] SN003:
+    LeftVideoSN003_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666565.363756    5212 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666565.371565   12192 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666565.387281   12192 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2739 (56.5%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 2106 neutral frames. Saved to SN003_left_baseline.csv
+    RightVideoSN003_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666658.432356    8592 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666658.441901   15572 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666658.457137   15572 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2739 (56.5%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 2106 neutral frames. Saved to SN003_right_baseline.csv
+
+[4/27] SN004:
+    LeftVideoSN004_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666752.355012   13108 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666752.362803    8760 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666752.379294    9036 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2013 (41.5%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 2832 neutral frames. Saved to SN004_left_baseline.csv
+    RightVideoSN004_comp.avi: 4846 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666845.091182   17968 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666845.098835   14720 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666845.114254   14720 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2013 (41.5%)  face detected=4846 (100.0%)
+    Baseline (right): computed from 2833 neutral frames. Saved to SN004_right_baseline.csv
+
+[5/27] SN005:
+    LeftVideoSN005_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778666927.932049   14464 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778666927.940575    8628 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778666927.956486    8628 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=289 (6.0%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4556 neutral frames. Saved to SN005_left_baseline.csv
+    RightVideoSN005_comp.avi: 4846 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667014.615553   12860 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667014.623307    7784 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667014.637487   15976 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=289 (6.0%)  face detected=4846 (100.0%)
+    Baseline (right): computed from 4557 neutral frames. Saved to SN005_right_baseline.csv
+
+[6/27] SN006:
+    LeftVideoSN006_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667106.930319    2992 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667106.940556   12564 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667106.957032   12564 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=589 (12.2%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4256 neutral frames. Saved to SN006_left_baseline.csv
+    RightVideoSN006_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667208.106672   17164 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667208.114169   16984 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667208.130952   16984 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=589 (12.2%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4256 neutral frames. Saved to SN006_right_baseline.csv
+
+[7/27] SN007:
+    LeftVideoSN007_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667305.942752   10640 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667305.950623    7748 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667305.966904    7748 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=124 (2.6%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4721 neutral frames. Saved to SN007_left_baseline.csv
+    RightVideoSN007_comp.avi: 4846 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667402.838495    5304 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667402.845217   13736 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667402.859823   16920 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=124 (2.6%)  face detected=4846 (100.0%)
+    Baseline (right): computed from 4722 neutral frames. Saved to SN007_right_baseline.csv
+
+[8/27] SN008:
+    LeftVideoSN008_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667497.420422   15652 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667497.427730   14244 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667497.444110   14244 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=881 (18.2%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 3964 neutral frames. Saved to SN008_left_baseline.csv
+    RightVideoSN008_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667586.996932    7336 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667587.004444   13736 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667587.019332    5092 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=881 (18.2%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 3964 neutral frames. Saved to SN008_right_baseline.csv
+
+[9/27] SN009:
+    LeftVideoSN009_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667678.950699   16064 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667678.959344   10640 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667678.975780   13668 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=29 (0.6%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4816 neutral frames. Saved to SN009_left_baseline.csv
+    RightVideoSN009_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778667771.441176   17444 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667771.449857   19292 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667771.464423   11808 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=29 (0.6%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4816 neutral frames. Saved to SN009_right_baseline.csv
+
+[10/27] SN010:
+    LeftVideoSN010_comp.avi: 4844 frames @ 20.00 FPS, 4844 AU4 labels
+W0000 00:00:1778667861.248399   15652 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667861.263593    9572 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667861.292012    6044 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=412 (8.5%)  face detected=4844 (100.0%)
+    Baseline (left): computed from 4432 neutral frames. Saved to SN010_left_baseline.csv
+    RightVideoSN010_comp.avi: 4844 frames @ 20.00 FPS, 4844 AU4 labels
+W0000 00:00:1778667951.451676   18124 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778667951.458920   15936 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778667951.473918   14168 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=412 (8.5%)  face detected=4844 (100.0%)
+    Baseline (right): computed from 4432 neutral frames. Saved to SN010_right_baseline.csv
+
+[11/27] SN011:
+    LeftVideoSN011_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668037.879426   17896 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668037.888134   19424 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668037.905874     372 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=3364 (69.4%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 1481 neutral frames. Saved to SN011_left_baseline.csv
+    RightVideoSN011_comp.avi: 4846 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668117.159436   19448 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668117.174899   14744 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668117.199002   14744 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=3364 (69.4%)  face detected=4846 (100.0%)
+    Baseline (right): computed from 1482 neutral frames. Saved to SN011_right_baseline.csv
+
+[12/27] SN012:
+    LeftVideoSN012_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668201.243554   13516 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668201.255144   18840 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668201.271238   18840 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=588 (12.1%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4257 neutral frames. Saved to SN012_left_baseline.csv
+    RightVideoSN012_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668285.338182   18164 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668285.347745    2612 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668285.365760    2612 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=588 (12.1%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4257 neutral frames. Saved to SN012_right_baseline.csv
+
+[13/27] SN013:
+    LeftVideoSN013_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668370.749685   12704 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668370.757884     872 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668370.771434    8468 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=378 (7.8%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4467 neutral frames. Saved to SN013_left_baseline.csv
+    RightVideoSN013_comp.avi: 4846 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668457.781466   14476 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668457.802660   14172 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668457.821384   10252 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=378 (7.8%)  face detected=4846 (100.0%)
+    Baseline (right): computed from 4468 neutral frames. Saved to SN013_right_baseline.csv
+
+[14/27] SN016:
+    LeftVideoSN016_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668545.777785   12672 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668545.787531   17324 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668545.802704   18704 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=3033 (62.6%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 1812 neutral frames. Saved to SN016_left_baseline.csv
+    RightVideoSN016_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668640.267338   10684 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668640.274588   15452 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668640.288702   15452 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=3033 (62.6%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 1812 neutral frames. Saved to SN016_right_baseline.csv
+
+[15/27] SN017:
+    LeftVideoSN017_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668724.184501   12672 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668724.194606    7784 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668724.212451    4876 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=210 (4.3%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4635 neutral frames. Saved to SN017_left_baseline.csv
+    RightVideoSN017_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668809.132596   11852 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668809.149196   18044 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668809.176227   18044 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=210 (4.3%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4635 neutral frames. Saved to SN017_right_baseline.csv
+
+[16/27] SN018:
+    LeftVideoSN018_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668898.348535   18104 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668898.357191    4272 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668898.376219    9384 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1269 (26.2%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 3576 neutral frames. Saved to SN018_left_baseline.csv
+    RightVideoSN018_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778668985.082382    9924 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778668985.091392   12444 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778668985.108651   12444 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1269 (26.2%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 3576 neutral frames. Saved to SN018_right_baseline.csv
+
+[17/27] SN021:
+    LeftVideoSN021_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669073.921039   18148 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669073.952866   10352 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669073.976898   14132 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1094 (22.6%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 3751 neutral frames. Saved to SN021_left_baseline.csv
+    RightVideoSN021_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669161.563856   16552 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669161.574104   17512 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669161.591377    6688 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1094 (22.6%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 3751 neutral frames. Saved to SN021_right_baseline.csv
+
+[18/27] SN023:
+    LeftVideoSN023_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669245.786259   16728 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669245.797120   17848 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669245.824789   17848 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1915 (39.5%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 2930 neutral frames. Saved to SN023_left_baseline.csv
+    RightVideoSN023_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669332.921380   18508 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669332.929653   10444 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669332.946777   14508 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1915 (39.5%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 2930 neutral frames. Saved to SN023_right_baseline.csv
+
+[19/27] SN024:
+    LeftVideoSN024_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669416.378481     684 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669416.386722   19048 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669416.401846   19048 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=149 (3.1%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4696 neutral frames. Saved to SN024_left_baseline.csv
+    RightVideoSN024_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669505.036243   10428 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669505.044563    2512 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669505.060712    2512 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=149 (3.1%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4696 neutral frames. Saved to SN024_right_baseline.csv
+
+[20/27] SN025:
+    LeftVideoSN025_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669595.141546   19352 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669595.152199   18124 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669595.170053   18124 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=133 (2.7%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4712 neutral frames. Saved to SN025_left_baseline.csv
+    RightVideoSN025_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669697.283318   18208 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669697.291398    6008 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669697.307394    6008 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=133 (2.7%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4712 neutral frames. Saved to SN025_right_baseline.csv
+
+[21/27] SN026:
+    LeftVideoSN026_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669797.967274   11848 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669797.976582   11120 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669797.993403    5244 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=133 (2.7%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4712 neutral frames. Saved to SN026_left_baseline.csv
+    RightVideoSN026_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669892.004289   10300 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669892.012403    9400 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669892.026758   15380 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=133 (2.7%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4712 neutral frames. Saved to SN026_right_baseline.csv
+
+[22/27] SN027:
+    LeftVideoSN027_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778669978.065403    2832 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778669978.082362   11272 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778669978.101934   18532 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=710 (14.7%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4135 neutral frames. Saved to SN027_left_baseline.csv
+    RightVideoSN027_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670056.620126   12908 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670056.628441   10640 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670056.643193   17996 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=710 (14.7%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4135 neutral frames. Saved to SN027_right_baseline.csv
+
+[23/27] SN028:
+    LeftVideoSN028_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670134.959405    7712 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670134.967307   13624 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670134.983143   11796 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=214 (4.4%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4631 neutral frames. Saved to SN028_left_baseline.csv
+    RightVideoSN028_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670222.132991    6004 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670222.140145   16564 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670222.155211   10256 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=214 (4.4%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4631 neutral frames. Saved to SN028_right_baseline.csv
+
+[24/27] SN029:
+    LeftVideoSN029_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670309.375795    6008 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670309.382872   17512 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670309.398770   16764 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2355 (48.6%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 2490 neutral frames. Saved to SN029_left_baseline.csv
+    RightVideoSN029_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670388.944402   17108 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670388.953268    1444 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670388.969938    1444 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=2355 (48.6%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 2490 neutral frames. Saved to SN029_right_baseline.csv
+
+[25/27] SN030:
+    LeftVideoSN030_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670480.200304   10580 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670480.210079   18836 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670480.227201   19264 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=484 (10.0%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4361 neutral frames. Saved to SN030_left_baseline.csv
+    RightVideoSN030_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670577.395872    9268 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670577.404519   18216 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670577.422228   18216 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=484 (10.0%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4361 neutral frames. Saved to SN030_right_baseline.csv
+
+[26/27] SN031:
+    LeftVideoSN031_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670690.660837     920 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670690.668420    4768 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670690.685651    4768 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=230 (4.7%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 4615 neutral frames. Saved to SN031_left_baseline.csv
+    RightVideoSN031_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670787.979050   17876 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670787.987929   16728 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670788.003867    4528 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=230 (4.7%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 4615 neutral frames. Saved to SN031_right_baseline.csv
+
+[27/27] SN032:
+    LeftVideoSN032_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670886.008616    5244 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670886.020003   13860 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670886.034579   15072 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1196 (24.7%)  face detected=4845 (100.0%)
+    Baseline (left): computed from 3649 neutral frames. Saved to SN032_left_baseline.csv
+    RightVideoSN032_comp.avi: 4845 frames @ 20.00 FPS, 4845 AU4 labels
+W0000 00:00:1778670980.883521   19048 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+W0000 00:00:1778670980.903346   18184 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1778670980.932459   18184 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+    -> tense=1196 (24.7%)  face detected=4845 (100.0%)
+    Baseline (right): computed from 3649 neutral frames. Saved to SN032_right_baseline.csv
+
+============================================================
+Extraction complete.
+  New frames extracted this run: 261,633
+
+Files now in F:\Thesis\videos\data\landmarks:
+  Landmark CSVs : 54   (expect 54)
+  Label CSVs    : 54  (expect 54)
+  Baseline CSVs : 54   (expect 54)
+PS C:\Users\Ian> 

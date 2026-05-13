@@ -8,6 +8,7 @@ SYMPTOMS_REQUIRED = 2
 
 # Symptom names for display
 SYMPTOM_NAMES = {
+    "facial_tension": "Facial Tension",
     "hand_tremor":     "Hand Tremors",
     "restlessness":    "Body Restlessness",
     "rapid_breathing": "Rapid Breathing",
@@ -19,9 +20,11 @@ class SymptomChecker:
         self.active_symptoms = []
         self.anxiety_detected = False
 
-    def update(self, hand_flagged, rest_flagged, breath_flagged):
+    def update(self, face_flagged, hand_flagged, rest_flagged, breath_flagged):
         self.active_symptoms = []
 
+        if face_flagged:
+            self.active_symptoms.append("facial_tension")
         if hand_flagged:
             self.active_symptoms.append("hand_tremor")
         if rest_flagged:
