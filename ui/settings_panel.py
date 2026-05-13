@@ -248,8 +248,74 @@ class SettingsPanel:
             scale.set(DEFAULTS[key])
 
 
+def _show_disclaimer(root: tk.Tk):
+    """Block the main window until the user acknowledges the disclaimer."""
+    root.withdraw()
+
+    dlg = tk.Toplevel(root)
+    dlg.title("Important Notice")
+    dlg.configure(bg=BG)
+    dlg.resizable(False, False)
+    dlg.attributes("-topmost", True)
+    dlg.grab_set()
+
+    # Centre the dialog on screen
+    dlg.update_idletasks()
+    w, h = 480, 340
+    sx = (dlg.winfo_screenwidth()  - w) // 2
+    sy = (dlg.winfo_screenheight() - h) // 2
+    dlg.geometry(f"{w}x{h}+{sx}+{sy}")
+
+    outer = tk.Frame(dlg, bg=BG, padx=28, pady=24)
+    outer.pack(fill="both", expand=True)
+
+    # Warning icon row
+    icon_row = tk.Frame(outer, bg=BG)
+    icon_row.pack(fill="x", pady=(0, 10))
+    tk.Label(icon_row, text="⚠", font=("Segoe UI", 22),
+             bg=BG, fg="#f25f4c").pack(side="left", padx=(0, 10))
+    tk.Label(icon_row, text="IMPORTANT NOTICE",
+             font=("Segoe UI", 13, "bold"), bg=BG, fg="#f25f4c",
+             anchor="w").pack(side="left")
+
+    tk.Frame(outer, bg="#f25f4c", height=1).pack(fill="x", pady=(0, 16))
+
+    body_text = (
+        "This system is a research prototype developed solely for academic "
+        "purposes as part of an undergraduate thesis study.\n\n"
+        "It is designed to detect physiological indicators that may be "
+        "associated with anxiety symptoms. It is NOT a certified medical "
+        "device and MUST NOT be used as a basis for clinical diagnosis, "
+        "medical advice, or treatment decisions.\n\n"
+        "If you have concerns about your mental health, please consult a "
+        "qualified healthcare professional."
+    )
+    tk.Label(outer, text=body_text, font=("Segoe UI", 9),
+             bg=BG, fg=TEXT, wraplength=420, justify="left",
+             anchor="nw").pack(fill="x")
+
+    tk.Frame(outer, bg=SEP, height=1).pack(fill="x", pady=(16, 14))
+
+    def _acknowledge():
+        dlg.destroy()
+        root.deiconify()
+
+    tk.Button(
+        outer, text="I Understand — Continue",
+        font=("Segoe UI", 10, "bold"),
+        bg="#f25f4c", fg="#fffffe",
+        activebackground="#d44535", activeforeground="#fffffe",
+        relief="flat", bd=0, padx=0, pady=10,
+        cursor="hand2", command=_acknowledge,
+    ).pack(fill="x")
+
+    dlg.protocol("WM_DELETE_WINDOW", _acknowledge)
+    root.wait_window(dlg)
+
+
 def launch_settings_panel():
     """Create and run the settings window. Must be called from the main thread."""
     root = tk.Tk()
+    _show_disclaimer(root)
     SettingsPanel(root)
     root.mainloop()
