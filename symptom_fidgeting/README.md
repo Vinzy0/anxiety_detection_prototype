@@ -159,19 +159,27 @@ group**; the trainer prints and asserts `GROUP OVERLAP = 0` before training.
 
 ## Final validation metrics (actual run)
 
-> (filled after training — see `symptom_fidgeting/models/metadata.json`)
+Run 2 (final): group-safe split, 20% of 89 source groups held out. Windows
+of 30 frames / step 5. Validation = 2,198 windows from 18 source groups (52
+clips) never seen during training.
 
 | Metric | Value |
 |---|---|
-| Accuracy | — |
-| Precision (positive) | — |
-| Recall (positive) | — |
-| F1 (positive) | — |
-| ROC AUC | — |
-| Confusion matrix | — |
-| Train / val windows | — / — |
-| Train / val source groups | — / — |
-| Group overlap | 0 |
+| Accuracy | 0.954 |
+| Precision (positive) | 0.673 |
+| Recall (positive) | 0.698 |
+| F1 (positive) | 0.685 |
+| ROC AUC | 0.964 |
+| Confusion matrix (TN/FP/FN/TP) | 1,985 / 54 / 48 / 111 |
+| Decision threshold | 0.56 |
+| Train / val windows | 6,103 / 2,198 |
+| Train / val source groups | 71 / 18 |
+| Group overlap | **0** |
+| Val positive rate | 7.2% (imbalanced by design) |
+
+Full per-source-group numbers in `symptom_fidgeting/models/metadata.json` and
+`experiments/train_run2.log`. Strongest held-out groups: David (F1 0.90),
+Julian (F1 0.88); weakest: Derrick (recall 0.36).
 
 ---
 

@@ -116,6 +116,9 @@ class FidgetDetector:
                 break
             frames.append(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB))
         cap.release()
+        # MediaPipe VIDEO mode requires strictly increasing timestamps across
+        # the whole landmarker lifetime; reset per video so ts restarts at 0.
+        self.landmarker = None
         t0 = time.time()
         windows = self.predict_windows(frames, fps)
         dt = time.time() - t0
