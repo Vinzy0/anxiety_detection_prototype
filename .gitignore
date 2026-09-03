@@ -121,3 +121,6 @@ Thumbs.db
 
 # MediaPipe model files (large binaries, auto-downloaded at runtime)
 *.task
+# --- Fidgeting prototype artifacts ---
+symptom_fidgeting/data_extracted/
+symptom_fidgeting/experiments/
