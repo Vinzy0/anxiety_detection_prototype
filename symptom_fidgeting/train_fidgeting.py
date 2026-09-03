@@ -277,7 +277,7 @@ def main(argv=None):
     probs_tr = model.predict(X_tr_s, verbose=0).flatten()
     thr, _f1 = find_best_threshold(probs_va, y_va)
     val_m = evaluate(y_va, probs_va, thr)
-    tr_m = evaluate(y_tr, probs_tr, thr)
+    tr_m = evaluate(y_tr, probs_tr, thr, label="train")
     print_metrics(tr_m)
     print_metrics(val_m)
     rows = per_group_report(y_va, probs_va, g_va, thr)
