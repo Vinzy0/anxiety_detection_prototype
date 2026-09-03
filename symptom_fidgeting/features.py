@@ -155,9 +155,11 @@ def window_to_features(df, scale=None, min_detection_rate=None,
         else:
             feats += [0.0, 0.0]
 
-    # Quality features.
+    # Quality features (computed over detected frames only: confidence is
+    # only defined there; undetected frames carry blank cells -> NaN).
     confs = [df[c].astype(float).to_numpy() for c in CONF_COLS
              if c in df.columns]
+    confs = [c[np.isfinite(c)] for c in confs]
     conf_mean = float(np.mean(confs)) if confs else 0.0
     feats += [det_rate, conf_mean]
     return np.asarray(feats, dtype=np.float64), det_rate

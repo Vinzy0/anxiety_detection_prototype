@@ -335,6 +335,14 @@ def main(argv=None):
                    {"group": g, "n": n, "acc": acc, "f1": f1,
                     "precision": prec, "recall": rec}
                    for g, n, posr, acc, f1, prec, rec in rows]}
+    # Persist the held-out clip list (filename/group/label) so the
+    # end-to-end inference test can pick unseen validation clips without
+    # re-deriving the split.
+    clip_meta = {}
+    for g, c, lab in zip(g_va.tolist(), c_va.tolist(), y_va.astype(int)):
+        clip_meta.setdefault(c, {"group": g, "label": int(lab)})
+    with open(os.path.join(out, "val_clips.json"), "w") as f:
+        json.dump(clip_meta, f, indent=2)
     with open(os.path.join(paths.EXPERIMENTS_DIR,
                            "run_summary.json"), "w") as f:
         json.dump(summary, f, indent=2)
