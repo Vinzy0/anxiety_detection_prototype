@@ -25,7 +25,7 @@ import numpy as np
 from . import paths
 from .dataset_map import usable_dataset, load_clip_to_source
 from .pose_utils import (make_pose_landmarker, LM, EXTRACT_JOINTS,
-                         DETECTED_COL, CONF_PREFIX, _col)
+                         DETECTED_COL, CONF_PREFIX, landmark_dict, _col)
 
 FIELDNAMES = (["dataset", "clip", "source_group", "label", "frame",
                "timestamp_ms", DETECTED_COL]
@@ -74,16 +74,9 @@ def extract_clip(video_path, clip_name, source_group, label, landmarker,
         row["scale_ref"] = ""
 
         if result.pose_landmarks:
-            lms = result.pose_landmarks[0]
             row[DETECTED_COL] = 1.0
             n_detected += 1
-            for j in EXTRACT_JOINTS:
-                lm = lms[LM[j]]
-                row[_col(j, "x")] = round(lm.x, 6)
-                row[_col(j, "y")] = round(lm.y, 6)
-                row[CONF_PREFIX + j] = round(lm.visibility, 5)
-            row["scale_ref"] = round(
-                abs(lms[LM["l_shoulder"]].x - lms[LM["r_shoulder"]].x), 6)
+            row.update(landmark_dict(result.pose_landmarks[0]))
         rows.append(row)
         frame_idx += 1
     cap.release()

@@ -45,6 +45,25 @@ def _col(joint, axis):
     lm_l_wrist_x."""
     return f"lm_{joint}_{axis}"
 
+
+def landmark_dict(pose_landmarks):
+    """Standard per-frame landmark dict from a MediaPipe Pose result.
+
+    Keys: lm_<joint>_{x,y} (rounded), lm_conf_<joint> (visibility), and
+    scale_ref (shoulder width). Used identically by the extractor and the
+    inference path so both produce the exact same DataFrame columns.
+    """
+    d = {}
+    for j in EXTRACT_JOINTS:
+        lm = pose_landmarks[LM[j]]
+        d[_col(j, "x")] = round(lm.x, 6)
+        d[_col(j, "y")] = round(lm.y, 6)
+        d[CONF_PREFIX + j] = round(lm.visibility, 5)
+    d["scale_ref"] = round(
+        abs(pose_landmarks[LM["l_shoulder"]].x
+            - pose_landmarks[LM["r_shoulder"]].x), 6)
+    return d
+
 # 0/1 column value meaning "pose detected on this frame" (kept as float to
 # match the fear pipeline's CSV convention).
 DETECTED_COL = "pose_detected"
