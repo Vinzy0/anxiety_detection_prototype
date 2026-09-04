@@ -27,7 +27,7 @@ import numpy as np
 
 from . import paths
 from .pose_utils import (REFERENCE_PAIRS, SCALE_LANDMARKS, DETECTED_COL,
-                         CONF_COLS, _col)
+                         CONF_COLS, CONF_PREFIX, _col)
 
 # Which per-signal statistics are computed, in order. Each relative-coordinate
 # axis yields one of these blocks.
@@ -88,15 +88,45 @@ def feature_names():
     return names
 
 
-def _scale_from_window(df):
-    """Shoulder width (normalized units) from detected frames; 1.0 if N/A."""
-    for colx in (_col(SCALE_LANDMARKS[0], "x"), _col(SCALE_LANDMARKS[1], "x")):
-        if colx not in df.columns:
-            return 1.0
-    lx = df[colx].to_numpy()
-    rx = df[_col(SCALE_LANDMARKS[1], "x")].to_numpy()
-    width = float(np.nanmedian(np.abs(lx - rx)))
-    return width if width > 1e-4 else 1.0
+def _scale_from_window(df, min_confidence=0.3):
+    """Median L2 distance between the shoulders over valid frames.
+
+    Robust body-size / camera-distance scale for one window. Uses BOTH
+    shoulder landmarks and BOTH x and y (the shoulders are rarely exactly
+    horizontal): width = hypot(lx-rx, ly-ry) per frame, median over frames.
+    A frame counts as valid when the pose is detected, both shoulder
+    coordinate pairs are finite, and both shoulder confidence values are
+    >= min_confidence, so missing / NaN / low-confidence frames cannot move
+    the scale.
+
+    Returns 0.0 (not 1.0) when no valid frame exists — missing columns, no
+    detected frames, non-finite landmarks, or all shoulders low-confidence.
+    The caller drops such windows. Silently scaling by an invented 1.0 was
+    the v1 bug: the model then never saw real body scale.
+    """
+    cols = [c for j in SCALE_LANDMARKS for c in (_col(j, "x"), _col(j, "y"))]
+    conf_cols = [CONF_PREFIX + j for j in SCALE_LANDMARKS]
+    if (DETECTED_COL not in df.columns
+            or any(c not in df.columns for c in cols + conf_cols)):
+        return 0.0
+    det = df[DETECTED_COL].astype(float).to_numpy()
+    mask = det > 0.5
+    if not mask.any():
+        return 0.0
+    sub = df.loc[mask, cols].astype(np.float64).to_numpy()
+    conf = df.loc[mask, conf_cols].astype(np.float64).to_numpy()
+    valid = (np.all(np.isfinite(sub), axis=1)
+             & np.all(np.isfinite(conf), axis=1)
+             & np.all(conf >= min_confidence, axis=1))
+    if not valid.any():
+        return 0.0
+    widths = np.hypot(sub[valid, 0] - sub[valid, 2],
+                      sub[valid, 1] - sub[valid, 3])
+    widths = widths[np.isfinite(widths)]
+    if widths.size == 0:
+        return 0.0
+    width = float(np.median(widths))
+    return width if width > 1e-4 else 0.0
 
 
 def _rel_series(df, detected_mask, joint, base):
@@ -136,6 +166,11 @@ def window_to_features(df, scale=None, min_detection_rate=None,
 
     if scale is None:
         scale = _scale_from_window(df)
+        if scale <= 0:
+            # No reliable shoulder width in this window (pose missing /
+            # low-confidence / degenerate) — motion cannot be normalized,
+            # so drop the window instead of silently using scale 1.0.
+            return None, det_rate
 
     feats = []
     for joint, base in REFERENCE_PAIRS:

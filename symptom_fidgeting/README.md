@@ -28,8 +28,25 @@ elbow / shoulder / hip motion relative to a stable body reference (e.g.
 wrist-vs-shoulder), summarized per window by total displacement, mean/peak
 velocity, velocity spread, direction changes, position spread, plus
 finger-fist distance change and pose-quality flags. All distances are divided
-by the person's shoulder width so the model does not learn camera distance /
-body size / video resolution.
+by the person's **shoulder width** so the model does not learn camera
+distance / body size / video resolution.
+
+### Normalization (shoulder width)
+
+Every 30-frame window is scaled by the median **euclidean shoulder width**
+over that window's valid frames:
+
+```
+width(frame) = hypot(l_shoulder_x - r_shoulder_x, l_shoulder_y - r_shoulder_y)
+scale(window) = median(width(frame)) over pose-detected, finite,
+                confidence>=0.3 shoulder frames
+```
+
+using both shoulders and both x and y (shoulders are rarely exactly
+horizontal). Missing / NaN / low-confidence frames never move the scale.
+Windows with no valid shoulder pair (no usable body scale) are **dropped** —
+the model never silently scales by 1.0. v1 had a bug that always scaled by
+1.0 (see History); the committed model is the corrected one.
 
 ---
 
@@ -70,6 +87,7 @@ BOTH classes**.
 | `dataset_map.py` | MAS label policy + clip→source-video group mapping |
 | `pose_utils.py` | MediaPipe Pose Landmarker setup + shared landmark dict |
 | `features.py` | **Shared** temporal feature engineering (training + inference) |
+| `tests/test_scale.py` | Regression test: shoulder-width normalization |
 | `extract_landmarks_fidgeting.py` | Video → pose CSV extraction |
 | `validate_features.py` | Pre-training data/feature sanity checks |
 | `train_fidgeting.py` | Group-safe training + eval + artifact saving |
@@ -157,39 +175,114 @@ group**; the trainer prints and asserts `GROUP OVERLAP = 0` before training.
 
 ---
 
-## Final validation metrics (actual run)
+## Final validation metrics (corrected model — actual run)
 
-Run 2 (final): group-safe split, 20% of 89 source groups held out. Windows
-of 30 frames / step 5. Validation = 2,198 windows from 18 source groups (52
-clips) never seen during training.
+Group-safe split: 20% of source groups held out. Windows of 30 frames /
+step 5. Validation = 2,198 windows from 18 source groups (52 clips) never
+seen during training. **Split caveat: only 3 of the 18 held-out groups are
+positive** (David, Julian, Derrick), so headline numbers are not a
+population-level estimate.
+
+### Window-level metrics
 
 | Metric | Value |
 |---|---|
-| Accuracy | 0.954 |
-| Precision (positive) | 0.673 |
-| Recall (positive) | 0.698 |
-| F1 (positive) | 0.685 |
-| ROC AUC | 0.964 |
-| Confusion matrix (TN/FP/FN/TP) | 1,985 / 54 / 48 / 111 |
-| Decision threshold | 0.56 |
+| Accuracy | 0.947 |
+| Precision (positive) | 0.642 |
+| Recall (positive) | 0.610 |
+| F1 (positive) | 0.626 |
+| ROC AUC | 0.938 |
+| Confusion matrix (TN/FP/FN/TP) | 1,985 / 54 / 62 / 97 |
+| Decision threshold | 0.62 |
 | Train / val windows | 6,103 / 2,198 |
 | Train / val source groups | 71 / 18 |
 | Group overlap | **0** |
-| Val positive rate | 7.2% (imbalanced by design) |
+| Val positive rate | 7.2% |
 
-Full per-source-group numbers in `symptom_fidgeting/models/metadata.json` and
-`experiments/train_run2.log`. Strongest held-out groups: David (F1 0.90),
-Julian (F1 0.88); weakest: Derrick (recall 0.36).
+### Clip-level metrics
+
+Windows within a clip are highly correlated (2,198 windows ≠ 2,198
+independent samples). Aggregating each clip's window probabilities to ONE
+clip probability (mean) and comparing to the same threshold:
+
+| Metric | Value |
+|---|---|
+| Validation clips | 52 (3 positive / 49 negative) |
+| Accuracy | 0.962 |
+| Precision (positive) | 0.667 |
+| Recall (positive) | 0.667 |
+| F1 (positive) | 0.667 |
+| ROC AUC | 0.973 |
+| Confusion matrix (TN/FP/FN/TP) | 48 / 1 / 1 / 2 |
+
+Per-source-group numbers in `models/metadata.json` (window-level plus
+clip-level) and `experiments/train_corrected.log`. Held-out group behavior
+is uneven: David F1 0.92, Julian F1 0.66; Derrick is poorly recalled
+(precision 0.80 / recall 0.08) — visible in both window and clip metrics.
+
+### Generalization check (group-aware 5-fold CV)
+
+Re-ran the same pipeline with `GroupKFold(5)` over source videos (details +
+per-fold rows in `experiments/cv_corrected.json`) to gauge how unstable
+performance is across different held-out groups — this is NOT a tuned
+model, just stability evidence:
+
+| Metric | window-level (mean ± std) | clip-level (mean ± std) |
+|---|---|---|
+| F1 (positive) | 0.520 ± 0.165 | 0.503 ± 0.067 |
+| Recall (positive) | 0.731 ± 0.192 | 0.736 ± 0.182 |
+| Precision (positive) | 0.412 ± 0.150 | 0.390 ± 0.050 |
+| ROC AUC | 0.815 ± 0.031 | 0.832 ± 0.017 |
+
+Averages are over the 4/5 folds that contained positive held-out groups.
+Fold 1 happened to hold out zero positive groups — with only 26 positive
+clips (~10 people), whether a fold has any positives at all is luck, and
+fold-level F1 swings 0.24 → 0.67 with group composition. Treat any single
+split's headline number with caution.
 
 ---
 
 ## Known limitations
 
-- Small positive class (26 clips / ~10 source people); validation results
-  should be read per-group, not as a single number.
+- **Only 26 positive clips exist locally** (26 vs 191), from only ~10
+  source people. Validation in the committed split covers just **3 positive
+  held-out groups** (David, Julian, Derrick); per-window F1/AUC here are NOT
+  a population-level estimate.
+- **Window samples are correlated within clips** (2,198 windows from 52
+  clips). Clip-level metrics (mean-window probability per clip) are the more
+  honest headline; read both.
+- **Threshold is tuned on the validation split** used for the headline
+  metrics — results are mildly optimistic. Clip-level n is tiny (3
+  positives).
+- `body stress` is a **proxy**; multi-label contamination is inherent to
+  MAS. Positives frequently co-occur with audio/face/prosodic stress, so the
+  model may learn correlated signals, not pure movement.
 - MAS clips are short (3–10 s); a 30-frame window at 24 fps ≈ 1.25 s of
   motion.
 - Pose is only detected while the person faces the camera (torso visible);
   windows with < 60% detection are dropped.
-- `body stress` is a proxy; multi-label contamination is inherent to MAS.
 - CPU-only TensorFlow was used; the TFLite model is the deployment artifact.
+
+## History
+
+**v1 (buggy, replaced):** the shoulder-width normalizer computed only the
+right shoulder's x for both sides (`r_shoulder_x - r_shoulder_x = 0`) and
+fell back to `1.0` on every window — the v1 model was NOT actually
+shoulder-width normalized, and its metrics (val F1 0.685 / AUC 0.964) were
+reported under an incorrect description. Replaced by the corrected model
+below (val F1 0.626 / AUC 0.938 window-level).
+
+## Regression test
+
+`symptom_fidgeting/tests/test_scale.py` guards the normalizer:
+
+```bash
+.venv/Scripts/python -m unittest symptom_fidgeting.tests.test_scale -v
+```
+
+Synthetic windows verify known shoulder widths (including y-axis
+contribution), median robustness to missing/low-confidence frames, and that
+degenerate windows return `0` (dropped) rather than a spurious `1.0`. Real
+extracted MAS windows must yield realistic scales in (0.05, 0.9) and never
+exactly `1.0`. On the full extracted set the corrected scale is median
+~0.23 (min 0.08 / max 0.43), with zero `1.0`s.

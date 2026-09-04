@@ -160,6 +160,29 @@ def evaluate(y, probs, thr, label="val"):
             "n_pos": int(y.sum())}
 
 
+def clip_metrics(clip_ids, y, probs, thr, label="val_clip"):
+    """Clip-level metrics: one mean-window probability per clip.
+
+    Windows within a clip are highly correlated, so per-window metrics
+    overstate effective sample size. This aggregates each clip's window
+    probabilities to ONE clip probability (mean) -> ONE prediction per clip.
+    """
+    clip_of = {}
+    for c, yy, pp in zip(clip_ids, y, probs):
+        clip_of.setdefault(c, []).append((float(yy), float(pp)))
+    clip_probs, clip_y = [], []
+    for c in clip_of:
+        ys = np.array([a for a, _ in clip_of[c]])
+        assert ys.min() == ys.max(), f"clip {c} has mixed labels"
+        clip_probs.append(float(np.mean([p for _, p in clip_of[c]])))
+        clip_y.append(int(ys[0]))
+    clip_probs = np.asarray(clip_probs, np.float64)
+    clip_y = np.asarray(clip_y, np.float64)
+    if len(clip_y) == 0:
+        return {"label": label, "n": 0, "n_pos": 0}
+    return evaluate(clip_y, clip_probs, thr, label=label)
+
+
 def print_metrics(m):
     print(f"\n  === {m['label'].upper()} (threshold {m['threshold']:.2f}) ===")
     print(f"  Accuracy  = {m['accuracy']:.3f}")
@@ -278,8 +301,11 @@ def main(argv=None):
     thr, _f1 = find_best_threshold(probs_va, y_va)
     val_m = evaluate(y_va, probs_va, thr)
     tr_m = evaluate(y_tr, probs_tr, thr, label="train")
+    val_clip_m = clip_metrics(c_va, y_va, probs_va, thr)
+    tr_clip_m = clip_metrics(c_tr, y_tr, probs_tr, thr, label="train_clip")
     print_metrics(tr_m)
     print_metrics(val_m)
+    print_metrics(val_clip_m)
     rows = per_group_report(y_va, probs_va, g_va, thr)
 
     # --- Save everything needed for inference ---
@@ -310,10 +336,20 @@ def main(argv=None):
         "val_metrics": val_m, "train_metrics": tr_m,
         "best_epoch": best_ep, "train_seconds": train_seconds,
         "seed": SEED,
+        "normalization": "per-window median euclidean shoulder width "
+                         "(both shoulders, x+y); window dropped if "
+                         "unscaleable",
         "label_policy": "pos=contains body stress; neg=['no stress']; "
                         "ignored=other stress-only clips",
         "proxy_statement": "MAS body stress used as proxy for observable "
                            "upper-body fidgeting; NOT a clinical diagnosis.",
+        "caveats": [
+            "window samples are correlated within clips (not independent)",
+            "threshold tuned on the validation split -> mildly optimistic",
+            "only 3 positive validation source groups in this split",
+            "MAS body-stress labels are an imperfect proxy",
+        ],
+        "val_clip_metrics": val_clip_m, "train_clip_metrics": tr_clip_m,
     }
     with open(os.path.join(out, "metadata.json"), "w") as f:
         json.dump(metadata, f, indent=2)
