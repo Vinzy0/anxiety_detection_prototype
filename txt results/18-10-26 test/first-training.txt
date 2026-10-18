@@ -1,0 +1,76 @@
+Epoch 1/60
+47/47 - 2s - 49ms/step - accuracy: 0.6768 - loss: 0.6709 - precision: 0.2731 - recall: 0.7594 - val_accuracy: 0.7063 - val_loss: 0.4496 - val_precision: 0.1889 - val_recall: 0.3207 - learning_rate: 1.0000e-03
+Epoch 2/60
+47/47 - 0s - 6ms/step - accuracy: 0.8399 - loss: 0.2954 - precision: 0.4677 - recall: 0.8732 - val_accuracy: 0.8126 - val_loss: 0.2282 - val_precision: 0.2978 - val_recall: 0.2294 - learning_rate: 1.0000e-03
+Epoch 3/60
+47/47 - 0s - 6ms/step - accuracy: 0.9058 - loss: 0.1455 - precision: 0.6155 - recall: 0.9072 - val_accuracy: 0.8070 - val_loss: 0.1483 - val_precision: 0.2448 - val_recall: 0.1682 - learning_rate: 1.0000e-03
+Epoch 4/60
+47/47 - 0s - 6ms/step - accuracy: 0.9372 - loss: 0.0834 - precision: 0.7136 - recall: 0.9354 - val_accuracy: 0.7960 - val_loss: 0.1095 - val_precision: 0.1296 - val_recall: 0.0749 - learning_rate: 1.0000e-03
+Epoch 5/60
+47/47 - 0s - 6ms/step - accuracy: 0.9592 - loss: 0.0523 - precision: 0.8057 - recall: 0.9411 - val_accuracy: 0.7957 - val_loss: 0.0911 - val_precision: 0.1802 - val_recall: 0.1211 - learning_rate: 1.0000e-03
+Epoch 6/60
+47/47 - 0s - 7ms/step - accuracy: 0.9708 - loss: 0.0366 - precision: 0.8565 - recall: 0.9557 - val_accuracy: 0.8133 - val_loss: 0.0811 - val_precision: 0.1956 - val_recall: 0.0986 - learning_rate: 1.0000e-03
+Epoch 7/60
+47/47 - 0s - 6ms/step - accuracy: 0.9763 - loss: 0.0277 - precision: 0.8848 - recall: 0.9587 - val_accuracy: 0.8013 - val_loss: 0.0797 - val_precision: 0.1463 - val_recall: 0.0807 - learning_rate: 1.0000e-03
+Epoch 8/60
+47/47 - 0s - 7ms/step - accuracy: 0.9822 - loss: 0.0226 - precision: 0.9143 - recall: 0.9657 - val_accuracy: 0.8115 - val_loss: 0.0809 - val_precision: 0.2213 - val_recall: 0.1267 - learning_rate: 1.0000e-03
+Epoch 9/60
+47/47 - 0s - 6ms/step - accuracy: 0.9831 - loss: 0.0207 - precision: 0.9222 - recall: 0.9627 - val_accuracy: 0.8232 - val_loss: 0.0794 - val_precision: 0.2489 - val_recall: 0.1179 - learning_rate: 1.0000e-03
+Epoch 10/60
+47/47 - 0s - 7ms/step - accuracy: 0.9846 - loss: 0.0185 - precision: 0.9326 - recall: 0.9617 - val_accuracy: 0.8088 - val_loss: 0.0950 - val_precision: 0.2179 - val_recall: 0.1308 - learning_rate: 1.0000e-03
+Epoch 11/60
+47/47 - 0s - 7ms/step - accuracy: 0.9878 - loss: 0.0168 - precision: 0.9449 - recall: 0.9710 - val_accuracy: 0.7827 - val_loss: 0.0964 - val_precision: 0.1352 - val_recall: 0.0965 - learning_rate: 1.0000e-03
+Epoch 12/60
+47/47 - 0s - 6ms/step - accuracy: 0.9853 - loss: 0.0172 - precision: 0.9374 - recall: 0.9611 - val_accuracy: 0.8111 - val_loss: 0.0974 - val_precision: 0.2116 - val_recall: 0.1182 - learning_rate: 1.0000e-03
+Epoch 13/60
+47/47 - 0s - 6ms/step - accuracy: 0.9869 - loss: 0.0166 - precision: 0.9426 - recall: 0.9671 - val_accuracy: 0.8074 - val_loss: 0.1000 - val_precision: 0.2235 - val_recall: 0.1407 - learning_rate: 1.0000e-03
+Epoch 14/60
+47/47 - 0s - 6ms/step - accuracy: 0.9862 - loss: 0.0172 - precision: 0.9446 - recall: 0.9594 - val_accuracy: 0.8118 - val_loss: 0.1148 - val_precision: 0.2430 - val_recall: 0.1501 - learning_rate: 1.0000e-03
+Epoch 15/60
+47/47 - 0s - 6ms/step - accuracy: 0.9859 - loss: 0.0159 - precision: 0.9385 - recall: 0.9644 - val_accuracy: 0.8306 - val_loss: 0.1156 - val_precision: 0.3164 - val_recall: 0.1600 - learning_rate: 1.0000e-03
+Epoch 16/60
+47/47 - 0s - 7ms/step - accuracy: 0.9881 - loss: 0.0150 - precision: 0.9471 - recall: 0.9707 - val_accuracy: 0.8136 - val_loss: 0.0987 - val_precision: 0.2233 - val_recall: 0.1232 - learning_rate: 5.0000e-04
+Epoch 17/60
+47/47 - 0s - 6ms/step - accuracy: 0.9898 - loss: 0.0130 - precision: 0.9562 - recall: 0.9730 - val_accuracy: 0.8206 - val_loss: 0.0968 - val_precision: 0.2576 - val_recall: 0.1360 - learning_rate: 5.0000e-04
+Epoch 18/60
+47/47 - 0s - 6ms/step - accuracy: 0.9903 - loss: 0.0123 - precision: 0.9551 - recall: 0.9777 - val_accuracy: 0.8165 - val_loss: 0.1083 - val_precision: 0.2671 - val_recall: 0.1633 - learning_rate: 5.0000e-04
+Epoch 19/60
+47/47 - 0s - 7ms/step - accuracy: 0.9897 - loss: 0.0126 - precision: 0.9520 - recall: 0.9770 - val_accuracy: 0.7955 - val_loss: 0.1209 - val_precision: 0.2241 - val_recall: 0.1752 - learning_rate: 5.0000e-04
+Epoch 20/60
+47/47 - 0s - 6ms/step - accuracy: 0.9899 - loss: 0.0126 - precision: 0.9556 - recall: 0.9744 - val_accuracy: 0.7939 - val_loss: 0.1161 - val_precision: 0.2018 - val_recall: 0.1498 - learning_rate: 5.0000e-04
+Epoch 21/60
+47/47 - 0s - 6ms/step - accuracy: 0.9900 - loss: 0.0123 - precision: 0.9495 - recall: 0.9820 - val_accuracy: 0.7788 - val_loss: 0.1298 - val_precision: 0.1512 - val_recall: 0.1188 - learning_rate: 5.0000e-04
+Participants: 2 | Videos: 42 | Windows: 6423
+Training windows: 3005 | Validation windows: 3418
+Validation metrics:
+facial_tension: F1=0.230 Precision=0.132 Recall=0.895 Accuracy=0.149 Threshold=0.20
+hand_tremor: F1=0.690 Precision=0.615 Recall=0.785 Accuracy=0.899 Threshold=0.40
+heavy_breathing: F1=0.500 Precision=0.403 Recall=0.660 Accuracy=0.813 Threshold=0.30
+knee_tremor: F1=0.252 Precision=0.196 Recall=0.350 Accuracy=0.699 Threshold=0.20
+fidgeting: F1=0.336 Precision=0.246 Recall=0.529 Accuracy=0.696 Threshold=0.42
+avoidant_gaze: F1=0.369 Precision=0.257 Recall=0.659 Accuracy=0.675 Threshold=0.36
+fear: F1=0.270 Precision=0.168 Recall=0.697 Accuracy=0.477 Threshold=0.40
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmp5819sjqu'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 1494), dtype=tf.float32, name='input')
+Output Type:
+  TensorSpec(shape=(None, 7), dtype=tf.float32, name=None)
+Captures:
+  2127655664912: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655663568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655664336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655664528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655664144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655665104: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655663760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655662800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655662992: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2127655662416: TensorSpec(shape=(), dtype=tf.resource, name=None)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1792324642.374896    2328 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1792324642.375316    2328 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1792324642.385378    2328 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+Best epoch: 9/21
+Model: F:\Thesis\videos\New folder\Thesis Data Gathering\symptom_model\symptom_model.tflite
+PS C:\Users\Ian> 
