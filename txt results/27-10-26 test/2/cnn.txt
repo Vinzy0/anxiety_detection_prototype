@@ -1,0 +1,319 @@
+cnn | features=both (1122 columns, 93 sequence channels) | windows=16,057 | people=51
+[fidgeting] fold 0: windows=863 | precision=0.934 recall=0.723 F1=0.815 accuracy=0.835
+[fidgeting] fold 1: windows=787 | precision=0.839 recall=0.620 F1=0.713 accuracy=0.750
+[fidgeting] fold 2: windows=793 | precision=0.870 recall=0.909 F1=0.889 accuracy=0.887
+[fidgeting] fold 3: windows=802 | precision=0.808 recall=0.836 F1=0.822 accuracy=0.815
+[fidgeting] fold 4: windows=784 | precision=0.892 recall=0.985 F1=0.936 accuracy=0.932
+[fidgeting] precision=0.868 recall=0.813 F1=0.839 accuracy=0.844 AUC=0.913 | TN=1753 FP=251 FN=379 TP=1646
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmpkw1g6e9i'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_135'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_136')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2586088253456: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088256528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088255952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088257872: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088256336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088259408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088255760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586088256144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116883280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116897488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116883856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116895952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116893840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116884624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116884432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116894224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116884816: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116896144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116896720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116895184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116893648: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116896528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116898256: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586116895760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1793083309.824833    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793083309.825243    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1793083309.849379    1824 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+[hand_tremor] fold 0: windows=862 | precision=0.878 recall=0.718 F1=0.790 accuracy=0.809
+[hand_tremor] fold 1: windows=787 | precision=0.652 recall=0.878 F1=0.749 accuracy=0.704
+[hand_tremor] fold 2: windows=789 | precision=0.796 recall=0.844 F1=0.819 accuracy=0.815
+[hand_tremor] fold 3: windows=801 | precision=0.910 recall=0.791 F1=0.846 accuracy=0.854
+[hand_tremor] fold 4: windows=783 | precision=0.732 recall=0.793 F1=0.761 accuracy=0.751
+[hand_tremor] precision=0.779 recall=0.803 F1=0.791 accuracy=0.787 AUC=0.860 | TN=1545 FP=459 FN=397 TP=1621
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmpl5fe4wpi'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_297'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_298')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2586120044624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586120046544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586120047696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111575632: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586120049616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586120046352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111583696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111579856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111580048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111584656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111583888: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111579472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111581776: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111584272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111582352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111578896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111579280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586111579088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328396816: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328397008: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328396240: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328396624: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328394512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328392400: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793083638.354589    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793083638.354701    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+[knee_tremor] fold 0: windows=864 | precision=0.879 recall=0.537 F1=0.667 accuracy=0.730
+[knee_tremor] fold 1: windows=784 | precision=0.725 recall=0.883 F1=0.796 accuracy=0.774
+[knee_tremor] fold 2: windows=793 | precision=0.770 recall=0.778 F1=0.774 accuracy=0.773
+[knee_tremor] fold 3: windows=782 | precision=0.585 recall=0.887 F1=0.705 accuracy=0.632
+[knee_tremor] fold 4: windows=781 | precision=0.761 recall=0.833 F1=0.796 accuracy=0.786
+[knee_tremor] precision=0.721 recall=0.778 F1=0.749 accuracy=0.739 AUC=0.801 | TN=1403 FP=601 FN=444 TP=1556
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmppha45yau'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_459'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_460')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2586328398736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328386448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328389136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328390864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328398928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328387408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328391056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586328392784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148376528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148377488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586301443600: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2586301435536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148376720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148377296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148376336: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148375952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148375568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148375760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587148378064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147099536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147096656: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147096272: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147100688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147095504: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793084005.416108    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793084005.416338    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+[avoidant_gaze] fold 0: windows=865 | precision=0.846 recall=0.857 F1=0.852 accuracy=0.850
+[avoidant_gaze] fold 1: windows=786 | precision=0.797 recall=0.878 F1=0.836 accuracy=0.827
+[avoidant_gaze] fold 2: windows=791 | precision=0.782 recall=0.827 F1=0.804 accuracy=0.799
+[avoidant_gaze] fold 3: windows=795 | precision=0.789 recall=0.858 F1=0.822 accuracy=0.813
+[avoidant_gaze] fold 4: windows=783 | precision=0.745 recall=0.901 F1=0.815 accuracy=0.796
+[avoidant_gaze] precision=0.791 recall=0.864 F1=0.826 accuracy=0.817 AUC=0.906 | TN=1544 FP=460 FN=274 TP=1742
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmp14bgd42y'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_621'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_622')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2587151195344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151202064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151193616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151202448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151201104: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151201296: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151194384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151200528: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151199760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151196688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151195152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151193424: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151200720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151201680: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151195536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151199952: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151192848: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587151194576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465538384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465539536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465539920: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465546256: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465546448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587465538576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793084292.641012    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793084292.641355    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+[facial_tension] fold 0: windows=862 | precision=0.753 recall=0.938 F1=0.835 accuracy=0.814
+[facial_tension] fold 1: windows=784 | precision=0.782 recall=0.707 F1=0.743 accuracy=0.755
+[facial_tension] fold 2: windows=790 | precision=0.705 recall=0.735 F1=0.720 accuracy=0.715
+[facial_tension] fold 3: windows=789 | precision=0.622 recall=0.863 F1=0.723 accuracy=0.669
+[facial_tension] fold 4: windows=783 | precision=0.662 recall=0.668 F1=0.665 accuracy=0.663
+[facial_tension] precision=0.701 recall=0.785 F1=0.741 accuracy=0.725 AUC=0.793 | TN=1332 FP=672 FN=430 TP=1574
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmpnfj0wzc7'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_783'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_784')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2587147098960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147093584: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147092432: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147092048: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147098576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147094736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147099728: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587147095312: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635777616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635781072: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635781264: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635778192: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635782608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635782800: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635781840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635782224: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635780688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587635780880: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470091792: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470096976: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470092944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470093712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470099280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470092368: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793084555.936863    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793084555.937123    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+[heavy_breathing] fold 0: windows=864 | precision=0.776 recall=0.820 F1=0.797 accuracy=0.791
+[heavy_breathing] fold 1: windows=784 | precision=0.706 recall=0.834 F1=0.765 accuracy=0.744
+[heavy_breathing] fold 2: windows=793 | precision=0.767 recall=0.674 F1=0.718 accuracy=0.735
+[heavy_breathing] fold 3: windows=787 | precision=0.771 recall=0.756 F1=0.763 accuracy=0.766
+[heavy_breathing] fold 4: windows=785 | precision=0.803 recall=0.642 F1=0.714 accuracy=0.741
+[heavy_breathing] precision=0.761 recall=0.747 F1=0.754 accuracy=0.756 AUC=0.814 | TN=1534 FP=470 FN=509 TP=1500
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmplb4stg3q'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_945'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_946')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2587602832080: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587789084816: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829254864: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829254096: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587789083088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587789095184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829247184: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829255248: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829250640: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829253712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829252944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829244112: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829253520: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829246608: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829253328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829254480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829254672: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829253136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587829246032: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470099856: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470098512: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470101008: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470093328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2587470098896: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793084794.049475    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793084794.049846    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+[fear] fold 0: windows=860 | precision=0.717 recall=0.867 F1=0.785 accuracy=0.763
+[fear] fold 1: windows=765 | precision=0.734 recall=0.702 F1=0.718 accuracy=0.731
+[fear] fold 2: windows=788 | precision=0.695 recall=0.593 F1=0.640 accuracy=0.669
+[fear] fold 3: windows=786 | precision=0.661 recall=0.707 F1=0.683 accuracy=0.673
+[fear] fold 4: windows=786 | precision=0.704 recall=0.818 F1=0.756 accuracy=0.735
+[fear] precision=0.702 recall=0.741 F1=0.721 accuracy=0.715 AUC=0.773 | TN=1382 FP=622 FN=514 TP=1467
+Saved artifact at 'C:\Users\Ian\AppData\Local\Temp\tmpq0yp46w4'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): List[TensorSpec(shape=(None, 120, 93), dtype=tf.float32, name='keras_tensor_1107'), TensorSpec(shape=(None, 678), dtype=tf.float32, name='keras_tensor_1108')]
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2588178037840: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307379152: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307374352: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307374928: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307374736: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307388944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307379536: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307378960: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307377040: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307377616: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307378384: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307375120: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307374544: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307378768: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307378576: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307375696: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307390096: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307379344: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307389328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307379728: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588307380304: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588367339984: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588367340560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2588367341712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+W0000 00:00:1793084990.105251    1824 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1793084990.105380    1824 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+
+OUT-OF-FOLD RESULTS (every participant is tested once, by a model that never saw them; threshold 0.5)
+        symptom  precision  recall    f1  accuracy  roc_auc   tn  fp  fn   tp
+      fidgeting      0.868   0.813 0.839     0.844    0.913 1753 251 379 1646
+    hand_tremor      0.779   0.803 0.791     0.787    0.860 1545 459 397 1621
+    knee_tremor      0.721   0.778 0.749     0.739    0.801 1403 601 444 1556
+  avoidant_gaze      0.791   0.864 0.826     0.817    0.906 1544 460 274 1742
+ facial_tension      0.701   0.785 0.741     0.725    0.793 1332 672 430 1574
+heavy_breathing      0.761   0.747 0.754     0.756    0.814 1534 470 509 1500
+           fear      0.702   0.741 0.721     0.715    0.773 1382 622 514 1467
+MACRO precision=0.761 recall=0.790 F1=0.774 accuracy=0.769 | F1 >=0.80: 2/7, >=0.85: 0/7, >=0.90: 0/7 | always-positive F1 about 0.667, chance accuracy 0.5
+
+OUTLIERS: videos where 50% or more of the windows were classified wrongly (at least 3 windows)
+[fidgeting] flagged videos 43/306 (symptom videos 27, control videos 16) | flagged people: 1, 10, 16, 23, 25, 28, 3, 33, 35, 4, 41, 43, 9
+[hand_tremor] flagged videos 58/307 (symptom videos 27, control videos 31) | flagged people: 14, 15, 16, 17, 2, 20, 22, 31, 33, 34, 35, 38, 42, 48, 49
+[knee_tremor] flagged videos 72/306 (symptom videos 27, control videos 45) | flagged people: 10, 13, 17, 19, 24, 25, 26, 27, 3, 34, 35, 38, 39, 4, 40, 42, 49, 9
+[avoidant_gaze] flagged videos 39/306 (symptom videos 11, control videos 28) | flagged people: 23, 24, 31, 35, 38, 4, 40, 43, 49, 8, 9
+[facial_tension] flagged videos 79/306 (symptom videos 30, control videos 49) | flagged people: 1, 24, 26, 27, 3, 30, 31, 32, 35, 37, 38, 4, 40, 42, 43, 48, 49, 50, 51, 9
+[heavy_breathing] flagged videos 64/306 (symptom videos 36, control videos 28) | flagged people: 10, 15, 16, 2, 24, 27, 28, 3, 32, 34, 35, 4, 41, 47, 49, 9
+[fear] flagged videos 76/306 (symptom videos 34, control videos 42) | flagged people: 1, 2, 21, 23, 24, 28, 3, 35, 36, 38, 4, 40, 42, 43, 44, 47, 49, 50, 51, 7, 8, 9
+People whose symptom videos fail (>=50%) in 3 or more symptom models: 49 (6/7), 1 (3/7), 28 (3/7), 34 (3/7)
+
+Share of windows classified wrongly, by camera angle:
+angle            Left  Middle  Right
+symptom_model                       
+avoidant_gaze    0.13    0.17   0.25
+facial_tension   0.26    0.25   0.32
+fear             0.25    0.27   0.33
+fidgeting        0.15    0.14   0.18
+hand_tremor      0.18    0.20   0.25
+heavy_breathing  0.22    0.24   0.27
+knee_tremor      0.25    0.27   0.26
+
+How often each model says 'present' on each kind of window (diagonal = recall; control column = false-alarm rate):
+windows_of       control  fidgeting  hand_tremor  knee_tremor  avoidant_gaze  facial_tension  heavy_breathing  fear
+model                                                                                                              
+fidgeting           0.13       0.81         0.45         0.33           0.49            0.30             0.34  0.32
+hand_tremor         0.23       0.75         0.80         0.55           0.38            0.24             0.36  0.27
+knee_tremor         0.30       0.86         0.65         0.78           0.70            0.56             0.52  0.55
+avoidant_gaze       0.23       0.70         0.31         0.42           0.86            0.53             0.48  0.54
+facial_tension      0.34       0.67         0.38         0.54           0.79            0.79             0.54  0.55
+heavy_breathing     0.23       0.77         0.41         0.44           0.71            0.51             0.75  0.53
+fear                0.31       0.76         0.37         0.51           0.86            0.61             0.62  0.74

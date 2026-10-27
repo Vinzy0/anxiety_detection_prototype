@@ -1,0 +1,307 @@
+symptom_model,video_id,participant_id,angle,task_class,windows,failed,fail_frac,face_tracked,pose_tracked,left_hand_tracked,right_hand_tracked,outlier
+facial_tension,Left_Control_35_IMG_3163,35,Left,control,13,13,1.0,1.0,1.0,1.0,1.0,True
+facial_tension,Left_Control_37_IMG_3179,37,Left,control,13,13,1.0,1.0,1.0,0.0,1.0,True
+facial_tension,Right_Control_35_VID_20261023_092656,35,Right,control,13,13,1.0,0.0,1.0,1.0,0.97628206,True
+facial_tension,Right_Control_7_VID_20261019_104710,7,Right,control,14,14,1.0,0.0,1.0,1.0,0.0011904762,True
+facial_tension,Right_Control_51_VID_20261024_155551,51,Right,control,13,13,1.0,0.0,1.0,0.0,1.0,True
+facial_tension,Right_Control_46_IMG_4072,46,Right,control,13,13,1.0,0.0,1.0,0.3301282,0.66987175,True
+facial_tension,Right_Control_40_VID_20261023_140520,40,Right,control,13,13,1.0,0.0,1.0,0.60641026,0.7038461,True
+facial_tension,Left_Control_4_IMG_2867,4,Left,control,13,13,1.0,0.8269231,1.0,0.13205129,0.99871796,True
+facial_tension,Left_Control_43_IMG_3238,43,Left,control,13,13,1.0,1.0,1.0,0.0,1.0,True
+facial_tension,Left_Control_40_IMG_3203,40,Left,control,13,13,1.0,1.0,1.0,0.11282051,0.8628205,True
+facial_tension,Left_Control_2_IMG_3229,2,Left,control,13,13,1.0,1.0,1.0,0.0,1.0,True
+facial_tension,Left_Facial Tension_30_IMG_3123,30,Left,facial_tension,13,13,1.0,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Control_24_VID_20261019_160936,24,Right,control,14,14,1.0,1.0,1.0,1.0,0.9916667,True
+facial_tension,Left_Facial Tension_51_IMG_3319,51,Left,facial_tension,13,13,1.0,0.0,1.0,1.0,0.9948718,True
+facial_tension,Left_Facial Tension_32_IMG_3139,32,Left,facial_tension,13,13,1.0,1.0,1.0,0.0,1.0,True
+facial_tension,Right_Facial Tension_42_VID_20261023_150313,42,Right,facial_tension,13,13,1.0,0.0,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_49_VID_20261024_154512,49,Right,facial_tension,13,13,1.0,0.64866674,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_47_VID_20261024_152806,47,Right,facial_tension,13,13,1.0,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_48_VID_20261024_153832,48,Right,facial_tension,13,13,1.0,0.0,1.0,1.0,0.115384616,True
+facial_tension,Middle_Control_40_VID_20261023_140551,40,Middle,control,13,13,1.0,0.0,1.0,0.95000005,0.086538464,True
+facial_tension,Right_Control_38_VID_20261023_095528,38,Right,control,13,13,1.0,0.0,1.0,0.0,0.0,True
+facial_tension,Right_Control_17_VID_20261019_144410,17,Right,control,13,13,1.0,0.9525641,1.0,1.0,0.0,True
+facial_tension,Right_Control_21_VID_20261019_151952,21,Right,control,13,13,1.0,0.0,1.0,1.0,1.0,True
+facial_tension,Right_Control_26_VID_20261021_092757,26,Right,control,13,13,1.0,0.0,1.0,0.9858974,0.12564102,True
+facial_tension,Right_Control_27_VID_20261021_093928,27,Right,control,13,13,1.0,1.0,1.0,1.0,0.0,True
+facial_tension,Left_Control_9_IMG_2911,9,Left,control,13,13,1.0,1.0,1.0,0.0,1.0,True
+facial_tension,Left_Facial Tension_1_Participant-1,1,Left,facial_tension,13,13,1.0,1.0,1.0,0.17179488,1.0,True
+facial_tension,Middle_Facial Tension_51_VID_20261024_160036,51,Middle,facial_tension,13,13,1.0,0.0,1.0,1.0,0.6663462,True
+facial_tension,Middle_Control_3_VID_20261019_093735,3,Middle,control,13,13,1.0,1.0,1.0,1.0,0.623077,True
+facial_tension,Middle_Control_38_VID_20261023_095558,38,Middle,control,13,13,1.0,0.0,1.0,0.0,0.0,True
+facial_tension,Middle_Control_37_VID_20261023_094711,37,Middle,control,13,13,1.0,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Facial Tension_49_VID_20261024_154543,49,Middle,facial_tension,13,13,1.0,0.0,1.0,1.0,1.0,True
+facial_tension,Middle_Facial Tension_1_1,1,Middle,facial_tension,13,13,1.0,1.0,1.0,1.0,0.0,True
+facial_tension,Left_Control_10_IMG_2919,10,Left,control,14,13,0.9285714285714286,1.0,1.0,0.04047619,1.0,True
+facial_tension,Right_Control_16_VID_20261019_142911,16,Right,control,14,13,0.9285714285714286,0.9791666,1.0,1.0,1.0,True
+facial_tension,Left_Control_3_IMG_2857,3,Left,control,13,12,0.9230769230769231,0.96153843,1.0,0.0,1.0,True
+facial_tension,Middle_Control_9_VID_20261019_124210,9,Middle,control,13,12,0.9230769230769231,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_50_VID_20261024_155232,50,Right,facial_tension,13,12,0.9230769230769231,0.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_4_VID_20261019_100844,4,Middle,control,13,12,0.9230769230769231,0.9179487,1.0,0.8717948,0.5974359,True
+facial_tension,Middle_Facial Tension_42_VID_20261023_150343,42,Middle,facial_tension,13,12,0.9230769230769231,0.0,1.0,1.0,1.0,True
+facial_tension,Left_Facial Tension_49_IMG_3303,49,Left,facial_tension,13,12,0.9230769230769231,0.9846154,1.0,1.0,1.0,True
+facial_tension,Right_Control_36_VID_20261023_093637,36,Right,control,13,12,0.9230769230769231,0.9730769,1.0,0.98141026,0.018589744,True
+facial_tension,Right_Control_3_VID_20261019_093705,3,Right,control,13,12,0.9230769230769231,1.0,1.0,1.0,0.03717949,True
+facial_tension,Left_Control_31_IMG_3125,31,Left,control,13,12,0.9230769230769231,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Control_9_VID_20261019_124140,9,Right,control,13,11,0.8461538461538461,0.0,1.0,1.0,0.48205125,True
+facial_tension,Right_Control_28_VID_20261021_095020,28,Right,control,13,11,0.8461538461538461,1.0,1.0,1.0,0.07820512,True
+facial_tension,Right_Control_25_VID_20261019_161926,25,Right,control,13,11,0.8461538461538461,0.8320513,1.0,1.0,1.0,True
+facial_tension,Right_Control_43_VID_20261023_151300,43,Right,control,13,11,0.8461538461538461,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_43_VID_20261023_151331,43,Middle,control,13,11,0.8461538461538461,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_26_VID_20261021_092828,26,Middle,control,13,10,0.7692307692307693,1.0,1.0,0.17500001,0.99615383,True
+facial_tension,Right_Facial Tension_44_VID_20261023_152914,44,Right,facial_tension,13,10,0.7692307692307693,1.0,1.0,1.0,1.0,True
+facial_tension,Left_Facial Tension_42_IMG_3236,42,Left,facial_tension,13,10,0.7692307692307693,1.0,1.0,1.0,1.0,True
+facial_tension,Left_Facial Tension_48_IMG_3295,48,Left,facial_tension,13,10,0.7692307692307693,1.0,1.0,0.0,1.0,True
+facial_tension,Left_Facial Tension_21_IMG_3020,21,Left,facial_tension,13,10,0.7692307692307693,1.0,1.0,0.8448718,1.0,True
+facial_tension,Middle_Facial Tension_40_VID_20261023_141142,40,Middle,facial_tension,13,10,0.7692307692307693,0.0,1.0,0.99615383,0.9836539,True
+facial_tension,Left_Control_24_IMG_3038,24,Left,control,13,10,0.7692307692307693,0.0012820513,1.0,1.0,1.0,True
+facial_tension,Right_Control_39_VID_20261023_132825,39,Right,control,13,10,0.7692307692307693,0.0,1.0,1.0,0.3474359,True
+facial_tension,Left_Facial Tension_50_IMG_3311,50,Left,facial_tension,13,9,0.6923076923076923,1.0,1.0,0.9916667,1.0,True
+facial_tension,Left_Facial Tension_28_IMG_3104,28,Left,facial_tension,13,9,0.6923076923076923,1.0,1.0,0.0,1.0,True
+facial_tension,Left_Facial Tension_8_IMG_2909,8,Left,facial_tension,13,9,0.6923076923076923,0.0012820513,1.0,0.0,1.0,True
+facial_tension,Middle_Facial Tension_32_VID_20261021_130238,32,Middle,facial_tension,13,9,0.6923076923076923,1.0,1.0,0.6653846,1.0,True
+facial_tension,Middle_Facial Tension_21_VID_20261019_152458,21,Middle,facial_tension,13,9,0.6923076923076923,0.79230773,1.0,0.8961538,1.0,True
+facial_tension,Left_Control_27_IMG_3088,27,Left,control,13,9,0.6923076923076923,1.0,1.0,1.0,0.6,True
+facial_tension,Left_Control_26_IMG_3080,26,Left,control,13,9,0.6923076923076923,1.0,1.0,0.0,1.0,True
+facial_tension,Middle_Control_31_VID_20261021_124713,31,Middle,control,13,9,0.6923076923076923,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_32_VID_20261021_130208,32,Right,facial_tension,14,9,0.6428571428571429,0.0,1.0,0.16190477,0.93095237,True
+facial_tension,Middle_Control_8_VID_20261019_123054,8,Middle,control,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Facial Tension_41_VID_20261023_142923,41,Right,facial_tension,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_48_VID_20261024_153432,48,Middle,control,13,8,0.6153846153846154,0.0,1.0,1.0,1.0,True
+facial_tension,Middle_Facial Tension_44_VID_20261023_152945,44,Middle,facial_tension,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_24_VID_20261019_161006,24,Middle,control,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+facial_tension,Left_Control_22_IMG_3022,22,Left,control,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+facial_tension,Right_Control_8_VID_20261019_123023,8,Right,control,13,8,0.6153846153846154,0.0,1.0,1.0,0.0,True
+facial_tension,Middle_Facial Tension_7_VID_20261019_105136,7,Middle,facial_tension,13,7,0.5384615384615384,0.44102567,1.0,1.0,0.9621795,True
+facial_tension,Middle_Control_27_VID_20261021_093959,27,Middle,control,13,7,0.5384615384615384,1.0,1.0,1.0,1.0,True
+facial_tension,Left_Facial Tension_4_IMG_2869,4,Left,facial_tension,13,7,0.5384615384615384,0.0012820513,1.0,1.0,1.0,True
+facial_tension,Right_Control_31_VID_20261021_124643,31,Right,control,13,7,0.5384615384615384,0.0,1.0,1.0,1.0,True
+facial_tension,Middle_Facial Tension_30_VID_20261021_124242,30,Middle,facial_tension,13,7,0.5384615384615384,1.0,1.0,1.0,1.0,True
+facial_tension,Middle_Control_23_VID_20261019_155827,23,Middle,control,13,7,0.5384615384615384,0.46153846,1.0,0.98846155,0.47115386,True
+facial_tension,Middle_Facial Tension_50_VID_20261024_155302,50,Middle,facial_tension,13,6,0.46153846153846156,0.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_23_VID_20261019_160350,23,Middle,facial_tension,13,6,0.46153846153846156,1.0,1.0,0.93653846,1.0,False
+facial_tension,Right_Facial Tension_40_VID_20261023_141111,40,Right,facial_tension,13,6,0.46153846153846156,0.2628205,1.0,1.0,0.8551282,False
+facial_tension,Middle_Facial Tension_22_VID_20261019_155424,22,Middle,facial_tension,13,5,0.38461538461538464,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_4_VID_20261019_100814,4,Right,control,13,5,0.38461538461538464,0.19743589,1.0,0.9974359,0.12179487,False
+facial_tension,Right_Facial Tension_15_VID_20261019_141115,15,Right,facial_tension,13,5,0.38461538461538464,0.8782052,1.0,1.0,0.97596157,False
+facial_tension,Left_Facial Tension_14_IMG_2960,14,Left,facial_tension,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_47_IMG_3286,47,Left,facial_tension,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_5_VID_20261019_101823,5,Middle,control,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_21_VID_20261019_152023,21,Middle,control,13,5,0.38461538461538464,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_22_VID_20261019_154811,22,Right,control,14,5,0.35714285714285715,0.89523804,1.0,1.0,1.0,False
+facial_tension,Left_Control_36_IMG_3171,36,Left,control,13,4,0.3076923076923077,1.0,1.0,0.98782057,0.2948718,False
+facial_tension,Middle_Control_29_VID_20261021_122429,29,Middle,control,13,4,0.3076923076923077,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_35_VID_20261023_092726,35,Middle,control,13,4,0.3076923076923077,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_41_VID_20261023_142343,41,Right,control,13,4,0.3076923076923077,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_23_IMG_3036,23,Left,facial_tension,13,4,0.3076923076923077,1.0,1.0,0.0,1.0,False
+facial_tension,Right_Facial Tension_39_VID_20261023_133358,39,Right,facial_tension,13,4,0.3076923076923077,0.3897436,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_28_VID_20261021_095621,28,Middle,facial_tension,13,4,0.3076923076923077,1.0,1.0,0.0,1.0,False
+facial_tension,Right_Facial Tension_23_VID_20261019_160319,23,Right,facial_tension,14,4,0.2857142857142857,1.0,1.0,1.0,0.52559525,False
+facial_tension,Right_Facial Tension_18_VID_20261019_145719,18,Right,facial_tension,14,4,0.2857142857142857,0.97440475,1.0,1.0,1.0,False
+facial_tension,Right_Control_5_VID_20261019_101751,5,Right,control,14,4,0.2857142857142857,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_22_VID_20261019_154840,22,Middle,control,12,3,0.25,0.99895835,1.0,1.0,1.0,False
+facial_tension,Middle_Control_51_VID_20261024_155622,51,Middle,control,13,3,0.23076923076923078,0.34807694,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_30_VID_20261021_124211,30,Right,facial_tension,13,3,0.23076923076923078,0.77307695,1.0,0.0,1.0,False
+facial_tension,Left_Control_20_IMG_3006,20,Left,control,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_23_IMG_3030,23,Left,control,13,3,0.23076923076923078,1.0,1.0,0.82564104,1.0,False
+facial_tension,Right_Control_23_VID_20261019_155755,23,Right,control,13,3,0.23076923076923078,1.0,1.0,1.0,0.6564102,False
+facial_tension,Left_Facial Tension_33_IMG_3147,33,Left,facial_tension,13,3,0.23076923076923078,1.0,1.0,0.0,1.0,False
+facial_tension,Right_Control_11_VID_20261019_133621,11,Right,control,13,3,0.23076923076923078,0.8423077,1.0,0.99871796,0.9371795,False
+facial_tension,Middle_Control_11_VID_20261019_133652,11,Middle,control,13,3,0.23076923076923078,1.0,1.0,0.97692305,1.0,False
+facial_tension,Left_Control_34_IMG_3155,34,Left,control,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_36_VID_20261023_093708,36,Middle,control,13,3,0.23076923076923078,0.60384613,1.0,0.97980773,0.020192306,False
+facial_tension,Middle_Control_25_VID_20261019_161957,25,Middle,control,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_38_VID_20261023_100118,38,Middle,facial_tension,13,3,0.23076923076923078,0.58461535,1.0,1.0,0.97692305,False
+facial_tension,Middle_Control_46_VID_20261024_120056,46,Middle,control,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_2_VID_20261023_145529,2,Middle,control,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_13_VID_20261019_135130,13,Right,control,13,3,0.23076923076923078,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_37_VID_20261023_094640,37,Right,control,13,3,0.23076923076923078,1.0,1.0,1.0,0.0,False
+facial_tension,Right_Facial Tension_8_VID_20261019_123550,8,Right,facial_tension,13,2,0.15384615384615385,0.0,1.0,0.9423077,0.0,False
+facial_tension,Right_Facial Tension_27_VID_20261021_094445,27,Right,facial_tension,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_31_VID_20261021_125256,31,Right,facial_tension,13,2,0.15384615384615385,0.7141025,1.0,1.0,0.9596154,False
+facial_tension,Left_Control_44_IMG_3246,44,Left,control,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_11_VID_20261019_134140,11,Right,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.93076926,0.55,False
+facial_tension,Left_Control_32_IMG_3133,32,Left,control,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_40_IMG_3209,40,Left,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.9474359,1.0,False
+facial_tension,Left_Facial Tension_45_IMG_3266,45,Left,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_2_Participant-2,2,Left,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.0,1.0,False
+facial_tension,Right_Control_20_VID_20261019_151130,20,Right,control,13,2,0.15384615384615385,0.0,1.0,1.0,0.9570513,False
+facial_tension,Right_Control_2_VID_20261023_145458,2,Right,control,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_30_VID_20261021_123612,30,Right,control,13,2,0.15384615384615385,0.7333333,1.0,0.0,1.0,False
+facial_tension,Left_Control_5_IMG_2876,5,Left,control,13,2,0.15384615384615385,0.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_8_VID_20261019_123620,8,Middle,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.6035714,0.999359,False
+facial_tension,Middle_Facial Tension_18_VID_20261019_145749,18,Middle,facial_tension,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_32_VID_20261021_125721,32,Middle,control,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_45_VID_20261024_115455,45,Middle,facial_tension,13,2,0.15384615384615385,1.0,1.0,0.075,0.9894231,False
+facial_tension,Middle_Control_10_VID_20261019_125221,10,Middle,control,13,2,0.15384615384615385,1.0,1.0,1.0,0.9974359,False
+facial_tension,Middle_Control_47_VID_20261024_152334,47,Middle,control,13,2,0.15384615384615385,0.51346153,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_10_VID_20261019_125922,10,Middle,facial_tension,13,2,0.15384615384615385,1.0,1.0,1.0,0.5997468,False
+facial_tension,Right_Facial Tension_7_VID_20261019_105104,7,Right,facial_tension,13,2,0.15384615384615385,0.0,1.0,1.0,0.11217949,False
+facial_tension,Left_Control_11_IMG_2929,11,Left,control,13,2,0.15384615384615385,1.0,1.0,0.7807692,1.0,False
+facial_tension,Middle_Facial Tension_2_VID_20261017_125500,2,Middle,facial_tension,14,2,0.14285714285714285,1.0,1.0,0.19107142,0.98928577,False
+facial_tension,Middle_Facial Tension_17_VID_20261019_144853,17,Middle,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_20_VID_20261019_151201,20,Middle,control,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_5_IMG_2882,5,Left,facial_tension,13,1,0.07692307692307693,0.9224359,1.0,0.4897436,0.99615383,False
+facial_tension,Middle_Control_13_VID_20261019_135201,13,Middle,control,13,1,0.07692307692307693,0.9846154,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_3_VID_20261019_094153,3,Middle,facial_tension,13,1,0.07692307692307693,1.0,1.0,0.8038461,0.9211539,False
+facial_tension,Middle_Control_16_VID_20261019_142943,16,Middle,control,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_12_IMG_2943,12,Left,facial_tension,13,1,0.07692307692307693,1.0,1.0,0.7134615,1.0,False
+facial_tension,Right_Control_32_VID_20261021_125651,32,Right,control,13,1,0.07692307692307693,0.7692308,1.0,1.0,0.8538462,False
+facial_tension,Right_Control_34_VID_20261023_091248,34,Right,control,13,1,0.07692307692307693,0.35641024,1.0,1.0,1.0,False
+facial_tension,Right_Control_45_IMG_4062,45,Right,control,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_41_IMG_3212,41,Left,control,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_28_VID_20261021_095551,28,Right,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,0.015384615,False
+facial_tension,Right_Control_1_VID_20261023_145342,1,Right,control,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_27_IMG_3094,27,Left,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,0.9891026,False
+facial_tension,Middle_Facial Tension_5_VID_20261019_102311,5,Middle,facial_tension,13,1,0.07692307692307693,1.0,1.0,0.9064102,0.99100405,False
+facial_tension,Left_Facial Tension_44_IMG_3252,44,Left,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_29_VID_20261021_122358,29,Right,control,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_37_VID_20261023_095112,37,Right,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,0.0,False
+facial_tension,Left_Control_29_IMG_3106,29,Left,control,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_34_VID_20261023_091836,34,Right,facial_tension,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_17_VID_20261019_144822,17,Right,facial_tension,13,1,0.07692307692307693,1.0,1.0,0.57820517,0.3846154,False
+facial_tension,Right_Facial Tension_12_VID_20261019_134913,12,Right,facial_tension,13,1,0.07692307692307693,0.0,1.0,1.0,0.052564103,False
+facial_tension,Right_Facial Tension_29_VID_20261021_123210,29,Right,facial_tension,14,1,0.07142857142857142,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_3_VID_20261019_094122,3,Right,facial_tension,14,1,0.07142857142857142,1.0,1.0,0.9988095,0.08214285,False
+facial_tension,Right_Facial Tension_13_VID_20261019_135537,13,Right,facial_tension,14,1,0.07142857142857142,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_4_VID_20261019_101154,4,Right,facial_tension,14,1,0.07142857142857142,0.6797619,1.0,0.9446429,0.05535714,False
+facial_tension,Right_Facial Tension_6_VID_20261019_103405,6,Right,facial_tension,14,1,0.07142857142857142,0.55595237,1.0,0.0,0.0,False
+facial_tension,Right_Control_10_VID_20261019_125150,10,Right,control,14,1,0.07142857142857142,0.0,1.0,1.0,0.98928577,False
+facial_tension,Left_Control_21_IMG_3014,21,Left,control,13,0,0.0,1.0,1.0,1.0,0.9698718,False
+facial_tension,Right_Facial Tension_43_VID_20261023_151750,43,Right,facial_tension,13,0,0.0,0.9967948,1.0,1.0,0.0,False
+facial_tension,Left_Control_18_IMG_2988,18,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_17_IMG_2978,17,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_16_IMG_2970,16,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_15_IMG_2962,15,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_25_IMG_3046,25,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_12_IMG_2937,12,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_13_IMG_2945,13,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_14_IMG_2953,14,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_34_VID_20261023_091320,34,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_33_VID_20261021_130658,33,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_30_VID_20261021_123642,30,Middle,control,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Control_28_VID_20261021_095050,28,Middle,control,13,0,0.0,1.0,1.0,1.0,0.91730773,False
+facial_tension,Middle_Facial Tension_15_VID_20261019_141145,15,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_16_VID_20261019_143412,16,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_13_VID_20261019_135608,13,Middle,facial_tension,13,0,0.0,0.575,1.0,1.0,0.95769227,False
+facial_tension,Middle_Facial Tension_14_VID_20261019_140301,14,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_7_VID_20261019_104741,7,Middle,control,13,0,0.0,0.4576923,1.0,1.0,1.0,False
+facial_tension,Middle_Control_6_VID_20261019_103003,6,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_12_VID_20261019_134944,12,Middle,facial_tension,13,0,0.0,0.98173076,1.0,0.998077,0.94134617,False
+facial_tension,Middle_Facial Tension_11_VID_20261019_134211,11,Middle,facial_tension,13,0,0.0,1.0,1.0,0.9634615,0.9480769,False
+facial_tension,Middle_Control_50_VID_20261024_154851,50,Middle,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_49_VID_20261024_154139,49,Middle,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_44_VID_20261023_152509,44,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_45_VID_20261024_114902,45,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_1_IMG_3228,1,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_45_IMG_4070,45,Right,facial_tension,14,0,0.0,0.0,1.0,0.9988095,0.70297617,False
+facial_tension,Middle_Control_42_VID_20261023_145855,42,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_41_VID_20261023_142414,41,Middle,control,13,0,0.0,0.18846154,1.0,1.0,1.0,False
+facial_tension,Middle_Control_39_VID_20261023_132856,39,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_5_VID_20261019_102241,5,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.043589745,False
+facial_tension,Right_Facial Tension_51_VID_20261024_160005,51,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.016254855,False
+facial_tension,Right_Facial Tension_46_IMG_4079,46,Right,facial_tension,13,0,0.0,0.0,1.0,0.8948718,0.08525641,False
+facial_tension,Left_Control_19_IMG_2997,19,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_37_VID_20261023_095142,37,Middle,facial_tension,13,0,0.0,0.99038464,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_39_VID_20261023_133429,39,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_31_VID_20261021_125326,31,Middle,facial_tension,13,0,0.0,1.0,1.0,0.5605769,0.43269232,False
+facial_tension,Middle_Facial Tension_29_VID_20261021_123242,29,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_25_VID_20261019_162420,25,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_24_VID_20261019_161444,24,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_19_VID_20261019_150756,19,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_1_VID_20261023_145413,1,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_19_VID_20261019_150335,19,Middle,control,13,0,0.0,0.81923074,1.0,1.0,1.0,False
+facial_tension,Middle_Control_18_VID_20261019_145320,18,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_17_VID_20261019_144441,17,Middle,control,13,0,0.0,1.0,1.0,1.0,0.0,False
+facial_tension,Middle_Control_15_VID_20261019_140627,15,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Control_14_VID_20261019_135850,14,Middle,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_4_VID_20261019_101225,4,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0025694894,1.0,False
+facial_tension,Middle_Facial Tension_48_VID_20261024_153902,48,Middle,facial_tension,13,0,0.0,0.0,1.0,0.8173077,1.0,False
+facial_tension,Right_Control_12_VID_20261019_134459,12,Right,control,16,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_14_VID_20261019_135820,14,Right,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_39_IMG_3201,39,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_38_IMG_3193,38,Left,facial_tension,13,0,0.0,1.0,1.0,0.12564102,0.874359,False
+facial_tension,Left_Facial Tension_3_IMG_2862,3,Left,facial_tension,13,0,0.0,1.0,1.0,0.98717946,1.0,False
+facial_tension,Middle_Facial Tension_6_VID_20261019_103435,6,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_9_VID_20261019_124658,9,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_47_VID_20261024_152837,47,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_46_IMG_3275,46,Left,facial_tension,13,0,0.0,0.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_43_IMG_3244,43,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_36_VID_20261023_094229,36,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,0.0,False
+facial_tension,Middle_Facial Tension_41_VID_20261023_142953,41,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_6_IMG_2891,6,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,0.0,False
+facial_tension,Left_Facial Tension_7_IMG_2899,7,Left,facial_tension,13,0,0.0,0.60384613,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_43_VID_20261023_151821,43,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,0.0,False
+facial_tension,Middle_Facial Tension_46_VID_20261024_120604,46,Middle,facial_tension,13,0,0.0,1.0,1.0,0.60865384,0.39134616,False
+facial_tension,Middle_Control_12_VID_20261019_134532,12,Middle,control,13,0,0.0,0.9913461,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_9_IMG_2917,9,Left,facial_tension,13,0,0.0,0.7230769,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_34_VID_20261023_091907,34,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_33_VID_20261021_131144,33,Middle,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Middle_Facial Tension_35_VID_20261023_093235,35,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Middle_Facial Tension_26_VID_20261021_093356,26,Middle,facial_tension,13,0,0.0,1.0,1.0,0.41153845,1.0,False
+facial_tension,Middle_Facial Tension_27_VID_20261021_094517,27,Middle,facial_tension,13,0,0.0,1.0,1.0,0.24615385,1.0,False
+facial_tension,Middle_Facial Tension_20_VID_20261019_151636,20,Middle,facial_tension,13,0,0.0,1.0,1.0,1.0,0.9942308,False
+facial_tension,Left_Control_8_IMG_2902,8,Left,control,13,0,0.0,0.0,1.0,0.998077,1.0,False
+facial_tension,Right_Control_19_VID_20261019_150304,19,Right,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_15_VID_20261019_140556,15,Right,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_18_VID_20261019_145250,18,Right,control,14,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_37_IMG_3185,37,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_36_IMG_3177,36,Left,facial_tension,13,0,0.0,1.0,1.0,0.24038461,0.65833336,False
+facial_tension,Left_Facial Tension_34_IMG_3161,34,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_35_IMG_3169,35,Left,facial_tension,13,0,0.0,1.0,1.0,0.052564103,0.9474359,False
+facial_tension,Left_Facial Tension_26_IMG_3086,26,Left,facial_tension,13,0,0.0,0.99615383,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_25_IMG_3053,25,Left,facial_tension,13,0,0.0,0.99871796,1.0,0.53397435,1.0,False
+facial_tension,Left_Facial Tension_31_IMG_3131,31,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_29_IMG_3114,29,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_24_IMG_3044,24,Left,facial_tension,13,0,0.0,0.0,1.0,0.057692308,1.0,False
+facial_tension,Left_Facial Tension_41_IMG_3219,41,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_15_IMG_2968,15,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_16_IMG_2976,16,Left,facial_tension,13,0,0.0,0.9628205,1.0,1.0,1.0,False
+facial_tension,Right_Control_44_VID_20261023_152438,44,Right,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_42_VID_20261023_145824,42,Right,control,13,0,0.0,0.05512821,1.0,1.0,1.0,False
+facial_tension,Right_Control_48_VID_20261024_153402,48,Right,control,14,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_47_VID_20261024_152302,47,Right,control,15,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_49_VID_20261024_154108,49,Right,control,13,0,0.0,0.1875,1.0,1.0,1.0,False
+facial_tension,Right_Control_50_VID_20261024_154820,50,Right,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Right_Control_6_VID_20261019_102933,6,Right,control,14,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_10_IMG_2927,10,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_18_IMG_2994,18,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_17_IMG_2985,17,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_20_IMG_3012,20,Left,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_19_IMG_3004,19,Left,facial_tension,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Facial Tension_22_IMG_3028,22,Left,facial_tension,13,0,0.0,1.0,1.0,0.8339744,1.0,False
+facial_tension,Right_Control_33_VID_20261021_130628,33,Right,control,13,0,0.0,0.0,1.0,1.0,1.0,False
+facial_tension,Left_Facial Tension_11_IMG_2935,11,Left,facial_tension,14,0,0.0,1.0,1.0,0.9047619,0.9541667,False
+facial_tension,Left_Facial Tension_13_IMG_2951,13,Left,facial_tension,13,0,0.0,1.0,1.0,0.7717949,1.0,False
+facial_tension,Left_Control_51_IMG_3313,51,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_50_IMG_3305,50,Left,control,14,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_49_IMG_3297,49,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_48_IMG_3288,48,Left,control,13,0,0.0,0.974359,1.0,1.0,1.0,False
+facial_tension,Left_Control_47_IMG_3280,47,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_46_IMG_3269,46,Left,control,13,0,0.0,0.0,1.0,1.0,0.0,False
+facial_tension,Left_Control_45_IMG_3260,45,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Left_Control_42_IMG_3230,42,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_10_VID_20261019_125852,10,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.0064102565,False
+facial_tension,Right_Facial Tension_20_VID_20261019_151605,20,Right,facial_tension,14,0,0.0,0.9619048,1.0,1.0,0.25535715,False
+facial_tension,Right_Facial Tension_1_P1_FacialTension,1,Right,facial_tension,13,0,0.0,1.0,1.0,1.0,0.0032051282,False
+facial_tension,Left_Control_7_IMG_2894,7,Left,control,13,0,0.0,1.0,1.0,0.005769231,1.0,False
+facial_tension,Left_Control_6_IMG_2886,6,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_14_VID_20261019_140230,14,Right,facial_tension,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_16_VID_20261019_143342,16,Right,facial_tension,14,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_19_VID_20261019_150726,19,Right,facial_tension,13,0,0.0,0.93333334,1.0,1.0,0.50384617,False
+facial_tension,Left_Control_28_IMG_3097,28,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_26_VID_20261021_093325,26,Right,facial_tension,14,0,0.0,1.0,1.0,0.93452376,0.5083333,False
+facial_tension,Right_Facial Tension_25_VID_20261019_162349,25,Right,facial_tension,13,0,0.0,0.0,1.0,0.0,0.0,False
+facial_tension,Right_Facial Tension_24_VID_20261019_161413,24,Right,facial_tension,14,0,0.0,0.0,1.0,0.0625,0.9375,False
+facial_tension,Right_Facial Tension_22_VID_20261019_155354,22,Right,facial_tension,13,0,0.0,0.99038464,1.0,1.0,0.0,False
+facial_tension,Right_Facial Tension_21_VID_20261019_152428,21,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.02371795,False
+facial_tension,Left_Control_38_IMG_3187,38,Left,control,13,0,0.0,1.0,1.0,0.0,0.0,False
+facial_tension,Left_Control_30_IMG_3116,30,Left,control,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Right_Facial Tension_2_VID_20261017_125428,2,Right,facial_tension,13,0,0.0,1.0,1.0,0.16410255,0.9512821,False
+facial_tension,Left_Control_39_IMG_3195,39,Left,control,13,0,0.0,1.0,1.0,0.0,1.0,False
+facial_tension,Left_Control_33_IMG_3141,33,Left,control,13,0,0.0,1.0,1.0,1.0,1.0,False
+facial_tension,Right_Facial Tension_33_VID_20261021_131113,33,Right,facial_tension,13,0,0.0,0.9673077,1.0,0.85833335,0.024358975,False
+facial_tension,Right_Facial Tension_36_VID_20261023_094158,36,Right,facial_tension,13,0,0.0,1.0,1.0,0.94487184,0.05512821,False
+facial_tension,Right_Facial Tension_35_VID_20261023_093204,35,Right,facial_tension,13,0,0.0,0.81666666,1.0,1.0,0.032051284,False
+facial_tension,Right_Facial Tension_38_VID_20261023_100047,38,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.030128203,False
+facial_tension,Right_Facial Tension_9_VID_20261019_124628,9,Right,facial_tension,13,0,0.0,0.0,1.0,1.0,0.29871795,False

@@ -3,9 +3,11 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 
 import csv
 import gzip
+import io
 import json
 import math
 import urllib.request
+import zlib
 from pathlib import Path
 
 import cv2
@@ -158,6 +160,61 @@ def find_videos():
                             "video_id": path.relative_to(DATASET_ROOT).with_suffix("").as_posix().replace("/", "_"),
                         })
     return sorted(videos, key=lambda item: str(item["path"]).casefold())
+
+
+def existing_lines():
+    try:
+        with gzip.open(OUTPUT_CSV, "rt", newline="", encoding="utf-8") as file:
+            for line in file:
+                yield line
+    except (EOFError, zlib.error, gzip.BadGzipFile):
+        print("Existing CSV ends abruptly; its last video will be re-checked.")
+
+
+def line_video_id(line, index):
+    return next(csv.reader([line[:1024]]))[index]
+
+
+def existing_videos():
+    counts, last = {}, None
+    if not OUTPUT_CSV.is_file() or OUTPUT_CSV.stat().st_size == 0:
+        return counts, last
+    lines = existing_lines()
+    header = next(csv.reader([next(lines, "")]), [])
+    if not header:
+        return counts, last
+    if header != CSV_COLUMNS:
+        raise ValueError(f"Existing CSV columns differ from this script's columns: {OUTPUT_CSV}")
+    index = header.index("video_id")
+    for line in lines:
+        if line.strip():
+            last = line_video_id(line, index)
+            counts[last] = counts.get(last, 0) + 1
+    return counts, last
+
+
+def count_frames(path):
+    cap = cv2.VideoCapture(str(path), cv2.CAP_FFMPEG)
+    if not cap.isOpened():
+        cap.release()
+        cap = cv2.VideoCapture(str(path))
+    frames = 0
+    while cap.grab():
+        frames += 1
+    cap.release()
+    return frames
+
+
+def drop_video_rows(video_id):
+    temp = OUTPUT_CSV.with_name(OUTPUT_CSV.name + ".tmp")
+    index = CSV_COLUMNS.index("video_id")
+    lines = existing_lines()
+    with gzip.open(temp, "wt", newline="", encoding="utf-8", compresslevel=1) as file:
+        file.write(next(lines))
+        for line in lines:
+            if line.strip() and line_video_id(line, index) != video_id:
+                file.write(line)
+    os.replace(temp, OUTPUT_CSV)
 
 
 def pixel_xyz(landmark, width, height):
@@ -383,21 +440,36 @@ def main():
     if not videos:
         raise FileNotFoundError(f"No supported videos found under: {DATASET_ROOT}")
 
-    model_paths = ensure_models()
     FEATURE_GROUPS_JSON.write_text(json.dumps(feature_groups(), indent=2), encoding="utf-8")
+    done, last = existing_videos()
+    by_id = {video["video_id"]: video for video in videos}
+    if last in by_id and done[last] != count_frames(by_id[last]["path"]):
+        print(f"Incomplete rows found for {last}; removing them and extracting it again.")
+        drop_video_rows(last)
+        del done[last]
+    todo = [video for video in videos if video["video_id"] not in done]
+    print(f"Already extracted: {len(done)} | To extract: {len(todo)}")
+    if not todo:
+        print(f"Nothing to do. CSV: {OUTPUT_CSV}")
+        return
+
+    model_paths = ensure_models()
     total_frames = 0
     failed = 0
-    with gzip.open(OUTPUT_CSV, "wt", newline="", encoding="utf-8", compresslevel=1) as file:
-        writer = csv.DictWriter(file, fieldnames=CSV_COLUMNS)
-        writer.writeheader()
-        for video in videos:
+    with gzip.open(OUTPUT_CSV, "at" if done else "wt", newline="", encoding="utf-8", compresslevel=1) as file:
+        if not done:
+            csv.DictWriter(file, fieldnames=CSV_COLUMNS).writeheader()
+        for video in todo:
+            buffer = io.StringIO()
             try:
-                total_frames += extract_video(video, writer, model_paths)
+                total_frames += extract_video(video, csv.DictWriter(buffer, fieldnames=CSV_COLUMNS), model_paths)
+                file.write(buffer.getvalue())
+                file.flush()
             except Exception as error:
                 failed += 1
                 print(f"Failed: {video['path']} ({error})")
 
-    print(f"Videos: {len(videos)} | Frames extracted: {total_frames} | Failed: {failed}")
+    print(f"Videos: {len(videos)} | Skipped: {len(done)} | Extracted: {len(todo) - failed} | Frames extracted: {total_frames} | Failed: {failed}")
     print(f"CSV: {OUTPUT_CSV}")
     print(f"Feature groups: {FEATURE_GROUPS_JSON}")
 
