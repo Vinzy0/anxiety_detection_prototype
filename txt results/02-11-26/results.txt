@@ -1,0 +1,331 @@
+Evaluation class counts [fidgeting]: control=1,086 | symptom=2,025
+Evaluation class counts [hand_tremor]: control=1,086 | symptom=2,018
+Evaluation class counts [knee_tremor]: control=1,086 | symptom=2,000
+Evaluation class counts [avoidant_gaze]: control=1,086 | symptom=2,016
+Evaluation class counts [facial_tension]: control=1,086 | symptom=2,004
+Evaluation class counts [heavy_breathing]: control=1,086 | symptom=2,009
+Evaluation class counts [fear]: control=1,086 | symptom=1,981
+LightGBM | features=both (1122 columns) | windows=16,057 | people=51
+Reserved calibration=765 | overlap guard=153 | evaluation/training=15,139
+Participant-angle baselines=153 | angle coverage: {'Left': 51, 'Middle': 51, 'Right': 51} | participants by number of calibrated angles: {3: 51}
+Evaluation Control windows=1,086 | excluded training participants=none
+Arms=['base', 'personal', 'personal_weighted'] | tracking filter=OFF | smoothing=3
+[fidgeting] personal features=360 | calibrated windows=14,844/15,139
+[hand_tremor] personal features=360 | calibrated windows=14,844/15,139
+[knee_tremor] personal features=100 | calibrated windows=15,139/15,139
+[avoidant_gaze] personal features=100 | calibrated windows=10,381/15,139
+[facial_tension] personal features=398 | calibrated windows=10,381/15,139
+[heavy_breathing] personal features=90 | calibrated windows=15,139/15,139
+[fear] personal features=398 | calibrated windows=10,381/15,139
+
+=== base ===
+[fidgeting|base] fold 0: windows=665 | precision=0.958 recall=0.845 F1=0.898 accuracy=0.875
+[fidgeting|base] fold 1: windows=607 | precision=0.956 recall=0.719 F1=0.821 accuracy=0.796
+[fidgeting|base] fold 2: windows=613 | precision=0.904 recall=0.977 F1=0.939 accuracy=0.918
+[fidgeting|base] fold 3: windows=622 | precision=0.872 recall=0.922 F1=0.896 accuracy=0.860
+[fidgeting|base] fold 4: windows=604 | precision=0.883 recall=1.000 F1=0.938 accuracy=0.914
+[fidgeting] precision=0.911 recall=0.892 F1=0.901 accuracy=0.873 AUC=0.941 | TN=909 FP=177 FN=219 TP=1806
+[fidgeting] final training windows=3,111 | deployment threshold=0.670
+[hand_tremor|base] fold 0: windows=664 | precision=0.967 recall=0.613 F1=0.751 accuracy=0.735
+[hand_tremor|base] fold 1: windows=607 | precision=0.772 recall=0.894 F1=0.829 accuracy=0.759
+[hand_tremor|base] fold 2: windows=609 | precision=0.950 recall=0.870 F1=0.908 accuracy=0.887
+[hand_tremor|base] fold 3: windows=621 | precision=0.931 recall=0.823 F1=0.874 accuracy=0.844
+[hand_tremor|base] fold 4: windows=603 | precision=0.850 recall=0.929 F1=0.888 accuracy=0.847
+[hand_tremor] precision=0.883 recall=0.822 F1=0.851 accuracy=0.813 AUC=0.906 | TN=866 FP=220 FN=360 TP=1658
+[hand_tremor] final training windows=3,104 | deployment threshold=0.430
+[knee_tremor|base] fold 0: windows=666 | precision=0.944 recall=0.654 F1=0.773 accuracy=0.749
+[knee_tremor|base] fold 1: windows=604 | precision=0.829 recall=0.852 F1=0.840 accuracy=0.790
+[knee_tremor|base] fold 2: windows=613 | precision=0.836 recall=0.899 F1=0.866 accuracy=0.821
+[knee_tremor|base] fold 3: windows=602 | precision=0.861 recall=0.827 F1=0.844 accuracy=0.802
+[knee_tremor|base] fold 4: windows=601 | precision=0.871 recall=0.882 F1=0.876 accuracy=0.839
+[knee_tremor] precision=0.864 recall=0.820 F1=0.841 accuracy=0.799 AUC=0.869 | TN=827 FP=259 FN=361 TP=1639
+[knee_tremor] final training windows=3,086 | deployment threshold=0.610
+[avoidant_gaze|base] fold 0: windows=667 | precision=0.904 recall=0.933 F1=0.919 accuracy=0.892
+[avoidant_gaze|base] fold 1: windows=606 | precision=0.931 recall=0.820 F1=0.872 accuracy=0.843
+[avoidant_gaze|base] fold 2: windows=611 | precision=0.853 recall=0.868 F1=0.860 accuracy=0.818
+[avoidant_gaze|base] fold 3: windows=615 | precision=0.872 recall=0.920 F1=0.896 accuracy=0.860
+[avoidant_gaze|base] fold 4: windows=603 | precision=0.840 recall=0.913 F1=0.875 accuracy=0.831
+[avoidant_gaze] precision=0.879 recall=0.892 F1=0.885 accuracy=0.850 AUC=0.914 | TN=838 FP=248 FN=218 TP=1798
+[avoidant_gaze] final training windows=3,102 | deployment threshold=0.670
+[facial_tension|base] fold 0: windows=664 | precision=0.857 recall=0.958 F1=0.905 accuracy=0.869
+[facial_tension|base] fold 1: windows=604 | precision=0.903 recall=0.689 F1=0.781 accuracy=0.750
+[facial_tension|base] fold 2: windows=610 | precision=0.787 recall=0.761 F1=0.774 accuracy=0.713
+[facial_tension|base] fold 3: windows=609 | precision=0.814 recall=0.785 F1=0.799 accuracy=0.744
+[facial_tension|base] fold 4: windows=603 | precision=0.814 recall=0.727 F1=0.768 accuracy=0.715
+[facial_tension] precision=0.834 recall=0.787 F1=0.810 accuracy=0.760 AUC=0.828 | TN=771 FP=315 FN=426 TP=1578
+[facial_tension] final training windows=3,090 | deployment threshold=0.550
+[heavy_breathing|base] fold 0: windows=666 | precision=0.905 recall=0.839 F1=0.871 accuracy=0.838
+[heavy_breathing|base] fold 1: windows=604 | precision=0.852 recall=0.893 F1=0.872 accuracy=0.829
+[heavy_breathing|base] fold 2: windows=613 | precision=0.871 recall=0.818 F1=0.844 accuracy=0.804
+[heavy_breathing|base] fold 3: windows=607 | precision=0.868 recall=0.883 F1=0.875 accuracy=0.837
+[heavy_breathing|base] fold 4: windows=605 | precision=0.836 recall=0.802 F1=0.819 accuracy=0.769
+[heavy_breathing] precision=0.867 recall=0.847 F1=0.856 accuracy=0.816 AUC=0.889 | TN=824 FP=262 FN=308 TP=1701
+[heavy_breathing] final training windows=3,095 | deployment threshold=0.680
+[fear|base] fold 0: windows=662 | precision=0.886 recall=0.900 F1=0.893 accuracy=0.860
+[fear|base] fold 1: windows=585 | precision=0.911 recall=0.740 F1=0.817 accuracy=0.788
+[fear|base] fold 2: windows=608 | precision=0.785 recall=0.747 F1=0.765 accuracy=0.706
+[fear|base] fold 3: windows=606 | precision=0.801 recall=0.689 F1=0.741 accuracy=0.688
+[fear|base] fold 4: windows=606 | precision=0.813 recall=0.891 F1=0.850 accuracy=0.795
+[fear] precision=0.838 recall=0.796 F1=0.816 accuracy=0.769 AUC=0.808 | TN=781 FP=305 FN=404 TP=1577
+[fear] final training windows=3,067 | deployment threshold=0.580
+
+OUT-OF-FOLD RESULTS (every participant is tested once, by a model that never saw them; threshold 0.5)
+        symptom  precision  recall    f1  accuracy  roc_auc  tn  fp  fn   tp
+      fidgeting      0.911   0.892 0.901     0.873    0.941 909 177 219 1806
+    hand_tremor      0.883   0.822 0.851     0.813    0.906 866 220 360 1658
+    knee_tremor      0.864   0.820 0.841     0.799    0.869 827 259 361 1639
+  avoidant_gaze      0.879   0.892 0.885     0.850    0.914 838 248 218 1798
+ facial_tension      0.834   0.787 0.810     0.760    0.828 771 315 426 1578
+heavy_breathing      0.867   0.847 0.856     0.816    0.889 824 262 308 1701
+           fear      0.838   0.796 0.816     0.769    0.808 781 305 404 1577
+MACRO precision=0.868 recall=0.836 F1=0.852 accuracy=0.811 | F1 >=0.80: 7/7, >=0.85: 4/7, >=0.90: 1/7 | always-positive F1 about 0.787, chance accuracy 0.5
+
+OUTLIERS: videos where 50% or more of the windows were classified wrongly (at least 3 windows)
+[fidgeting] flagged videos 34/306 (symptom videos 13, control videos 21) | flagged people: 10, 23, 25, 26, 28, 33, 4, 40, 41, 8, 9
+[hand_tremor] flagged videos 58/307 (symptom videos 27, control videos 31) | flagged people: 14, 15, 16, 17, 21, 23, 27, 28, 31, 34, 35, 37, 38, 39, 42, 48
+[knee_tremor] flagged videos 59/306 (symptom videos 23, control videos 36) | flagged people: 1, 10, 16, 20, 21, 23, 26, 28, 3, 34, 35, 36, 38, 39, 4, 40, 9
+[avoidant_gaze] flagged videos 41/306 (symptom videos 9, control videos 32) | flagged people: 21, 23, 24, 31, 38, 4, 40, 43, 47, 49, 8, 9
+[facial_tension] flagged videos 72/306 (symptom videos 29, control videos 43) | flagged people: 1, 10, 2, 20, 21, 24, 25, 26, 30, 31, 32, 36, 38, 4, 40, 42, 43, 44, 47, 49, 50, 8, 9
+[heavy_breathing] flagged videos 46/306 (symptom videos 16, control videos 30) | flagged people: 15, 16, 20, 23, 26, 34, 35, 4, 51, 8, 9
+[fear] flagged videos 71/306 (symptom videos 31, control videos 40) | flagged people: 1, 10, 20, 21, 23, 26, 27, 28, 31, 35, 38, 4, 40, 42, 44, 47, 48, 49, 51, 8, 9
+People whose symptom videos fail (>=50%) in 3 or more symptom models: 1 (3/7), 34 (3/7), 47 (3/7), 49 (3/7)
+
+Share of windows classified wrongly, by camera angle:
+angle            Left  Middle  Right
+symptom_model                       
+avoidant_gaze    0.11    0.16   0.23
+facial_tension   0.20    0.24   0.31
+fear             0.18    0.22   0.32
+fidgeting        0.11    0.14   0.15
+hand_tremor      0.16    0.19   0.22
+heavy_breathing  0.16    0.19   0.24
+knee_tremor      0.18    0.24   0.21
+
+How often each model says 'present' on each kind of window (diagonal = recall; control column = false-alarm rate):
+windows_of       control  fidgeting  hand_tremor  knee_tremor  avoidant_gaze  facial_tension  heavy_breathing  fear
+model                                                                                                              
+fidgeting           0.16       0.89         0.52         0.38           0.44            0.30             0.31  0.36
+hand_tremor         0.20       0.67         0.82         0.51           0.23            0.18             0.32  0.22
+knee_tremor         0.24       0.84         0.66         0.82           0.62            0.58             0.50  0.53
+avoidant_gaze       0.23       0.67         0.37         0.47           0.89            0.58             0.51  0.60
+facial_tension      0.29       0.63         0.31         0.53           0.79            0.79             0.53  0.62
+heavy_breathing     0.24       0.77         0.48         0.56           0.80            0.63             0.85  0.65
+fear                0.28       0.77         0.39         0.54           0.86            0.68             0.66  0.80
+
+Files: F:\Thesis\videos\New folder\Thesis Data Gathering\v6\results\vs_control_lgbm_angle_segment_clean_both_seed42\base
+
+=== personal ===
+[fidgeting|personal] fold 0: windows=665 | precision=0.923 recall=0.942 F1=0.933 accuracy=0.911
+[fidgeting|personal] fold 1: windows=607 | precision=0.980 recall=0.747 F1=0.848 accuracy=0.825
+[fidgeting|personal] fold 2: windows=613 | precision=0.959 recall=0.947 F1=0.953 accuracy=0.940
+[fidgeting|personal] fold 3: windows=622 | precision=0.948 recall=0.902 F1=0.925 accuracy=0.904
+[fidgeting|personal] fold 4: windows=604 | precision=0.961 recall=1.000 F1=0.980 accuracy=0.974
+[fidgeting] precision=0.952 recall=0.908 F1=0.930 accuracy=0.911 AUC=0.973 | TN=994 FP=92 FN=186 TP=1839
+[fidgeting] final training windows=3,111 | deployment threshold=0.520
+[hand_tremor|personal] fold 0: windows=664 | precision=0.945 recall=0.801 F1=0.867 accuracy=0.840
+[hand_tremor|personal] fold 1: windows=607 | precision=0.944 recall=0.944 F1=0.944 accuracy=0.928
+[hand_tremor|personal] fold 2: windows=609 | precision=0.969 recall=0.946 F1=0.957 accuracy=0.946
+[hand_tremor|personal] fold 3: windows=621 | precision=0.949 recall=0.877 F1=0.912 accuracy=0.889
+[hand_tremor|personal] fold 4: windows=603 | precision=0.959 recall=0.957 F1=0.958 accuracy=0.945
+[hand_tremor] precision=0.953 recall=0.903 F1=0.927 accuracy=0.908 AUC=0.970 | TN=997 FP=89 FN=196 TP=1822
+[hand_tremor] final training windows=3,104 | deployment threshold=0.680
+[knee_tremor|personal] fold 0: windows=666 | precision=0.977 recall=0.871 F1=0.921 accuracy=0.902
+[knee_tremor|personal] fold 1: windows=604 | precision=0.944 recall=0.952 F1=0.948 accuracy=0.932
+[knee_tremor|personal] fold 2: windows=613 | precision=0.952 recall=0.942 F1=0.947 accuracy=0.931
+[knee_tremor|personal] fold 3: windows=602 | precision=0.949 recall=0.866 F1=0.906 accuracy=0.884
+[knee_tremor|personal] fold 4: windows=601 | precision=0.943 recall=0.977 F1=0.960 accuracy=0.947
+[knee_tremor] precision=0.953 recall=0.920 F1=0.936 accuracy=0.919 AUC=0.972 | TN=995 FP=91 FN=159 TP=1841
+[knee_tremor] final training windows=3,086 | deployment threshold=0.510
+[avoidant_gaze|personal] fold 0: windows=667 | precision=0.944 recall=0.933 F1=0.939 accuracy=0.921
+[avoidant_gaze|personal] fold 1: windows=606 | precision=0.937 recall=0.906 F1=0.921 accuracy=0.899
+[avoidant_gaze|personal] fold 2: windows=611 | precision=0.848 recall=0.863 F1=0.855 accuracy=0.812
+[avoidant_gaze|personal] fold 3: windows=615 | precision=0.886 recall=0.948 F1=0.916 accuracy=0.886
+[avoidant_gaze|personal] fold 4: windows=603 | precision=0.854 recall=0.883 F1=0.868 accuracy=0.826
+[avoidant_gaze] precision=0.894 recall=0.907 F1=0.901 accuracy=0.870 AUC=0.936 | TN=869 FP=217 FN=187 TP=1829
+[avoidant_gaze] final training windows=3,102 | deployment threshold=0.670
+[facial_tension|personal] fold 0: windows=664 | precision=0.949 recall=0.905 F1=0.927 accuracy=0.907
+[facial_tension|personal] fold 1: windows=604 | precision=0.964 recall=0.890 F1=0.926 accuracy=0.907
+[facial_tension|personal] fold 2: windows=610 | precision=0.835 recall=0.878 F1=0.856 accuracy=0.810
+[facial_tension|personal] fold 3: windows=609 | precision=0.882 recall=0.911 F1=0.897 accuracy=0.864
+[facial_tension|personal] fold 4: windows=603 | precision=0.870 recall=0.819 F1=0.844 accuracy=0.803
+[facial_tension] precision=0.899 recall=0.881 F1=0.890 accuracy=0.859 AUC=0.928 | TN=888 FP=198 FN=238 TP=1766
+[facial_tension] final training windows=3,090 | deployment threshold=0.450
+[heavy_breathing|personal] fold 0: windows=666 | precision=0.923 recall=0.906 F1=0.914 accuracy=0.889
+[heavy_breathing|personal] fold 1: windows=604 | precision=0.937 recall=0.946 F1=0.942 accuracy=0.924
+[heavy_breathing|personal] fold 2: windows=613 | precision=0.915 recall=0.821 F1=0.866 accuracy=0.835
+[heavy_breathing|personal] fold 3: windows=607 | precision=0.931 recall=0.863 F1=0.896 accuracy=0.870
+[heavy_breathing|personal] fold 4: windows=605 | precision=0.918 recall=0.906 F1=0.912 accuracy=0.886
+[heavy_breathing] precision=0.925 recall=0.889 F1=0.906 accuracy=0.881 AUC=0.944 | TN=941 FP=145 FN=224 TP=1785
+[heavy_breathing] final training windows=3,095 | deployment threshold=0.530
+[fear|personal] fold 0: windows=662 | precision=0.918 recall=0.935 F1=0.926 accuracy=0.903
+[fear|personal] fold 1: windows=585 | precision=0.910 recall=0.895 F1=0.903 accuracy=0.877
+[fear|personal] fold 2: windows=608 | precision=0.795 recall=0.864 F1=0.828 accuracy=0.770
+[fear|personal] fold 3: windows=606 | precision=0.888 recall=0.745 F1=0.810 accuracy=0.774
+[fear|personal] fold 4: windows=606 | precision=0.873 recall=0.904 F1=0.888 accuracy=0.851
+[fear] precision=0.876 recall=0.870 F1=0.873 accuracy=0.836 AUC=0.901 | TN=841 FP=245 FN=258 TP=1723
+[fear] final training windows=3,067 | deployment threshold=0.330
+
+OUT-OF-FOLD RESULTS (every participant is tested once, by a model that never saw them; threshold 0.5)
+        symptom  precision  recall    f1  accuracy  roc_auc  tn  fp  fn   tp
+      fidgeting      0.952   0.908 0.930     0.911    0.973 994  92 186 1839
+    hand_tremor      0.953   0.903 0.927     0.908    0.970 997  89 196 1822
+    knee_tremor      0.953   0.920 0.936     0.919    0.972 995  91 159 1841
+  avoidant_gaze      0.894   0.907 0.901     0.870    0.936 869 217 187 1829
+ facial_tension      0.899   0.881 0.890     0.859    0.928 888 198 238 1766
+heavy_breathing      0.925   0.889 0.906     0.881    0.944 941 145 224 1785
+           fear      0.876   0.870 0.873     0.836    0.901 841 245 258 1723
+MACRO precision=0.922 recall=0.897 F1=0.909 accuracy=0.883 | F1 >=0.80: 7/7, >=0.85: 7/7, >=0.90: 5/7 | always-positive F1 about 0.787, chance accuracy 0.5
+
+OUTLIERS: videos where 50% or more of the windows were classified wrongly (at least 3 windows)
+[fidgeting] flagged videos 18/306 (symptom videos 12, control videos 6) | flagged people: 10, 23, 25, 35, 38
+[hand_tremor] flagged videos 28/307 (symptom videos 16, control videos 12) | flagged people: 13, 23, 29, 34, 4
+[knee_tremor] flagged videos 18/306 (symptom videos 10, control videos 8) | flagged people: 23, 25
+[avoidant_gaze] flagged videos 37/306 (symptom videos 9, control videos 28) | flagged people: 21, 23, 24, 31, 4, 40, 47, 49, 7, 8, 9
+[facial_tension] flagged videos 44/306 (symptom videos 16, control videos 28) | flagged people: 10, 2, 21, 23, 26, 38, 4, 40, 43, 49, 51
+[heavy_breathing] flagged videos 30/306 (symptom videos 14, control videos 16) | flagged people: 34, 4, 9
+[fear] flagged videos 52/306 (symptom videos 20, control videos 32) | flagged people: 21, 22, 23, 24, 35, 38, 4, 40, 42, 47, 49, 51, 7
+People whose symptom videos fail (>=50%) in 3 or more symptom models: 49 (3/7)
+
+Share of windows classified wrongly, by camera angle:
+angle            Left  Middle  Right
+symptom_model                       
+avoidant_gaze    0.09    0.14   0.20
+facial_tension   0.09    0.11   0.25
+fear             0.09    0.15   0.29
+fidgeting        0.08    0.10   0.08
+hand_tremor      0.10    0.08   0.08
+heavy_breathing  0.11    0.14   0.13
+knee_tremor      0.07    0.09   0.08
+
+How often each model says 'present' on each kind of window (diagonal = recall; control column = false-alarm rate):
+windows_of       control  fidgeting  hand_tremor  knee_tremor  avoidant_gaze  facial_tension  heavy_breathing  fear
+model                                                                                                              
+fidgeting           0.08       0.91         0.59         0.54           0.56            0.47             0.41  0.50
+hand_tremor         0.08       0.76         0.90         0.64           0.40            0.32             0.50  0.32
+knee_tremor         0.08       0.94         0.78         0.92           0.88            0.87             0.80  0.84
+avoidant_gaze       0.20       0.71         0.40         0.48           0.91            0.64             0.54  0.62
+facial_tension      0.18       0.70         0.50         0.61           0.78            0.88             0.54  0.62
+heavy_breathing     0.13       0.84         0.61         0.69           0.87            0.77             0.89  0.80
+fear                0.23       0.85         0.60         0.72           0.89            0.84             0.73  0.87
+
+Files: F:\Thesis\videos\New folder\Thesis Data Gathering\v6\results\vs_control_lgbm_angle_segment_clean_both_seed42\personal
+
+=== personal_weighted ===
+[fidgeting|personal_weighted] fold 0: windows=665 | precision=0.923 recall=0.942 F1=0.933 accuracy=0.911
+[fidgeting|personal_weighted] fold 1: windows=607 | precision=0.980 recall=0.754 F1=0.853 accuracy=0.830
+[fidgeting|personal_weighted] fold 2: windows=613 | precision=0.952 recall=0.942 F1=0.947 accuracy=0.931
+[fidgeting|personal_weighted] fold 3: windows=622 | precision=0.952 recall=0.914 F1=0.932 accuracy=0.913
+[fidgeting|personal_weighted] fold 4: windows=604 | precision=0.963 recall=1.000 F1=0.981 accuracy=0.975
+[fidgeting] precision=0.952 recall=0.911 F1=0.931 accuracy=0.912 AUC=0.973 | TN=993 FP=93 FN=180 TP=1845
+[fidgeting] final training windows=3,111 | deployment threshold=0.510
+[hand_tremor|personal_weighted] fold 0: windows=664 | precision=0.948 recall=0.794 F1=0.864 accuracy=0.837
+[hand_tremor|personal_weighted] fold 1: windows=607 | precision=0.942 recall=0.942 F1=0.942 accuracy=0.924
+[hand_tremor|personal_weighted] fold 2: windows=609 | precision=0.971 recall=0.941 F1=0.956 accuracy=0.944
+[hand_tremor|personal_weighted] fold 3: windows=621 | precision=0.950 recall=0.885 F1=0.916 accuracy=0.894
+[hand_tremor|personal_weighted] fold 4: windows=603 | precision=0.957 recall=0.954 F1=0.955 accuracy=0.942
+[hand_tremor] precision=0.953 recall=0.901 F1=0.926 accuracy=0.907 AUC=0.970 | TN=997 FP=89 FN=200 TP=1818
+[hand_tremor] final training windows=3,104 | deployment threshold=0.680
+[knee_tremor|personal_weighted] fold 0: windows=666 | precision=0.979 recall=0.876 F1=0.925 accuracy=0.907
+[knee_tremor|personal_weighted] fold 1: windows=604 | precision=0.949 recall=0.952 F1=0.950 accuracy=0.935
+[knee_tremor|personal_weighted] fold 2: windows=613 | precision=0.949 recall=0.944 F1=0.947 accuracy=0.931
+[knee_tremor|personal_weighted] fold 3: windows=602 | precision=0.952 recall=0.869 F1=0.908 accuracy=0.887
+[knee_tremor|personal_weighted] fold 4: windows=601 | precision=0.948 recall=0.977 F1=0.962 accuracy=0.950
+[knee_tremor] precision=0.955 recall=0.922 F1=0.939 accuracy=0.922 AUC=0.973 | TN=1000 FP=86 FN=155 TP=1845
+[knee_tremor] final training windows=3,086 | deployment threshold=0.550
+[avoidant_gaze|personal_weighted] fold 0: windows=667 | precision=0.956 recall=0.938 F1=0.947 accuracy=0.931
+[avoidant_gaze|personal_weighted] fold 1: windows=606 | precision=0.929 recall=0.901 F1=0.915 accuracy=0.891
+[avoidant_gaze|personal_weighted] fold 2: windows=611 | precision=0.846 recall=0.863 F1=0.854 accuracy=0.810
+[avoidant_gaze|personal_weighted] fold 3: windows=615 | precision=0.881 recall=0.945 F1=0.912 accuracy=0.881
+[avoidant_gaze|personal_weighted] fold 4: windows=603 | precision=0.855 recall=0.885 F1=0.870 accuracy=0.828
+[avoidant_gaze] precision=0.894 recall=0.907 F1=0.900 accuracy=0.869 AUC=0.938 | TN=868 FP=218 FN=187 TP=1829
+[avoidant_gaze] final training windows=3,102 | deployment threshold=0.720
+[facial_tension|personal_weighted] fold 0: windows=664 | precision=0.940 recall=0.907 F1=0.923 accuracy=0.902
+[facial_tension|personal_weighted] fold 1: windows=604 | precision=0.963 recall=0.867 F1=0.913 accuracy=0.892
+[facial_tension|personal_weighted] fold 2: windows=610 | precision=0.829 recall=0.885 F1=0.856 accuracy=0.808
+[facial_tension|personal_weighted] fold 3: windows=609 | precision=0.886 recall=0.922 F1=0.903 accuracy=0.872
+[facial_tension|personal_weighted] fold 4: windows=603 | precision=0.870 recall=0.819 F1=0.844 accuracy=0.803
+[facial_tension] precision=0.896 recall=0.881 F1=0.888 accuracy=0.856 AUC=0.926 | TN=881 FP=205 FN=239 TP=1765
+[facial_tension] final training windows=3,090 | deployment threshold=0.400
+[heavy_breathing|personal_weighted] fold 0: windows=666 | precision=0.925 recall=0.912 F1=0.919 accuracy=0.895
+[heavy_breathing|personal_weighted] fold 1: windows=604 | precision=0.928 recall=0.957 F1=0.942 accuracy=0.924
+[heavy_breathing|personal_weighted] fold 2: windows=613 | precision=0.911 recall=0.826 F1=0.866 accuracy=0.835
+[heavy_breathing|personal_weighted] fold 3: windows=607 | precision=0.937 recall=0.875 F1=0.905 accuracy=0.881
+[heavy_breathing|personal_weighted] fold 4: windows=605 | precision=0.922 recall=0.901 F1=0.911 accuracy=0.886
+[heavy_breathing] precision=0.925 recall=0.894 F1=0.909 accuracy=0.884 AUC=0.945 | TN=940 FP=146 FN=212 TP=1797
+[heavy_breathing] final training windows=3,095 | deployment threshold=0.500
+[fear|personal_weighted] fold 0: windows=662 | precision=0.918 recall=0.942 F1=0.930 accuracy=0.908
+[fear|personal_weighted] fold 1: windows=585 | precision=0.919 recall=0.879 F1=0.899 accuracy=0.874
+[fear|personal_weighted] fold 2: windows=608 | precision=0.799 recall=0.885 F1=0.840 accuracy=0.783
+[fear|personal_weighted] fold 3: windows=606 | precision=0.895 recall=0.737 F1=0.808 accuracy=0.774
+[fear|personal_weighted] fold 4: windows=606 | precision=0.875 recall=0.904 F1=0.889 accuracy=0.853
+[fear] precision=0.879 recall=0.871 F1=0.875 accuracy=0.839 AUC=0.901 | TN=849 FP=237 FN=256 TP=1725
+[fear] final training windows=3,067 | deployment threshold=0.370
+
+OUT-OF-FOLD RESULTS (every participant is tested once, by a model that never saw them; threshold 0.5)
+        symptom  precision  recall    f1  accuracy  roc_auc   tn  fp  fn   tp
+      fidgeting      0.952   0.911 0.931     0.912    0.973  993  93 180 1845
+    hand_tremor      0.953   0.901 0.926     0.907    0.970  997  89 200 1818
+    knee_tremor      0.955   0.922 0.939     0.922    0.973 1000  86 155 1845
+  avoidant_gaze      0.894   0.907 0.900     0.869    0.938  868 218 187 1829
+ facial_tension      0.896   0.881 0.888     0.856    0.926  881 205 239 1765
+heavy_breathing      0.925   0.894 0.909     0.884    0.945  940 146 212 1797
+           fear      0.879   0.871 0.875     0.839    0.901  849 237 256 1725
+MACRO precision=0.922 recall=0.898 F1=0.910 accuracy=0.884 | F1 >=0.80: 7/7, >=0.85: 7/7, >=0.90: 5/7 | always-positive F1 about 0.787, chance accuracy 0.5
+
+OUTLIERS: videos where 50% or more of the windows were classified wrongly (at least 3 windows)
+[fidgeting] flagged videos 16/306 (symptom videos 11, control videos 5) | flagged people: 23, 25, 38
+[hand_tremor] flagged videos 26/307 (symptom videos 14, control videos 12) | flagged people: 13, 23, 29, 34, 38
+[knee_tremor] flagged videos 17/306 (symptom videos 9, control videos 8) | flagged people: 23, 25
+[avoidant_gaze] flagged videos 36/306 (symptom videos 9, control videos 27) | flagged people: 21, 23, 24, 31, 4, 40, 47, 49, 7, 8, 9
+[facial_tension] flagged videos 45/306 (symptom videos 17, control videos 28) | flagged people: 2, 21, 23, 26, 38, 4, 40, 43, 49, 50, 51
+[heavy_breathing] flagged videos 26/306 (symptom videos 12, control videos 14) | flagged people: 23, 34, 4, 9
+[fear] flagged videos 53/306 (symptom videos 21, control videos 32) | flagged people: 21, 22, 23, 24, 35, 38, 4, 40, 42, 47, 49, 51, 7
+People whose symptom videos fail (>=50%) in 3 or more symptom models: 49 (3/7)
+
+Share of windows classified wrongly, by camera angle:
+angle            Left  Middle  Right
+symptom_model                       
+avoidant_gaze    0.09    0.15   0.20
+facial_tension   0.09    0.12   0.26
+fear             0.09    0.14   0.28
+fidgeting        0.08    0.10   0.08
+hand_tremor      0.10    0.08   0.09
+heavy_breathing  0.11    0.13   0.12
+knee_tremor      0.07    0.08   0.08
+
+How often each model says 'present' on each kind of window (diagonal = recall; control column = false-alarm rate):
+windows_of       control  fidgeting  hand_tremor  knee_tremor  avoidant_gaze  facial_tension  heavy_breathing  fear
+model                                                                                                              
+fidgeting           0.09       0.91         0.59         0.56           0.55            0.46             0.40  0.50
+hand_tremor         0.08       0.77         0.90         0.64           0.40            0.33             0.51  0.32
+knee_tremor         0.08       0.94         0.80         0.92           0.88            0.86             0.80  0.85
+avoidant_gaze       0.20       0.71         0.40         0.48           0.91            0.64             0.55  0.62
+facial_tension      0.19       0.71         0.51         0.63           0.79            0.88             0.55  0.62
+heavy_breathing     0.13       0.85         0.61         0.69           0.88            0.77             0.89  0.81
+fear                0.22       0.85         0.61         0.71           0.89            0.84             0.73  0.87
+
+Files: F:\Thesis\videos\New folder\Thesis Data Gathering\v6\results\vs_control_lgbm_angle_segment_clean_both_seed42\personal_weighted
+
+EVALUATION COMPARISON
+              arm                  variant  symptoms  macro_precision  macro_recall  macro_f1  macro_accuracy  macro_f1_50_50  macro_accuracy_50_50  macro_roc_auc
+             base            raw_fixed_050         7            0.868         0.836     0.852           0.811           0.808                 0.801          0.879
+             base     raw_nested_threshold         7            0.865         0.822     0.843           0.802           0.799                 0.793          0.879
+             base        smooth3_fixed_050         7            0.871         0.852     0.861           0.822           0.817                 0.810          0.886
+             base smooth3_nested_threshold         7            0.877         0.826     0.851           0.812           0.810                 0.806          0.886
+         personal            raw_fixed_050         7            0.922         0.897     0.909           0.883           0.881                 0.878          0.946
+         personal     raw_nested_threshold         7            0.918         0.898     0.908           0.882           0.878                 0.874          0.946
+         personal        smooth3_fixed_050         7            0.928         0.906     0.916           0.892           0.890                 0.887          0.954
+         personal smooth3_nested_threshold         7            0.930         0.896     0.913           0.888           0.887                 0.886          0.954
+personal_weighted            raw_fixed_050         7            0.922         0.898     0.910           0.884           0.881                 0.878          0.946
+personal_weighted     raw_nested_threshold         7            0.919         0.898     0.908           0.882           0.879                 0.876          0.946
+personal_weighted        smooth3_fixed_050         7            0.928         0.908     0.917           0.894           0.891                 0.888          0.954
+personal_weighted smooth3_nested_threshold         7            0.928         0.902     0.914           0.890           0.888                 0.885          0.954
+
+PRIMARY VARIANT: smooth3_nested_threshold
+              arm  macro_f1  macro_f1_50_50  macro_accuracy  macro_accuracy_50_50
+personal_weighted     0.914           0.888           0.890                 0.885
+         personal     0.913           0.887           0.888                 0.886
+             base     0.851           0.810           0.812                 0.806
+
+Natural-prevalence F1 uses observed class proportions; 50/50 F1 standardizes prevalence.
+Thresholds are selected using inner-validation participants only.

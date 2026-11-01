@@ -1,0 +1,308 @@
+symptom_model,video_id,participant_id,angle,task_class,windows,failed,fail_frac,face_tracked,pose_tracked,left_hand_tracked,right_hand_tracked,outlier
+hand_tremor,Left_Control_27_IMG_3088,27,Left,control,7,7,1.0,1.0,1.0,1.0,1.0,True
+hand_tremor,Middle_Hand Tremor_34_VID_20261023_091416,34,Middle,hand_tremor,13,13,1.0,0.91730773,1.0,1.0,1.0,True
+hand_tremor,Left_Hand Tremor_34_IMG_3156,34,Left,hand_tremor,13,13,1.0,1.0,1.0,1.0,1.0,True
+hand_tremor,Left_Control_23_IMG_3030,23,Left,control,7,7,1.0,1.0,1.0,0.9690476,1.0,True
+hand_tremor,Left_Hand Tremor_4_IMG_2868,4,Left,hand_tremor,13,13,1.0,0.0,1.0,0.90384614,1.0,True
+hand_tremor,Right_Hand Tremor_34_VID_20261023_091346,34,Right,hand_tremor,13,13,1.0,0.49871796,1.0,1.0,1.0,True
+hand_tremor,Right_Hand Tremor_9_VID_20261019_124222,9,Right,hand_tremor,13,13,1.0,0.0,1.0,1.0,0.7205128,True
+hand_tremor,Right_Hand Tremor_22_VID_20261019_154858,22,Right,hand_tremor,13,13,1.0,1.0,1.0,1.0,1.0,True
+hand_tremor,Middle_Hand Tremor_38_VID_20261023_095647,38,Middle,hand_tremor,13,13,1.0,1.0,1.0,1.0,1.0,True
+hand_tremor,Left_Hand Tremor_36_IMG_3172,36,Left,hand_tremor,13,13,1.0,1.0,1.0,1.0,1.0,True
+hand_tremor,Right_Hand Tremor_44_VID_20261023_152518,44,Right,hand_tremor,13,12,0.9230769230769231,0.9692308,1.0,1.0,1.0,True
+hand_tremor,Middle_Control_13_VID_20261019_135201,13,Middle,control,7,6,0.8571428571428571,1.0,1.0,1.0,1.0,True
+hand_tremor,Middle_Control_23_VID_20261019_155827,23,Middle,control,7,6,0.8571428571428571,0.85714287,1.0,0.9785714,0.875,True
+hand_tremor,Right_Control_29_VID_20261021_122358,29,Right,control,7,6,0.8571428571428571,1.0,1.0,1.0,1.0,True
+hand_tremor,Right_Control_23_VID_20261019_155755,23,Right,control,7,6,0.8571428571428571,1.0,1.0,1.0,0.8904762,True
+hand_tremor,Left_Control_29_IMG_3106,29,Left,control,7,6,0.8571428571428571,1.0,1.0,1.0,1.0,True
+hand_tremor,Middle_Hand Tremor_25_VID_20261019_162044,25,Middle,hand_tremor,13,10,0.7692307692307693,1.0,1.0,1.0,1.0,True
+hand_tremor,Left_Control_13_IMG_2945,13,Left,control,7,5,0.7142857142857143,1.0,1.0,1.0,1.0,True
+hand_tremor,Right_Control_13_VID_20261019_135130,13,Right,control,7,5,0.7142857142857143,0.0,1.0,1.0,1.0,True
+hand_tremor,Middle_Control_47_VID_20261024_152334,47,Middle,control,7,5,0.7142857142857143,0.94107145,1.0,1.0,1.0,True
+hand_tremor,Left_Hand Tremor_38_IMG_3188,38,Left,hand_tremor,13,9,0.6923076923076923,0.96666664,1.0,1.0,1.0,True
+hand_tremor,Middle_Hand Tremor_33_VID_20261021_130750,33,Middle,hand_tremor,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+hand_tremor,Left_Hand Tremor_41_IMG_3213,41,Left,hand_tremor,13,8,0.6153846153846154,0.9967948,1.0,1.0,1.0,True
+hand_tremor,Left_Control_8_IMG_2902,8,Left,control,7,4,0.5714285714285714,0.0,1.0,1.0,1.0,True
+hand_tremor,Left_Control_45_IMG_3260,45,Left,control,7,4,0.5714285714285714,1.0,1.0,1.0,1.0,True
+hand_tremor,Left_Hand Tremor_39_IMG_3196,39,Left,hand_tremor,13,7,0.5384615384615384,1.0,1.0,1.0,1.0,True
+hand_tremor,Right_Hand Tremor_3_VID_20261019_093746(1),3,Right,hand_tremor,13,6,0.46153846153846156,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_3_VID_20261019_093746,3,Right,hand_tremor,13,6,0.46153846153846156,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_21_VID_20261019_152023,21,Middle,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_8_VID_20261019_123054,8,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_40_VID_20261023_140626,40,Right,hand_tremor,13,5,0.38461538461538464,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_21_VID_20261019_152039,21,Right,hand_tremor,13,5,0.38461538461538464,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_4_VID_20261019_100859,4,Right,hand_tremor,13,5,0.38461538461538464,0.0,1.0,1.0,0.9320513,False
+hand_tremor,Left_Control_4_IMG_2867,4,Left,control,7,2,0.2857142857142857,0.84999996,1.0,0.084523804,0.9976191,False
+hand_tremor,Middle_Control_4_VID_20261019_100844,4,Middle,control,7,2,0.2857142857142857,0.89285713,1.0,0.9547619,0.7690476,False
+hand_tremor,Middle_Control_26_VID_20261021_092828,26,Middle,control,7,2,0.2857142857142857,1.0,1.0,0.32500002,0.9928571,False
+hand_tremor,Middle_Control_2_VID_20261023_145529,2,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_15_IMG_2962,15,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_16_IMG_2970,16,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_24_IMG_3039,24,Left,hand_tremor,13,3,0.23076923076923078,0.98653847,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_1_1,1,Middle,hand_tremor,13,2,0.15384615384615385,0.73846155,0.82500005,0.9115385,0.91346157,False
+hand_tremor,Middle_Hand Tremor_24_VID_20261019_161053,24,Middle,hand_tremor,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_47_VID_20261024_152407,47,Right,hand_tremor,13,2,0.15384615384615385,0.3910256,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_29_VID_20261021_122429,29,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_38_VID_20261023_095616,38,Right,hand_tremor,14,2,0.14285714285714285,0.87142855,1.0,1.0,1.0,False
+hand_tremor,Right_Control_40_VID_20261023_140520,40,Right,control,7,1,0.14285714285714285,0.0,1.0,0.57857144,0.75357145,False
+hand_tremor,Right_Control_45_IMG_4062,45,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_45_VID_20261024_114902,45,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_20_VID_20261019_151243,20,Middle,hand_tremor,13,1,0.07692307692307693,1.0,1.0,0.99615383,1.0,False
+hand_tremor,Middle_Hand Tremor_41_VID_20261023_142500,41,Middle,hand_tremor,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_4_VID_20261019_100929,4,Middle,hand_tremor,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_20_VID_20261019_151212,20,Right,hand_tremor,13,1,0.07692307692307693,1.0,1.0,0.99871796,0.9974359,False
+hand_tremor,Left_Control_40_IMG_3203,40,Left,control,7,0,0.0,1.0,1.0,0.17261906,0.79404765,False
+hand_tremor,Left_Control_41_IMG_3212,41,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_42_IMG_3230,42,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_43_IMG_3238,43,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_44_IMG_3246,44,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_12_IMG_2937,12,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_46_IMG_3269,46,Left,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+hand_tremor,Left_Control_47_IMG_3280,47,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_48_IMG_3288,48,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_49_IMG_3297,49,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_50_IMG_3305,50,Left,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_51_IMG_3313,51,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_5_IMG_2876,5,Left,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_6_IMG_2886,6,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_7_IMG_2894,7,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_9_IMG_2911,9,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Hand Tremor_10_IMG_2920,10,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_11_IMG_2930,11,Left,hand_tremor,13,0,0.0,1.0,1.0,0.91410255,1.0,False
+hand_tremor,Left_Hand Tremor_12_IMG_2938,12,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_13_IMG_2946,13,Left,hand_tremor,13,0,0.0,0.99358976,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_14_IMG_2954,14,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_15_IMG_2963,15,Left,hand_tremor,13,0,0.0,0.99294865,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_16_IMG_2971,16,Left,hand_tremor,15,0,0.0,0.23111111,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_17_IMG_2980,17,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_18_IMG_2989,18,Left,hand_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_19_IMG_2998,19,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_1_Participant-1,1,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_20_IMG_3007,20,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_21_IMG_3015,21,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_22_IMG_3023,22,Left,hand_tremor,13,0,0.0,0.873077,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_23_IMG_3031,23,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_25_IMG_3048,25,Left,hand_tremor,13,0,0.0,0.44871795,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_26_IMG_3081,26,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_27_IMG_3089,27,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_28_IMG_3099,28,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_29_IMG_3107,29,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_2_Participant-2,2,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_30_IMG_3117,30,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_31_IMG_3126,31,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_32_IMG_3134,32,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_33_IMG_3142,33,Left,hand_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_35_IMG_3164,35,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_37_IMG_3180,37,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_3_IMG_2858,3,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_40_IMG_3204,40,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_42_IMG_3231,42,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_43_IMG_3239,43,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_44_IMG_3247,44,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_45_IMG_3261,45,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_46_IMG_3270,46,Left,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_47_IMG_3281,47,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_48_IMG_3290,48,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_49_IMG_3298,49,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_50_IMG_3306,50,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_51_IMG_3314,51,Left,hand_tremor,13,0,0.0,0.99871796,1.0,0.0,1.0,False
+hand_tremor,Left_Hand Tremor_5_IMG_2877,5,Left,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_6_IMG_2887,6,Left,hand_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_7_IMG_2895,7,Left,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_8_IMG_2903,8,Left,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Hand Tremor_9_IMG_2912,9,Left,hand_tremor,13,0,0.0,0.0,1.0,0.7602564,1.0,False
+hand_tremor,Middle_Control_10_VID_20261019_125221,10,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_11_VID_20261019_133652,11,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_12_VID_20261019_134532,12,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_14_VID_20261019_135850,14,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_15_VID_20261019_140627,15,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_16_VID_20261019_142943,16,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_17_VID_20261019_144441,17,Middle,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+hand_tremor,Middle_Control_18_VID_20261019_145320,18,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_19_VID_20261019_150335,19,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_1_VID_20261023_145413,1,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_20_VID_20261019_151201,20,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_22_VID_20261019_154840,22,Middle,control,6,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_24_VID_20261019_161006,24,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_25_VID_20261019_161957,25,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_27_VID_20261021_093959,27,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_28_VID_20261021_095050,28,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_30_VID_20261021_123642,30,Middle,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Middle_Control_31_VID_20261021_124713,31,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_32_VID_20261021_125721,32,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_33_VID_20261021_130658,33,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_34_VID_20261023_091320,34,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_35_VID_20261023_092726,35,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_36_VID_20261023_093708,36,Middle,control,7,0,0.0,1.0,1.0,0.96250004,0.037499998,False
+hand_tremor,Middle_Control_37_VID_20261023_094711,37,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_38_VID_20261023_095558,38,Middle,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+hand_tremor,Middle_Control_39_VID_20261023_132856,39,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_3_VID_20261019_093735,3,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_40_VID_20261023_140551,40,Middle,control,7,0,0.0,0.0,1.0,0.9071428,0.16071428,False
+hand_tremor,Middle_Control_41_VID_20261023_142414,41,Middle,control,7,0,0.0,0.35,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_42_VID_20261023_145855,42,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_43_VID_20261023_151331,43,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_44_VID_20261023_152509,44,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_46_VID_20261024_120056,46,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_48_VID_20261024_153432,48,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_49_VID_20261024_154139,49,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_50_VID_20261024_154851,50,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_51_VID_20261024_155622,51,Middle,control,7,0,0.0,0.6464286,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_5_VID_20261019_101823,5,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_6_VID_20261019_103003,6,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_7_VID_20261019_104741,7,Middle,control,7,0,0.0,0.84999996,1.0,1.0,1.0,False
+hand_tremor,Middle_Control_9_VID_20261019_124210,9,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_10_VID_20261019_125320,10,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_11_VID_20261019_133737,11,Middle,hand_tremor,13,0,0.0,1.0,1.0,0.9788462,0.9586538,False
+hand_tremor,Middle_Hand Tremor_12_VID_20261019_134616,12,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_13_VID_20261019_135240,13,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_14_VID_20261019_135931,14,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_15_VID_20261019_140739,15,Middle,hand_tremor,13,0,0.0,1.0,1.0,0.9596154,0.9913461,False
+hand_tremor,Middle_Hand Tremor_16_VID_20261019_143023,16,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_17_VID_20261019_144544,17,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,0.998077,False
+hand_tremor,Middle_Hand Tremor_18_VID_20261019_145401,18,Middle,hand_tremor,13,0,0.0,1.0,1.0,0.98173076,0.99038464,False
+hand_tremor,Middle_Hand Tremor_19_VID_20261019_150415,19,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_29_VID_20261021_122448,29,Right,hand_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_10_IMG_2919,10,Left,control,8,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Middle_Hand Tremor_21_VID_20261019_152109,21,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_22_VID_20261019_154928,22,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_23_VID_20261019_155914,23,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_2_P2_ShakyHands,2,Right,hand_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_30_VID_20261021_123707,30,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_26_VID_20261021_092918,26,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_27_VID_20261021_094050,27,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_28_VID_20261021_095210,28,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_29_VID_20261021_122518,29,Middle,hand_tremor,13,0,0.0,1.0,1.0,0.9836539,0.99230766,False
+hand_tremor,Middle_Hand Tremor_2_VID_20261017_124917,2,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_30_VID_20261021_123737,30,Middle,hand_tremor,13,0,0.0,0.97115386,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_31_VID_20261021_124806,31,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_32_VID_20261021_125814,32,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_31_VID_20261021_124737,31,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_32_VID_20261021_125744,32,Right,hand_tremor,13,0,0.0,0.98205125,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_35_VID_20261023_092818,35,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,0.99615383,False
+hand_tremor,Middle_Hand Tremor_36_VID_20261023_093757,36,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_37_VID_20261023_094752,37,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_33_VID_20261021_130720,33,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_39_VID_20261023_132943,39,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_3_VID_20261019_093817,3,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_40_VID_20261023_140657,40,Middle,hand_tremor,13,0,0.0,0.0,1.0,0.98653847,1.0,False
+hand_tremor,Right_Hand Tremor_35_VID_20261023_092748,35,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_42_VID_20261023_145936,42,Middle,hand_tremor,13,0,0.0,0.17500001,1.0,0.9625,0.91923076,False
+hand_tremor,Middle_Hand Tremor_43_VID_20261023_151418,43,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_44_VID_20261023_152549,44,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_45_VID_20261024_114946,45,Middle,hand_tremor,13,0,0.0,1.0,1.0,0.9528846,0.92499995,False
+hand_tremor,Middle_Hand Tremor_46_VID_20261024_120144,46,Middle,hand_tremor,13,0,0.0,0.9740385,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_47_VID_20261024_152438,47,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_48_VID_20261024_153527,48,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,0.9942308,False
+hand_tremor,Middle_Hand Tremor_49_VID_20261024_154222,49,Middle,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_36_VID_20261023_093726,36,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_50_VID_20261024_154934,50,Middle,hand_tremor,13,0,0.0,0.8596154,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_51_VID_20261024_155707,51,Middle,hand_tremor,13,0,0.0,0.2596154,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_5_VID_20261019_101904,5,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_6_VID_20261019_103047,6,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_7_VID_20261019_104826,7,Middle,hand_tremor,13,0,0.0,0.9788462,1.0,1.0,0.97818893,False
+hand_tremor,Middle_Hand Tremor_8_VID_20261019_123135,8,Middle,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Middle_Hand Tremor_9_VID_20261019_124253,9,Middle,hand_tremor,13,0,0.0,0.7608974,1.0,1.0,1.0,False
+hand_tremor,Right_Control_10_VID_20261019_125150,10,Right,control,8,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_11_VID_20261019_133621,11,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_12_VID_20261019_134459,12,Right,control,10,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_37_VID_20261023_094721,37,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_14_VID_20261019_135820,14,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_15_VID_20261019_140556,15,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_16_VID_20261019_142911,16,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_17_VID_20261019_144410,17,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+hand_tremor,Right_Control_18_VID_20261019_145250,18,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_19_VID_20261019_150304,19,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_1_VID_20261023_145342,1,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_20_VID_20261019_151130,20,Right,control,7,0,0.0,0.0,1.0,1.0,0.97261906,False
+hand_tremor,Right_Control_21_VID_20261019_151952,21,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_22_VID_20261019_154811,22,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_39_VID_20261023_132912,39,Right,hand_tremor,13,0,0.0,0.9634615,1.0,1.0,1.0,False
+hand_tremor,Right_Control_24_VID_20261019_160936,24,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_25_VID_20261019_161926,25,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_26_VID_20261021_092757,26,Right,control,7,0,0.0,0.0,1.0,0.9904762,0.123809524,False
+hand_tremor,Right_Control_27_VID_20261021_093928,27,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+hand_tremor,Right_Control_28_VID_20261021_095020,28,Right,control,7,0,0.0,1.0,1.0,1.0,0.13571429,False
+hand_tremor,Right_Hand Tremor_41_VID_20261023_142427,41,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_2_VID_20261023_145458,2,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_30_VID_20261021_123612,30,Right,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Right_Control_31_VID_20261021_124643,31,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_32_VID_20261021_125651,32,Right,control,7,0,0.0,1.0,1.0,1.0,0.7285714,False
+hand_tremor,Right_Control_33_VID_20261021_130628,33,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_28_IMG_3097,28,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_35_VID_20261023_092656,35,Right,control,7,0,0.0,0.0,1.0,1.0,0.9928571,False
+hand_tremor,Right_Control_36_VID_20261023_093637,36,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+hand_tremor,Right_Control_37_VID_20261023_094640,37,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+hand_tremor,Right_Control_38_VID_20261023_095528,38,Right,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+hand_tremor,Right_Control_39_VID_20261023_132825,39,Right,control,7,0,0.0,0.0,1.0,1.0,0.64523804,False
+hand_tremor,Right_Control_3_VID_20261019_093705,3,Right,control,7,0,0.0,1.0,1.0,1.0,0.03690476,False
+hand_tremor,Left_Control_2_IMG_3229,2,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Right_Control_41_VID_20261023_142343,41,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_42_VID_20261023_145824,42,Right,control,7,0,0.0,0.102380954,1.0,1.0,1.0,False
+hand_tremor,Right_Control_43_VID_20261023_151300,43,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_44_VID_20261023_152438,44,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_30_IMG_3116,30,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Right_Control_46_IMG_4072,46,Right,control,7,0,0.0,0.0,1.0,0.2761905,0.72380954,False
+hand_tremor,Right_Control_47_VID_20261024_152302,47,Right,control,9,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_48_VID_20261024_153402,48,Right,control,8,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_49_VID_20261024_154108,49,Right,control,7,0,0.0,0.3482143,1.0,1.0,1.0,False
+hand_tremor,Right_Control_4_VID_20261019_100814,4,Right,control,7,0,0.0,0.36666664,1.0,1.0,0.06666667,False
+hand_tremor,Right_Control_50_VID_20261024_154820,50,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_51_VID_20261024_155551,51,Right,control,7,0,0.0,0.0,1.0,0.0,1.0,False
+hand_tremor,Right_Control_5_VID_20261019_101751,5,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_6_VID_20261019_102933,6,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_7_VID_20261019_104710,7,Right,control,8,0,0.0,0.0,1.0,1.0,0.0020833334,False
+hand_tremor,Right_Control_8_VID_20261019_123023,8,Right,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+hand_tremor,Right_Control_9_VID_20261019_124140,9,Right,control,7,0,0.0,0.0,1.0,1.0,0.5928572,False
+hand_tremor,Right_Hand Tremor_10_VID_20261019_125249,10,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_11_VID_20261019_133706,11,Right,hand_tremor,13,0,0.0,0.9371795,1.0,0.99615383,0.92051286,False
+hand_tremor,Right_Hand Tremor_12_VID_20261019_134545,12,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_13_VID_20261019_135209,13,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_14_VID_20261019_135901,14,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_15_VID_20261019_140709,15,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_16_VID_20261019_142951,16,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_17_VID_20261019_144514,17,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_18_VID_20261019_145331,18,Right,hand_tremor,16,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_19_VID_20261019_150344,19,Right,hand_tremor,14,0,0.0,0.6464286,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_1_P1_ShakyHands,1,Right,hand_tremor,14,0,0.0,0.9761905,1.0,1.0,1.0,False
+hand_tremor,Left_Control_31_IMG_3125,31,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_32_IMG_3133,32,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Control_34_VID_20261023_091248,34,Right,control,7,0,0.0,0.66190475,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_23_VID_20261019_155843,23,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_24_VID_20261019_161022,24,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_25_VID_20261019_162014,25,Right,hand_tremor,13,0,0.0,0.97628206,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_26_VID_20261021_092848,26,Right,hand_tremor,13,0,0.0,0.7474359,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_27_VID_20261021_094019,27,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_28_VID_20261021_095139,28,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_42_VID_20261023_145906,42,Right,hand_tremor,14,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_43_VID_20261023_151347,43,Right,hand_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_33_IMG_3141,33,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_45_IMG_4063,45,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_46_IMG_4074,46,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_34_IMG_3155,34,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_48_VID_20261024_153456,48,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_49_VID_20261024_154151,49,Right,hand_tremor,13,0,0.0,0.7179487,1.0,1.0,1.0,False
+hand_tremor,Left_Control_35_IMG_3163,35,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_50_VID_20261024_154904,50,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_51_VID_20261024_155636,51,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_5_VID_20261019_101833,5,Right,hand_tremor,14,0,0.0,0.90833336,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_6_VID_20261019_103017,6,Right,hand_tremor,13,0,0.0,0.54102564,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_7_VID_20261019_104755,7,Right,hand_tremor,14,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Right_Hand Tremor_8_VID_20261019_123105,8,Right,hand_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_36_IMG_3171,36,Left,control,7,0,0.0,1.0,1.0,1.0,0.32142857,False
+hand_tremor,Left_Control_37_IMG_3179,37,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_14_IMG_2953,14,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_38_IMG_3187,38,Left,control,7,0,0.0,1.0,1.0,0.0,0.0,False
+hand_tremor,Left_Control_39_IMG_3195,39,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_17_IMG_2978,17,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_18_IMG_2988,18,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_19_IMG_2997,19,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_1_IMG_3228,1,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_20_IMG_3006,20,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_21_IMG_3014,21,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_22_IMG_3022,22,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_3_IMG_2857,3,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_24_IMG_3038,24,Left,control,7,0,0.0,0.0023809525,1.0,1.0,1.0,False
+hand_tremor,Left_Control_25_IMG_3046,25,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+hand_tremor,Left_Control_26_IMG_3080,26,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+hand_tremor,Left_Control_11_IMG_2929,11,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False

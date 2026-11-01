@@ -1,0 +1,307 @@
+symptom_model,video_id,participant_id,angle,task_class,windows,failed,fail_frac,face_tracked,pose_tracked,left_hand_tracked,right_hand_tracked,outlier
+avoidant_gaze,Right_Control_46_IMG_4072,46,Right,control,7,7,1.0,0.0,1.0,0.2761905,0.72380954,True
+avoidant_gaze,Right_Control_7_VID_20261019_104710,7,Right,control,8,8,1.0,0.0,1.0,1.0,0.0020833334,True
+avoidant_gaze,Right_Control_8_VID_20261019_123023,8,Right,control,7,7,1.0,0.0,1.0,1.0,0.0,True
+avoidant_gaze,Right_Control_51_VID_20261024_155551,51,Right,control,7,7,1.0,0.0,1.0,0.0,1.0,True
+avoidant_gaze,Right_Control_21_VID_20261019_151952,21,Right,control,7,7,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Control_20_VID_20261019_151130,20,Right,control,7,7,1.0,0.0,1.0,1.0,0.97261906,True
+avoidant_gaze,Right_Control_10_VID_20261019_125150,10,Right,control,8,8,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Avoidant Gaze_42_VID_20261023_150220,42,Right,avoidant_gaze,13,13,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Control_35_VID_20261023_092726,35,Middle,control,7,7,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Control_48_VID_20261024_153432,48,Middle,control,7,7,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Avoidant Gaze_49_VID_20261024_154501,49,Middle,avoidant_gaze,13,13,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Control_31_VID_20261021_124643,31,Right,control,7,7,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Control_40_VID_20261023_140520,40,Right,control,7,7,1.0,0.0,1.0,0.57857144,0.75357145,True
+avoidant_gaze,Right_Control_9_VID_20261019_124140,9,Right,control,7,7,1.0,0.0,1.0,1.0,0.5928572,True
+avoidant_gaze,Middle_Control_40_VID_20261023_140551,40,Middle,control,7,7,1.0,0.0,1.0,0.9071428,0.16071428,True
+avoidant_gaze,Middle_Control_21_VID_20261019_152023,21,Middle,control,7,7,1.0,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Avoidant Gaze_47_VID_20261024_152716,47,Right,avoidant_gaze,13,12,0.9230769230769231,0.9801282,1.0,1.0,1.0,True
+avoidant_gaze,Left_Control_24_IMG_3038,24,Left,control,7,6,0.8571428571428571,0.0023809525,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Control_23_VID_20261019_155827,23,Middle,control,7,6,0.8571428571428571,0.85714287,1.0,0.9785714,0.875,True
+avoidant_gaze,Left_Control_8_IMG_2902,8,Left,control,7,6,0.8571428571428571,0.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Control_4_VID_20261019_100814,4,Right,control,7,6,0.8571428571428571,0.36666664,1.0,1.0,0.06666667,True
+avoidant_gaze,Right_Avoidant Gaze_49_VID_20261024_154430,49,Right,avoidant_gaze,13,11,0.8461538461538461,0.19388564,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Avoidant Gaze_47_VID_20261024_152747,47,Middle,avoidant_gaze,13,11,0.8461538461538461,0.9913461,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Avoidant Gaze_32_VID_20261021_130200,32,Middle,avoidant_gaze,13,10,0.7692307692307693,1.0,1.0,0.28846154,0.7288462,True
+avoidant_gaze,Right_Control_24_VID_20261019_160936,24,Right,control,8,6,0.75,1.0,1.0,1.0,1.0,True
+avoidant_gaze,Right_Control_26_VID_20261021_092757,26,Right,control,7,5,0.7142857142857143,0.0,1.0,0.9904762,0.123809524,True
+avoidant_gaze,Left_Control_4_IMG_2867,4,Left,control,7,5,0.7142857142857143,0.84999996,1.0,0.084523804,0.9976191,True
+avoidant_gaze,Middle_Control_9_VID_20261019_124210,9,Middle,control,7,5,0.7142857142857143,1.0,1.0,1.0,1.0,True
+avoidant_gaze,Middle_Control_38_VID_20261023_095558,38,Middle,control,7,5,0.7142857142857143,0.0,1.0,0.0,0.0,True
+avoidant_gaze,Left_Avoidant Gaze_20_IMG_3010,20,Left,avoidant_gaze,13,8,0.6153846153846154,1.0,1.0,1.0,1.0,True
+avoidant_gaze,Left_Control_23_IMG_3030,23,Left,control,7,4,0.5714285714285714,1.0,1.0,0.9690476,1.0,True
+avoidant_gaze,Middle_Control_4_VID_20261019_100844,4,Middle,control,7,4,0.5714285714285714,0.89285713,1.0,0.9547619,0.7690476,True
+avoidant_gaze,Left_Control_43_IMG_3238,43,Left,control,7,4,0.5714285714285714,1.0,1.0,0.0,1.0,True
+avoidant_gaze,Right_Control_23_VID_20261019_155755,23,Right,control,7,4,0.5714285714285714,1.0,1.0,1.0,0.8904762,True
+avoidant_gaze,Right_Avoidant Gaze_48_VID_20261024_153744,48,Right,avoidant_gaze,13,7,0.5384615384615384,0.0,1.0,1.0,0.10897435,True
+avoidant_gaze,Middle_Avoidant Gaze_20_VID_20261019_151459,20,Middle,avoidant_gaze,14,7,0.5,0.69821423,1.0,1.0,1.0,True
+avoidant_gaze,Left_Avoidant Gaze_32_IMG_3138,32,Left,avoidant_gaze,13,6,0.46153846153846156,1.0,1.0,0.001923077,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_38_VID_20261023_100004,38,Middle,avoidant_gaze,13,6,0.46153846153846156,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_16_VID_20261019_142943,16,Middle,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_7_IMG_2894,7,Left,control,7,3,0.42857142857142855,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Right_Control_32_VID_20261021_125651,32,Right,control,7,3,0.42857142857142855,1.0,1.0,1.0,0.7285714,False
+avoidant_gaze,Right_Control_45_IMG_4062,45,Right,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_8_VID_20261019_123054,8,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_11_VID_20261019_133652,11,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_9_IMG_2911,9,Left,control,7,3,0.42857142857142855,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Control_24_VID_20261019_161006,24,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_46_IMG_3274,46,Left,avoidant_gaze,13,5,0.38461538461538464,0.30641025,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_38_VID_20261023_095933,38,Right,avoidant_gaze,13,5,0.38461538461538464,0.0,1.0,1.0,0.68141025,False
+avoidant_gaze,Right_Control_22_VID_20261019_154811,22,Right,control,8,3,0.375,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_5_VID_20261019_102135,5,Right,avoidant_gaze,13,4,0.3076923076923077,0.21410257,1.0,0.9628205,0.29807693,False
+avoidant_gaze,Right_Avoidant Gaze_10_VID_20261019_125529,10,Right,avoidant_gaze,13,4,0.3076923076923077,0.0025641026,1.0,1.0,0.0,False
+avoidant_gaze,Left_Avoidant Gaze_24_IMG_3042,24,Left,avoidant_gaze,13,4,0.3076923076923077,0.30448717,1.0,0.8442308,0.74358976,False
+avoidant_gaze,Left_Control_46_IMG_3269,46,Left,control,7,2,0.2857142857142857,0.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_13_VID_20261019_135130,13,Right,control,7,2,0.2857142857142857,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_31_IMG_3125,31,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_31_VID_20261021_124713,31,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_51_VID_20261024_155622,51,Middle,control,7,2,0.2857142857142857,0.6464286,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_26_IMG_3080,26,Left,control,7,2,0.2857142857142857,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Control_13_IMG_2945,13,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_50_IMG_3310,50,Left,avoidant_gaze,13,3,0.23076923076923078,1.0,1.0,0.99230766,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_21_VID_20261019_152246,21,Right,avoidant_gaze,13,3,0.23076923076923078,0.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_14_VID_20261019_140102,14,Right,avoidant_gaze,13,3,0.23076923076923078,0.59615386,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_36_VID_20261023_094132,36,Middle,avoidant_gaze,13,3,0.23076923076923078,1.0,1.0,0.99615383,0.28846154,False
+avoidant_gaze,Middle_Avoidant Gaze_10_VID_20261019_125617,10,Middle,avoidant_gaze,22,5,0.22727272727272727,1.0,1.0,1.0,0.98594344,False
+avoidant_gaze,Right_Avoidant Gaze_35_VID_20261023_093118,35,Right,avoidant_gaze,14,3,0.21428571428571427,0.0,1.0,1.0,0.0035714286,False
+avoidant_gaze,Right_Avoidant Gaze_25_VID_20261019_162135,25,Right,avoidant_gaze,14,3,0.21428571428571427,0.3904762,1.0,0.0,0.8869048,False
+avoidant_gaze,Middle_Avoidant Gaze_51_VID_20261024_155950,51,Middle,avoidant_gaze,13,2,0.15384615384615385,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_35_VID_20261023_093150,35,Middle,avoidant_gaze,13,2,0.15384615384615385,0.97115386,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_24_VID_20261019_161301,24,Middle,avoidant_gaze,13,2,0.15384615384615385,1.0,1.0,0.4846154,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_40_VID_20261023_141013,40,Middle,avoidant_gaze,13,2,0.15384615384615385,0.0,1.0,0.9951923,0.998077,False
+avoidant_gaze,Middle_Avoidant Gaze_37_VID_20261023_095049,37,Middle,avoidant_gaze,13,2,0.15384615384615385,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_40_IMG_3208,40,Left,avoidant_gaze,13,2,0.15384615384615385,1.0,1.0,0.9724359,0.998077,False
+avoidant_gaze,Right_Avoidant Gaze_45_IMG_4068,45,Right,avoidant_gaze,13,2,0.15384615384615385,0.0,1.0,1.0,0.0,False
+avoidant_gaze,Left_Avoidant Gaze_42_IMG_3235,42,Left,avoidant_gaze,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_50_VID_20261024_154851,50,Middle,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_2_VID_20261023_145458,2,Right,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_39_VID_20261023_132825,39,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,0.64523804,False
+avoidant_gaze,Left_Control_41_IMG_3212,41,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_11_IMG_2929,11,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_23_VID_20261019_160139,23,Right,avoidant_gaze,14,2,0.14285714285714285,0.98869044,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Control_43_VID_20261023_151331,43,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_2_VID_20261023_145529,2,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_15_IMG_2962,15,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_15_VID_20261019_140556,15,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_12_IMG_2937,12,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_47_VID_20261024_152302,47,Right,control,9,1,0.1111111111111111,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_36_VID_20261023_094101,36,Right,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_50_VID_20261024_155149,50,Right,avoidant_gaze,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_38_IMG_3192,38,Left,avoidant_gaze,13,1,0.07692307692307693,0.9410257,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_36_IMG_3176,36,Left,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,0.52371794,0.47500002,False
+avoidant_gaze,Left_Avoidant Gaze_25_IMG_3050,25,Left,avoidant_gaze,13,1,0.07692307692307693,0.71666664,1.0,0.00064102566,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_25_VID_20261019_162206,25,Middle,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_17_VID_20261019_144729,17,Right,avoidant_gaze,13,1,0.07692307692307693,0.45192307,1.0,0.76282054,0.71666664,False
+avoidant_gaze,Right_Avoidant Gaze_43_VID_20261023_151657,43,Right,avoidant_gaze,13,1,0.07692307692307693,0.9230769,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_15_IMG_2966,15,Left,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_7_VID_20261019_105044,7,Middle,avoidant_gaze,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_12_VID_20261019_134745,12,Right,avoidant_gaze,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_45_VID_20261024_115303,45,Middle,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_23_IMG_3034,23,Left,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_31_VID_20261021_125226,31,Middle,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_42_VID_20261023_150250,42,Middle,avoidant_gaze,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_40_VID_20261023_140942,40,Right,avoidant_gaze,14,1,0.07142857142857142,0.0,1.0,1.0,0.9660714,False
+avoidant_gaze,Middle_Avoidant Gaze_27_VID_20261021_094421,27,Middle,avoidant_gaze,14,1,0.07142857142857142,1.0,1.0,1.0,0.98392856,False
+avoidant_gaze,Right_Avoidant Gaze_15_VID_20261019_140931,15,Right,avoidant_gaze,14,1,0.07142857142857142,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_14_IMG_2958,14,Left,avoidant_gaze,14,1,0.07142857142857142,0.68095237,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_41_VID_20261023_142808,41,Right,avoidant_gaze,15,1,0.06666666666666667,0.88,1.0,1.0,0.98722225,False
+avoidant_gaze,Left_Avoidant Gaze_10_IMG_2923,10,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Right_Control_41_VID_20261023_142343,41,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_3_VID_20261019_093705,3,Right,control,7,0,0.0,1.0,1.0,1.0,0.03690476,False
+avoidant_gaze,Right_Control_38_VID_20261023_095528,38,Right,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+avoidant_gaze,Right_Control_37_VID_20261023_094640,37,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_36_VID_20261023_093637,36,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_35_VID_20261023_092656,35,Right,control,7,0,0.0,0.0,1.0,1.0,0.9928571,False
+avoidant_gaze,Right_Control_34_VID_20261023_091248,34,Right,control,7,0,0.0,0.66190475,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_33_VID_20261021_130628,33,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_30_VID_20261021_123612,30,Right,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Right_Control_43_VID_20261023_151300,43,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_42_VID_20261023_145824,42,Right,control,7,0,0.0,0.102380954,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_26_IMG_3085,26,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_22_IMG_3025,22,Left,avoidant_gaze,13,0,0.0,0.95576924,1.0,1.0,0.35192305,False
+avoidant_gaze,Left_Avoidant Gaze_21_IMG_3018,21,Left,avoidant_gaze,13,0,0.0,0.8858974,1.0,0.2628205,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_1_Participant-1,1,Left,avoidant_gaze,13,0,0.0,0.9974359,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_19_IMG_3002,19,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_18_IMG_2992,18,Left,avoidant_gaze,13,0,0.0,0.9269231,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_17_IMG_2984,17,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.21410257,0.8384615,False
+avoidant_gaze,Left_Avoidant Gaze_16_IMG_2974,16,Left,avoidant_gaze,13,0,0.0,0.59615386,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_6_IMG_2886,6,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_34_VID_20261023_091801,34,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_33_VID_20261021_131058,33,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_30_VID_20261021_124150,30,Middle,avoidant_gaze,13,0,0.0,0.95769227,1.0,0.011538462,0.046153847,False
+avoidant_gaze,Middle_Avoidant Gaze_2_VID_20261017_125340,2,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_29_VID_20261021_123019,29,Middle,avoidant_gaze,13,0,0.0,0.64807695,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_28_VID_20261021_095523,28,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.051923078,0.9480769,False
+avoidant_gaze,Middle_Avoidant Gaze_26_VID_20261021_093246,26,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.011538461,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_23_VID_20261019_103823,23,Middle,avoidant_gaze,13,0,0.0,0.974359,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_3_IMG_2857,3,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Control_39_IMG_3195,39,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_1_1,1,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_19_VID_20261019_150623,19,Middle,avoidant_gaze,13,0,0.0,0.8019231,1.0,1.0,0.27884614,False
+avoidant_gaze,Middle_Avoidant Gaze_18_VID_20261019_145608,18,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_17_VID_20261019_144800,17,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.7192308,0.5519231,False
+avoidant_gaze,Middle_Avoidant Gaze_16_VID_20261019_143241,16,Middle,avoidant_gaze,13,0,0.0,0.7692308,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_15_VID_20261019_141001,15,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_14_VID_20261019_140133,14,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_13_VID_20261019_135442,13,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_12_VID_20261019_134816,12,Middle,avoidant_gaze,13,0,0.0,0.9826923,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_11_VID_20261019_134006,11,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.975,0.99230766,False
+avoidant_gaze,Middle_Avoidant Gaze_22_VID_20261019_160210,22,Middle,avoidant_gaze,13,0,0.0,0.40576923,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_21_VID_20261019_155120,21,Middle,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,0.9326923,False
+avoidant_gaze,Middle_Avoidant Gaze_4_VID_20261019_101137,4,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.9851325,0.8195971,False
+avoidant_gaze,Middle_Avoidant Gaze_48_VID_20261024_153815,48,Middle,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_46_VID_20261024_120453,46,Middle,avoidant_gaze,13,0,0.0,0.86538464,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_44_VID_20261023_152857,44,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.0019230769,0.9701923,False
+avoidant_gaze,Middle_Avoidant Gaze_43_VID_20261023_151728,43,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_41_VID_20261023_142842,41,Middle,avoidant_gaze,14,0,0.0,0.0,1.0,0.99464285,0.99642855,False
+avoidant_gaze,Middle_Avoidant Gaze_3_VID_20261019_094036,3,Middle,avoidant_gaze,13,0,0.0,0.9288461,1.0,0.96153843,0.873077,False
+avoidant_gaze,Middle_Avoidant Gaze_39_VID_20261023_133340,39,Middle,avoidant_gaze,13,0,0.0,1.0,1.0,0.93653846,0.09615385,False
+avoidant_gaze,Middle_Control_18_VID_20261019_145320,18,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_17_VID_20261019_144441,17,Middle,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Middle_Control_15_VID_20261019_140627,15,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_14_VID_20261019_135850,14,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_13_VID_20261019_135201,13,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_12_VID_20261019_134532,12,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_10_VID_20261019_125221,10,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_9_VID_20261019_124604,9,Middle,avoidant_gaze,13,0,0.0,0.56305754,1.0,1.0,0.3899806,False
+avoidant_gaze,Middle_Avoidant Gaze_8_VID_20261019_123426,8,Middle,avoidant_gaze,13,0,0.0,0.7142693,1.0,0.5104303,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_6_VID_20261019_103823,6,Middle,avoidant_gaze,13,0,0.0,0.974359,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Avoidant Gaze_5_VID_20261019_102206,5,Middle,avoidant_gaze,13,0,0.0,0.913467,1.0,0.6269338,0.44615385,False
+avoidant_gaze,Left_Control_25_IMG_3046,25,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_5_IMG_2876,5,Left,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_51_IMG_3313,51,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_50_IMG_3305,50,Left,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_49_IMG_3297,49,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_48_IMG_3288,48,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_47_IMG_3280,47,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_45_IMG_3260,45,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_44_IMG_3246,44,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_42_IMG_3230,42,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_40_IMG_3203,40,Left,control,7,0,0.0,1.0,1.0,0.17261906,0.79404765,False
+avoidant_gaze,Middle_Avoidant Gaze_50_VID_20261024_155220,50,Middle,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_32_VID_20261021_125721,32,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_30_VID_20261021_123642,30,Middle,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Middle_Control_29_VID_20261021_122429,29,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_28_VID_20261021_095050,28,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_27_VID_20261021_093959,27,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_26_VID_20261021_092828,26,Middle,control,7,0,0.0,1.0,1.0,0.32500002,0.9928571,False
+avoidant_gaze,Middle_Control_25_VID_20261019_161957,25,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_22_VID_20261019_154840,22,Middle,control,6,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_20_VID_20261019_151201,20,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_1_VID_20261023_145413,1,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_19_VID_20261019_150335,19,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_47_VID_20261024_152334,47,Middle,control,7,0,0.0,0.94107145,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_46_VID_20261024_120056,46,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_45_VID_20261024_114902,45,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_44_VID_20261023_152509,44,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_42_VID_20261023_145855,42,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_41_VID_20261023_142414,41,Middle,control,7,0,0.0,0.35,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_3_VID_20261019_093735,3,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_39_VID_20261023_132856,39,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_37_VID_20261023_094711,37,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_36_VID_20261023_093708,36,Middle,control,7,0,0.0,1.0,1.0,0.96250004,0.037499998,False
+avoidant_gaze,Left_Control_10_IMG_2919,10,Left,control,8,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_9_IMG_2915,9,Left,avoidant_gaze,13,0,0.0,0.043589745,1.0,0.10897437,1.0,False
+avoidant_gaze,Left_Control_38_IMG_3187,38,Left,control,7,0,0.0,1.0,1.0,0.0,0.0,False
+avoidant_gaze,Left_Control_37_IMG_3179,37,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Control_36_IMG_3171,36,Left,control,7,0,0.0,1.0,1.0,1.0,0.32142857,False
+avoidant_gaze,Left_Control_35_IMG_3163,35,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_34_IMG_3155,34,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_33_IMG_3141,33,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_32_IMG_3133,32,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_30_IMG_3116,30,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Control_2_IMG_3229,2,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Control_29_IMG_3106,29,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_28_IMG_3097,28,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_27_IMG_3088,27,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_34_VID_20261023_091320,34,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_33_VID_20261021_130658,33,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_13_VID_20261019_135412,13,Right,avoidant_gaze,13,0,0.0,0.3733974,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_11_VID_20261019_133935,11,Right,avoidant_gaze,13,0,0.0,1.0,1.0,0.99871796,0.04935897,False
+avoidant_gaze,Middle_Control_7_VID_20261019_104741,7,Middle,control,7,0,0.0,0.84999996,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_6_VID_20261019_103003,6,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_5_VID_20261019_101823,5,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Middle_Control_49_VID_20261024_154139,49,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_2_P2_AvoidantGaze,2,Right,avoidant_gaze,14,0,0.0,1.0,1.0,1.0,0.9904762,False
+avoidant_gaze,Right_Avoidant Gaze_29_VID_20261021_122949,29,Right,avoidant_gaze,13,0,0.0,0.67628205,1.0,0.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_28_VID_20261021_095453,28,Right,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,0.23846152,False
+avoidant_gaze,Right_Avoidant Gaze_27_VID_20261021_094347,27,Right,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,0.9974359,False
+avoidant_gaze,Right_Avoidant Gaze_26_VID_20261021_093216,26,Right,avoidant_gaze,13,0,0.0,0.95448714,1.0,0.9794872,0.050641026,False
+avoidant_gaze,Right_Avoidant Gaze_24_VID_20261019_161230,24,Right,avoidant_gaze,13,0,0.0,0.0,1.0,0.9,0.500641,False
+avoidant_gaze,Right_Avoidant Gaze_22_VID_20261019_155050,22,Right,avoidant_gaze,13,0,0.0,0.40705127,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_20_VID_20261019_151427,20,Right,avoidant_gaze,14,0,0.0,0.07976191,1.0,1.0,0.4470238,False
+avoidant_gaze,Right_Avoidant Gaze_1_P1_AvoidantGaze,1,Right,avoidant_gaze,13,0,0.0,0.69871795,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_19_VID_20261019_150552,19,Right,avoidant_gaze,13,0,0.0,0.64358974,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_18_VID_20261019_145537,18,Right,avoidant_gaze,13,0,0.0,0.9403846,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_41_IMG_3218,41,Left,avoidant_gaze,14,0,0.0,0.16666666,1.0,0.9988095,1.0,False
+avoidant_gaze,Left_Control_22_IMG_3022,22,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_21_IMG_3014,21,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_20_IMG_3006,20,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_1_IMG_3228,1,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_19_IMG_2997,19,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_18_IMG_2988,18,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_17_IMG_2978,17,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_16_IMG_2970,16,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Control_14_IMG_2953,14,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_16_VID_20261019_143211,16,Right,avoidant_gaze,13,0,0.0,0.4294872,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_44_VID_20261023_152826,44,Right,avoidant_gaze,13,0,0.0,0.9846154,1.0,0.99871796,0.6602564,False
+avoidant_gaze,Right_Avoidant Gaze_3_VID_20261019_094005,3,Right,avoidant_gaze,14,0,0.0,0.9035714,1.0,0.9952381,0.6654762,False
+avoidant_gaze,Right_Avoidant Gaze_39_VID_20261023_133308,39,Right,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_37_VID_20261023_095018,37,Right,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_34_VID_20261023_091730,34,Right,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_33_VID_20261021_131027,33,Right,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_32_VID_20261021_130129,32,Right,avoidant_gaze,13,0,0.0,1.0,1.0,0.6076923,0.64294875,False
+avoidant_gaze,Right_Avoidant Gaze_31_VID_20261021_125156,31,Right,avoidant_gaze,13,0,0.0,0.9371795,1.0,0.9339743,0.8397436,False
+avoidant_gaze,Right_Avoidant Gaze_30_VID_20261021_124120,30,Right,avoidant_gaze,13,0,0.0,0.044871792,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_12_VID_20261019_134459,12,Right,control,10,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_11_VID_20261019_133621,11,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_9_VID_20261019_124534,9,Right,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Avoidant Gaze_8_VID_20261019_123358,8,Right,avoidant_gaze,13,0,0.0,0.0,1.0,0.9916667,0.060256414,False
+avoidant_gaze,Right_Avoidant Gaze_7_VID_20261019_105013,7,Right,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_6_VID_20261019_103752,6,Right,avoidant_gaze,14,0,0.0,0.0,1.0,0.22500001,0.9988095,False
+avoidant_gaze,Right_Avoidant Gaze_51_VID_20261024_155920,51,Right,avoidant_gaze,13,0,0.0,0.0,1.0,1.0,0.98756796,False
+avoidant_gaze,Right_Avoidant Gaze_4_VID_20261019_101106,4,Right,avoidant_gaze,13,0,0.0,0.5224359,1.0,1.0,0.09615385,False
+avoidant_gaze,Left_Avoidant Gaze_28_IMG_3103,28,Left,avoidant_gaze,13,0,0.0,0.9974359,1.0,0.0051282053,0.9948718,False
+avoidant_gaze,Left_Avoidant Gaze_27_IMG_3093,27,Left,avoidant_gaze,13,0,0.0,0.92435896,1.0,1.0,0.9967948,False
+avoidant_gaze,Left_Avoidant Gaze_8_IMG_2907,8,Left,avoidant_gaze,13,0,0.0,0.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_7_IMG_2898,7,Left,avoidant_gaze,13,0,0.0,0.9128205,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_6_IMG_2893,6,Left,avoidant_gaze,13,0,0.0,0.30512822,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_5_IMG_2881,5,Left,avoidant_gaze,13,0,0.0,0.73717946,1.0,0.3179487,0.974359,False
+avoidant_gaze,Left_Avoidant Gaze_51_IMG_3318,51,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.86730766,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_4_IMG_2871,4,Left,avoidant_gaze,13,0,0.0,0.5820513,1.0,0.024358975,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_49_IMG_3302,49,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_48_IMG_3294,48,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_47_IMG_3285,47,Left,avoidant_gaze,13,0,0.0,0.9833333,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_45_IMG_3265,45,Left,avoidant_gaze,13,0,0.0,0.9115385,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_44_IMG_3251,44,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_43_IMG_3243,43,Left,avoidant_gaze,13,0,0.0,0.98717946,1.0,1.0,1.0,False
+avoidant_gaze,Right_Avoidant Gaze_46_IMG_4078,46,Right,avoidant_gaze,14,0,0.0,0.050000004,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_27_VID_20261021_093928,27,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_25_VID_20261019_161926,25,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_1_VID_20261023_145342,1,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_19_VID_20261019_150304,19,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_18_VID_20261019_145250,18,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_17_VID_20261019_144410,17,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+avoidant_gaze,Right_Control_16_VID_20261019_142911,16,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_29_VID_20261021_122358,29,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_28_VID_20261021_095020,28,Right,control,7,0,0.0,1.0,1.0,1.0,0.13571429,False
+avoidant_gaze,Left_Avoidant Gaze_3_IMG_2861,3,Left,avoidant_gaze,13,0,0.0,0.81923074,1.0,0.93012816,0.92820513,False
+avoidant_gaze,Left_Avoidant Gaze_39_IMG_3200,39,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.6410256,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_37_IMG_3184,37,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_35_IMG_3168,35,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.054487184,0.94551283,False
+avoidant_gaze,Left_Avoidant Gaze_34_IMG_3160,34,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_33_IMG_3146,33,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_31_IMG_3130,31,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.02948718,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_30_IMG_3122,30,Left,avoidant_gaze,13,0,0.0,0.974359,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_2_Participant-2,2,Left,avoidant_gaze,13,0,0.0,1.0,1.0,0.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_29_IMG_3112,29,Left,avoidant_gaze,13,0,0.0,0.6217948,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_14_VID_20261019_135820,14,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_11_IMG_2933,11,Left,avoidant_gaze,14,0,0.0,1.0,1.0,0.4940476,0.9952381,False
+avoidant_gaze,Right_Control_6_VID_20261019_102933,6,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_5_VID_20261019_101751,5,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_50_VID_20261024_154820,50,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_49_VID_20261024_154108,49,Right,control,7,0,0.0,0.3482143,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_48_VID_20261024_153402,48,Right,control,8,0,0.0,0.0,1.0,1.0,1.0,False
+avoidant_gaze,Right_Control_44_VID_20261023_152438,44,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_13_IMG_2949,13,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False
+avoidant_gaze,Left_Avoidant Gaze_12_IMG_2941,12,Left,avoidant_gaze,13,0,0.0,1.0,1.0,1.0,1.0,False

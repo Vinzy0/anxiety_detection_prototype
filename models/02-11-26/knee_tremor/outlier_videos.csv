@@ -1,0 +1,307 @@
+symptom_model,video_id,participant_id,angle,task_class,windows,failed,fail_frac,face_tracked,pose_tracked,left_hand_tracked,right_hand_tracked,outlier
+knee_tremor,Right_Control_20_VID_20261019_151130,20,Right,control,7,7,1.0,0.0,1.0,1.0,0.97261906,True
+knee_tremor,Middle_Knee Tremor_34_VID_20261023_091509,34,Middle,knee_tremor,13,13,1.0,0.99615383,1.0,0.998077,1.0,True
+knee_tremor,Right_Knee Tremor_40_VID_20261023_140710,40,Right,knee_tremor,13,13,1.0,0.0,1.0,1.0,0.0,True
+knee_tremor,Middle_Knee Tremor_25_VID_20261019_162124,25,Middle,knee_tremor,13,12,0.9230769230769231,1.0,1.0,0.20961538,1.0,True
+knee_tremor,Middle_Control_13_VID_20261019_135201,13,Middle,control,7,6,0.8571428571428571,1.0,1.0,1.0,1.0,True
+knee_tremor,Right_Knee Tremor_44_VID_20261023_152602,44,Right,knee_tremor,13,11,0.8461538461538461,1.0,1.0,1.0,1.0,True
+knee_tremor,Left_Knee Tremor_25_IMG_3049,25,Left,knee_tremor,13,11,0.8461538461538461,0.8051282,1.0,0.2576923,1.0,True
+knee_tremor,Right_Knee Tremor_3_VID_20261019_093829,3,Right,knee_tremor,13,10,0.7692307692307693,1.0,1.0,1.0,1.0,True
+knee_tremor,Left_Control_10_IMG_2919,10,Left,control,8,6,0.75,1.0,1.0,0.0,1.0,True
+knee_tremor,Right_Control_23_VID_20261019_155755,23,Right,control,7,5,0.7142857142857143,1.0,1.0,1.0,0.8904762,True
+knee_tremor,Middle_Control_23_VID_20261019_155827,23,Middle,control,7,5,0.7142857142857143,0.85714287,1.0,0.9785714,0.875,True
+knee_tremor,Left_Control_16_IMG_2970,16,Left,control,7,4,0.5714285714285714,1.0,1.0,1.0,1.0,True
+knee_tremor,Left_Control_8_IMG_2902,8,Left,control,7,4,0.5714285714285714,0.0,1.0,1.0,1.0,True
+knee_tremor,Left_Knee Tremor_39_IMG_3197,39,Left,knee_tremor,14,8,0.5714285714285714,1.0,1.0,1.0,1.0,True
+knee_tremor,Middle_Control_8_VID_20261019_123054,8,Middle,control,7,4,0.5714285714285714,1.0,1.0,1.0,1.0,True
+knee_tremor,Right_Knee Tremor_22_VID_20261019_154956,22,Right,knee_tremor,13,7,0.5384615384615384,0.9775641,1.0,1.0,0.0,True
+knee_tremor,Left_Knee Tremor_4_IMG_2869,4,Left,knee_tremor,13,7,0.5384615384615384,0.0012820513,1.0,1.0,1.0,True
+knee_tremor,Right_Knee Tremor_11_VID_20261019_133747,11,Right,knee_tremor,13,6,0.46153846153846156,0.7673077,1.0,1.0,0.9948718,False
+knee_tremor,Left_Control_26_IMG_3080,26,Left,control,7,3,0.42857142857142855,1.0,1.0,0.0,1.0,False
+knee_tremor,Right_Control_21_VID_20261019_151952,21,Right,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_29_VID_20261021_122358,29,Right,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_21_IMG_3014,21,Left,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_4_VID_20261019_101010,4,Middle,knee_tremor,13,5,0.38461538461538464,0.14384831,1.0,1.0,0.85600084,False
+knee_tremor,Left_Knee Tremor_19_IMG_2999,19,Left,knee_tremor,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_33_VID_20261021_130832,33,Middle,knee_tremor,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_20_VID_20261019_151327,20,Middle,knee_tremor,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_50_VID_20261024_155015,50,Middle,knee_tremor,13,4,0.3076923076923077,0.61346155,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_44_VID_20261023_152633,44,Middle,knee_tremor,13,4,0.3076923076923077,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_2_VID_20261023_145529,2,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_4_VID_20261019_100940,4,Right,knee_tremor,14,4,0.2857142857142857,0.0,1.0,1.0,0.76785713,False
+knee_tremor,Left_Control_2_IMG_3229,2,Left,control,7,2,0.2857142857142857,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_35_IMG_3163,35,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_32_VID_20261021_125651,32,Right,control,7,2,0.2857142857142857,1.0,1.0,1.0,0.7285714,False
+knee_tremor,Right_Control_2_VID_20261023_145458,2,Right,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_28_IMG_3097,28,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_17_VID_20261019_144441,17,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_35_VID_20261023_092656,35,Right,control,7,2,0.2857142857142857,0.0,1.0,1.0,0.9928571,False
+knee_tremor,Right_Control_45_IMG_4062,45,Right,control,7,2,0.2857142857142857,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_9_VID_20261019_124210,9,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_32_VID_20261021_125721,32,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_23_IMG_3030,23,Left,control,7,2,0.2857142857142857,1.0,1.0,0.9690476,1.0,False
+knee_tremor,Left_Knee Tremor_44_IMG_3248,44,Left,knee_tremor,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_36_IMG_3173,36,Left,knee_tremor,13,3,0.23076923076923078,1.0,1.0,0.9948718,0.0051282053,False
+knee_tremor,Middle_Knee Tremor_38_VID_20261023_095728,38,Middle,knee_tremor,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_15_VID_20261019_140749,15,Right,knee_tremor,13,3,0.23076923076923078,0.97996795,1.0,1.0,0.21813427,False
+knee_tremor,Middle_Knee Tremor_36_VID_20261023_093846,36,Middle,knee_tremor,15,3,0.2,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Knee Tremor_19_VID_20261019_150426,19,Right,knee_tremor,13,2,0.15384615384615385,0.974359,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_8_VID_20261019_123241,8,Middle,knee_tremor,13,2,0.15384615384615385,0.52153844,1.0,0.98307693,1.0,False
+knee_tremor,Middle_Control_37_VID_20261023_094711,37,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_40_VID_20261023_140551,40,Middle,control,7,1,0.14285714285714285,0.0,1.0,0.9071428,0.16071428,False
+knee_tremor,Middle_Control_4_VID_20261019_100844,4,Middle,control,7,1,0.14285714285714285,0.89285713,1.0,0.9547619,0.7690476,False
+knee_tremor,Left_Control_45_IMG_3260,45,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_7_IMG_2894,7,Left,control,7,1,0.14285714285714285,1.0,1.0,0.0,1.0,False
+knee_tremor,Middle_Control_21_VID_20261019_152023,21,Middle,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_46_IMG_4072,46,Right,control,7,1,0.14285714285714285,0.0,1.0,0.2761905,0.72380954,False
+knee_tremor,Right_Control_4_VID_20261019_100814,4,Right,control,7,1,0.14285714285714285,0.36666664,1.0,1.0,0.06666667,False
+knee_tremor,Left_Control_20_IMG_3006,20,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_33_IMG_3143,33,Left,knee_tremor,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_26_IMG_3082,26,Left,knee_tremor,13,1,0.07692307692307693,0.9589744,1.0,0.0,1.0,False
+knee_tremor,Right_Knee Tremor_34_VID_20261023_091438,34,Right,knee_tremor,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_48_VID_20261024_153608,48,Middle,knee_tremor,13,1,0.07692307692307693,0.27692306,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_18_VID_20261019_145412,18,Right,knee_tremor,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_26_VID_20261021_092934,26,Right,knee_tremor,13,1,0.07692307692307693,0.77820516,1.0,1.0,0.0,False
+knee_tremor,Right_Knee Tremor_2_P2_KneeTremors,2,Right,knee_tremor,14,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Right_Knee Tremor_30_VID_20261021_123822,30,Right,knee_tremor,13,0,0.0,0.0,1.0,0.0,1.0,False
+knee_tremor,Right_Knee Tremor_31_VID_20261021_124823,31,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,0.85192305,False
+knee_tremor,Right_Knee Tremor_32_VID_20261021_125825,32,Right,knee_tremor,13,0,0.0,0.9371795,1.0,1.0,0.061538458,False
+knee_tremor,Right_Knee Tremor_33_VID_20261021_130801,33,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_35_VID_20261023_092852,35,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_36_VID_20261023_093811,36,Right,knee_tremor,13,0,0.0,1.0,1.0,0.1852564,0.8147436,False
+knee_tremor,Right_Knee Tremor_37_VID_20261023_094802,37,Right,knee_tremor,13,0,0.0,1.0,1.0,0.6929487,0.30192307,False
+knee_tremor,Right_Knee Tremor_38_VID_20261023_095658,38,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,0.0,False
+knee_tremor,Right_Knee Tremor_39_VID_20261023_132953,39,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_27_IMG_3088,27,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_29_IMG_3106,29,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_30_IMG_3116,30,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_31_IMG_3125,31,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_32_IMG_3133,32,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_33_IMG_3141,33,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_34_IMG_3155,34,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_36_IMG_3171,36,Left,control,7,0,0.0,1.0,1.0,1.0,0.32142857,False
+knee_tremor,Left_Control_37_IMG_3179,37,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_38_IMG_3187,38,Left,control,7,0,0.0,1.0,1.0,0.0,0.0,False
+knee_tremor,Left_Control_39_IMG_3195,39,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_3_IMG_2857,3,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_40_IMG_3203,40,Left,control,7,0,0.0,1.0,1.0,0.17261906,0.79404765,False
+knee_tremor,Left_Control_41_IMG_3212,41,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_42_IMG_3230,42,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_43_IMG_3238,43,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Control_44_IMG_3246,44,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_46_IMG_3269,46,Left,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+knee_tremor,Left_Control_47_IMG_3280,47,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_48_IMG_3288,48,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_49_IMG_3297,49,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_4_IMG_2867,4,Left,control,7,0,0.0,0.84999996,1.0,0.084523804,0.9976191,False
+knee_tremor,Left_Control_50_IMG_3305,50,Left,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_51_IMG_3313,51,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_5_IMG_2876,5,Left,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_6_IMG_2886,6,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_9_IMG_2911,9,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Knee Tremor_10_IMG_2921,10,Left,knee_tremor,13,0,0.0,1.0,1.0,0.9967948,0.69358975,False
+knee_tremor,Left_Knee Tremor_11_IMG_2931,11,Left,knee_tremor,13,0,0.0,0.876923,1.0,0.99294865,0.99358976,False
+knee_tremor,Left_Knee Tremor_12_IMG_2939,12,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_13_IMG_2947,13,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_14_IMG_2956,14,Left,knee_tremor,10,0,0.0,1.0,1.0,0.99833333,1.0,False
+knee_tremor,Left_Knee Tremor_15_IMG_2964,15,Left,knee_tremor,13,0,0.0,1.0,1.0,0.8858974,1.0,False
+knee_tremor,Left_Knee Tremor_16_IMG_2972,16,Left,knee_tremor,13,0,0.0,0.9891026,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_17_IMG_2981,17,Left,knee_tremor,13,0,0.0,1.0,1.0,0.2551282,1.0,False
+knee_tremor,Left_Knee Tremor_18_IMG_2990,18,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_1_Participant-1,1,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_20_IMG_3008,20,Left,knee_tremor,13,0,0.0,0.5974359,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_21_IMG_3016,21,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_22_IMG_3024,22,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_23_IMG_3032,23,Left,knee_tremor,13,0,0.0,0.9730769,1.0,0.9974359,0.19999999,False
+knee_tremor,Left_Knee Tremor_24_IMG_3040,24,Left,knee_tremor,13,0,0.0,0.0,1.0,0.046153847,1.0,False
+knee_tremor,Left_Knee Tremor_27_IMG_3090,27,Left,knee_tremor,13,0,0.0,0.98846155,1.0,0.9948718,0.99615383,False
+knee_tremor,Left_Knee Tremor_28_IMG_3100,28,Left,knee_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_29_IMG_3108,29,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_2_Participant-2,2,Left,knee_tremor,13,0,0.0,1.0,1.0,0.53589743,1.0,False
+knee_tremor,Left_Knee Tremor_30_IMG_3119,30,Left,knee_tremor,13,0,0.0,0.925641,1.0,0.899359,0.9115385,False
+knee_tremor,Left_Knee Tremor_31_IMG_3127,31,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_32_IMG_3135,32,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.15897435,False
+knee_tremor,Left_Knee Tremor_34_IMG_3157,34,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_35_IMG_3165,35,Left,knee_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_37_IMG_3181,37,Left,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Knee Tremor_38_IMG_3189,38,Left,knee_tremor,13,0,0.0,0.44487178,1.0,0.0,1.0,False
+knee_tremor,Left_Knee Tremor_3_IMG_2859,3,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_40_IMG_3205,40,Left,knee_tremor,13,0,0.0,1.0,1.0,0.39423078,0.5955128,False
+knee_tremor,Left_Knee Tremor_41_IMG_3214,41,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_42_IMG_3232,42,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_43_IMG_3240,43,Left,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Knee Tremor_45_IMG_3262,45,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.5589743,False
+knee_tremor,Left_Knee Tremor_46_IMG_3271,46,Left,knee_tremor,13,0,0.0,0.0,1.0,0.021794872,1.0,False
+knee_tremor,Left_Knee Tremor_47_IMG_3282,47,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_48_IMG_3291,48,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_49_IMG_3299,49,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_50_IMG_3307,50,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_51_IMG_3315,51,Left,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_5_IMG_2878,5,Left,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Left_Knee Tremor_6_IMG_2888,6,Left,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Left_Knee Tremor_7_IMG_2896,7,Left,knee_tremor,13,0,0.0,0.16410255,1.0,0.99294865,0.99871796,False
+knee_tremor,Left_Knee Tremor_8_IMG_2904,8,Left,knee_tremor,13,0,0.0,0.0,1.0,0.9807692,1.0,False
+knee_tremor,Left_Knee Tremor_9_IMG_2913,9,Left,knee_tremor,13,0,0.0,0.0,1.0,0.18205127,1.0,False
+knee_tremor,Middle_Control_10_VID_20261019_125221,10,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_11_VID_20261019_133652,11,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_12_VID_20261019_134532,12,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_14_VID_20261019_135850,14,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_15_VID_20261019_140627,15,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_16_VID_20261019_142943,16,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_18_VID_20261019_145320,18,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_19_VID_20261019_150335,19,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_1_VID_20261023_145413,1,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_20_VID_20261019_151201,20,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_22_VID_20261019_154840,22,Middle,control,6,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_24_VID_20261019_161006,24,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_25_VID_20261019_161957,25,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_26_VID_20261021_092828,26,Middle,control,7,0,0.0,1.0,1.0,0.32500002,0.9928571,False
+knee_tremor,Middle_Knee Tremor_14_VID_20261019_140010,14,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.998077,0.98846155,False
+knee_tremor,Middle_Knee Tremor_15_VID_20261019_140820,15,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.9826923,False
+knee_tremor,Middle_Knee Tremor_16_VID_20261019_143107,16,Middle,knee_tremor,13,0,0.0,0.9913461,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_17_VID_20261019_144623,17,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.86346155,1.0,False
+knee_tremor,Middle_Knee Tremor_18_VID_20261019_145443,18,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_19_VID_20261019_150456,19,Middle,knee_tremor,13,0,0.0,0.975,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_1_1,1,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_7_VID_20261019_104741,7,Middle,control,7,0,0.0,0.84999996,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_21_VID_20261019_152148,21,Middle,knee_tremor,13,0,0.0,0.80576926,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_22_VID_20261019_155026,22,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.9778846,False
+knee_tremor,Middle_Knee Tremor_23_VID_20261019_160000,23,Middle,knee_tremor,13,0,0.0,0.97115386,1.0,0.99038464,0.23461539,False
+knee_tremor,Middle_Knee Tremor_24_VID_20261019_161135,24,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.9326923,0.86538464,False
+knee_tremor,Middle_Control_6_VID_20261019_103003,6,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_26_VID_20261021_093004,26,Middle,knee_tremor,13,0,0.0,0.998077,1.0,1.0,0.0,False
+knee_tremor,Middle_Knee Tremor_27_VID_20261021_094133,27,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.98653847,0.9701923,False
+knee_tremor,Middle_Knee Tremor_28_VID_20261021_095254,28,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_29_VID_20261021_122607,29,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.975,1.0,False
+knee_tremor,Middle_Knee Tremor_2_VID_20261017_125000,2,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Middle_Knee Tremor_30_VID_20261021_123852,30,Middle,knee_tremor,13,0,0.0,0.81153846,1.0,0.08846153,0.8576923,False
+knee_tremor,Middle_Knee Tremor_31_VID_20261021_124854,31,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_32_VID_20261021_125855,32,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.99230766,0.9211539,False
+knee_tremor,Middle_Control_5_VID_20261019_101823,5,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_51_VID_20261024_155622,51,Middle,control,7,0,0.0,0.6464286,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_35_VID_20261023_092922,35,Middle,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_50_VID_20261024_154851,50,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_37_VID_20261023_094833,37,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Middle_Control_49_VID_20261024_154139,49,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_39_VID_20261023_133025,39,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_3_VID_20261019_093859,3,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_40_VID_20261023_140740,40,Middle,knee_tremor,13,0,0.0,0.0,1.0,1.0,0.62692314,False
+knee_tremor,Middle_Knee Tremor_41_VID_20261023_142541,41,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_42_VID_20261023_150018,42,Middle,knee_tremor,13,0,0.0,0.9153846,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_43_VID_20261023_151459,43,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Middle_Knee Tremor_10_VID_20261019_125417,10,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.99871254,False
+knee_tremor,Middle_Knee Tremor_45_VID_20261024_115031,45,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_46_VID_20261024_120226,46,Middle,knee_tremor,13,0,0.0,0.0,1.0,0.975,1.0,False
+knee_tremor,Middle_Knee Tremor_47_VID_20261024_152524,47,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_11_IMG_2929,11,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_49_VID_20261024_154300,49,Middle,knee_tremor,13,0,0.0,0.6192308,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_48_VID_20261024_153432,48,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_47_VID_20261024_152334,47,Middle,control,7,0,0.0,0.94107145,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_51_VID_20261024_155747,51,Middle,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_5_VID_20261019_101947,5,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_6_VID_20261019_103130,6,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.91923076,1.0,False
+knee_tremor,Middle_Knee Tremor_7_VID_20261019_104908,7,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_46_VID_20261024_120056,46,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_9_VID_20261019_124342,9,Middle,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_10_VID_20261019_125150,10,Right,control,8,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_11_VID_20261019_133621,11,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_12_VID_20261019_134459,12,Right,control,10,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_13_VID_20261019_135130,13,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_14_VID_20261019_135820,14,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_15_VID_20261019_140556,15,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_16_VID_20261019_142911,16,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_17_VID_20261019_144410,17,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_18_VID_20261019_145250,18,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_19_VID_20261019_150304,19,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_1_VID_20261023_145342,1,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_45_VID_20261024_114902,45,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_44_VID_20261023_152509,44,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_22_VID_20261019_154811,22,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_43_VID_20261023_151331,43,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_24_VID_20261019_160936,24,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_25_VID_20261019_161926,25,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_26_VID_20261021_092757,26,Right,control,7,0,0.0,0.0,1.0,0.9904762,0.123809524,False
+knee_tremor,Right_Control_27_VID_20261021_093928,27,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_28_VID_20261021_095020,28,Right,control,7,0,0.0,1.0,1.0,1.0,0.13571429,False
+knee_tremor,Middle_Control_42_VID_20261023_145855,42,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_41_VID_20261023_142414,41,Middle,control,7,0,0.0,0.35,1.0,1.0,1.0,False
+knee_tremor,Right_Control_30_VID_20261021_123612,30,Right,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Right_Control_31_VID_20261021_124643,31,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_3_VID_20261019_093735,3,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_33_VID_20261021_130628,33,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_34_VID_20261023_091248,34,Right,control,7,0,0.0,0.66190475,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_39_VID_20261023_132856,39,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_36_VID_20261023_093637,36,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_37_VID_20261023_094640,37,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_38_VID_20261023_095528,38,Right,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+knee_tremor,Right_Control_39_VID_20261023_132825,39,Right,control,7,0,0.0,0.0,1.0,1.0,0.64523804,False
+knee_tremor,Right_Control_3_VID_20261019_093705,3,Right,control,7,0,0.0,1.0,1.0,1.0,0.03690476,False
+knee_tremor,Right_Control_40_VID_20261023_140520,40,Right,control,7,0,0.0,0.0,1.0,0.57857144,0.75357145,False
+knee_tremor,Right_Control_41_VID_20261023_142343,41,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_42_VID_20261023_145824,42,Right,control,7,0,0.0,0.102380954,1.0,1.0,1.0,False
+knee_tremor,Right_Control_43_VID_20261023_151300,43,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_44_VID_20261023_152438,44,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_38_VID_20261023_095558,38,Middle,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+knee_tremor,Middle_Knee Tremor_11_VID_20261019_133817,11,Middle,knee_tremor,13,0,0.0,1.0,1.0,0.9692308,0.9807692,False
+knee_tremor,Right_Control_47_VID_20261024_152302,47,Right,control,9,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_48_VID_20261024_153402,48,Right,control,8,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_49_VID_20261024_154108,49,Right,control,7,0,0.0,0.3482143,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_12_VID_20261019_134655,12,Middle,knee_tremor,13,0,0.0,0.99615383,1.0,1.0,1.0,False
+knee_tremor,Right_Control_50_VID_20261024_154820,50,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_51_VID_20261024_155551,51,Right,control,7,0,0.0,0.0,1.0,0.0,1.0,False
+knee_tremor,Right_Control_5_VID_20261019_101751,5,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_6_VID_20261019_102933,6,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Control_7_VID_20261019_104710,7,Right,control,8,0,0.0,0.0,1.0,1.0,0.0020833334,False
+knee_tremor,Right_Control_8_VID_20261019_123023,8,Right,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+knee_tremor,Right_Control_9_VID_20261019_124140,9,Right,control,7,0,0.0,0.0,1.0,1.0,0.5928572,False
+knee_tremor,Right_Knee Tremor_10_VID_20261019_125352,10,Right,knee_tremor,11,0,0.0,0.0,1.0,1.0,0.92424244,False
+knee_tremor,Middle_Control_36_VID_20261023_093708,36,Middle,control,7,0,0.0,1.0,1.0,0.96250004,0.037499998,False
+knee_tremor,Right_Knee Tremor_12_VID_20261019_134624,12,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_13_VID_20261019_135249,13,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_14_VID_20261019_135940,14,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_35_VID_20261023_092726,35,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_16_VID_20261019_143037,16,Right,knee_tremor,13,0,0.0,0.8551282,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_17_VID_20261019_144553,17,Right,knee_tremor,14,0,0.0,0.9690476,1.0,1.0,0.8738095,False
+knee_tremor,Left_Control_12_IMG_2937,12,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_34_VID_20261023_091320,34,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_1_P1_KneeTremors,1,Right,knee_tremor,14,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_20_VID_20261019_151256,20,Right,knee_tremor,14,0,0.0,0.9767857,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_21_VID_20261019_152117,21,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_33_VID_20261021_130658,33,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_23_VID_20261019_155929,23,Right,knee_tremor,14,0,0.0,0.60238093,1.0,1.0,0.28690475,False
+knee_tremor,Right_Knee Tremor_24_VID_20261019_161104,24,Right,knee_tremor,13,0,0.0,1.0,1.0,0.99615383,0.4871795,False
+knee_tremor,Right_Knee Tremor_25_VID_20261019_162054,25,Right,knee_tremor,14,0,0.0,0.8452381,1.0,0.18928573,1.0,False
+knee_tremor,Right_Knee Tremor_29_VID_20261021_122536,29,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_27_VID_20261021_094103,27,Right,knee_tremor,13,0,0.0,1.0,1.0,0.99358976,0.99230766,False
+knee_tremor,Right_Knee Tremor_28_VID_20261021_095223,28,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_43_VID_20261023_151428,43,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.9775641,False
+knee_tremor,Middle_Control_31_VID_20261021_124713,31,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_45_IMG_4064,45,Right,knee_tremor,15,0,0.0,0.0,1.0,1.0,0.5777778,False
+knee_tremor,Right_Knee Tremor_46_IMG_4075,46,Right,knee_tremor,14,0,0.0,0.0,1.0,0.0,1.0,False
+knee_tremor,Right_Knee Tremor_47_VID_20261024_152454,47,Right,knee_tremor,13,0,0.0,0.5543547,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_48_VID_20261024_153537,48,Right,knee_tremor,13,0,0.0,0.0,1.0,0.9846154,1.0,False
+knee_tremor,Right_Knee Tremor_49_VID_20261024_154229,49,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_30_VID_20261021_123642,30,Middle,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+knee_tremor,Right_Knee Tremor_50_VID_20261024_154944,50,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_51_VID_20261024_155717,51,Right,knee_tremor,13,0,0.0,0.0,1.0,0.0062160064,1.0,False
+knee_tremor,Right_Knee Tremor_5_VID_20261019_101916,5,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_6_VID_20261019_103100,6,Right,knee_tremor,13,0,0.0,1.0,1.0,0.85320514,0.99038464,False
+knee_tremor,Right_Knee Tremor_7_VID_20261019_104836,7,Right,knee_tremor,14,0,0.0,0.0,1.0,1.0,0.063690476,False
+knee_tremor,Right_Knee Tremor_8_VID_20261019_123212,8,Right,knee_tremor,13,0,0.0,0.0,1.0,0.9974359,0.56666666,False
+knee_tremor,Right_Knee Tremor_41_VID_20261023_142510,41,Right,knee_tremor,13,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_42_VID_20261023_145947,42,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_13_IMG_2945,13,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_14_IMG_2953,14,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_15_IMG_2962,15,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_29_VID_20261021_122429,29,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_17_IMG_2978,17,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_18_IMG_2988,18,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_19_IMG_2997,19,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_1_IMG_3228,1,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Knee Tremor_13_VID_20261019_135319,13,Middle,knee_tremor,13,0,0.0,1.0,1.0,1.0,0.99903846,False
+knee_tremor,Middle_Control_28_VID_20261021_095050,28,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_22_IMG_3022,22,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Middle_Control_27_VID_20261021_093959,27,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Left_Control_24_IMG_3038,24,Left,control,7,0,0.0,0.0023809525,1.0,1.0,1.0,False
+knee_tremor,Left_Control_25_IMG_3046,25,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+knee_tremor,Right_Knee Tremor_9_VID_20261019_124312,9,Right,knee_tremor,13,0,0.0,0.0,1.0,1.0,0.3096154,False

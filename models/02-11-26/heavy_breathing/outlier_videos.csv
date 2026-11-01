@@ -1,0 +1,307 @@
+symptom_model,video_id,participant_id,angle,task_class,windows,failed,fail_frac,face_tracked,pose_tracked,left_hand_tracked,right_hand_tracked,outlier
+heavy_breathing,Middle_Heavy Breathing_37_IMG_3179,37,Middle,heavy_breathing,13,13,1.0,1.0,1.0,0.0,1.0,True
+heavy_breathing,Middle_Control_9_VID_20261019_124210,9,Middle,control,7,7,1.0,1.0,1.0,1.0,1.0,True
+heavy_breathing,Middle_Control_8_VID_20261019_123054,8,Middle,control,7,7,1.0,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Heavy Breathing_34_IMG_3158,34,Left,heavy_breathing,13,13,1.0,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Heavy Breathing_8_IMG_2906,8,Left,heavy_breathing,13,13,1.0,0.0,1.0,0.99294865,1.0,True
+heavy_breathing,Right_Heavy Breathing_44_VID_20261023_152647,44,Right,heavy_breathing,13,13,1.0,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Control_16_IMG_2970,16,Left,control,7,7,1.0,1.0,1.0,1.0,1.0,True
+heavy_breathing,Middle_Control_23_VID_20261019_155827,23,Middle,control,7,6,0.8571428571428571,0.85714287,1.0,0.9785714,0.875,True
+heavy_breathing,Middle_Heavy Breathing_10_VID_20261019_125505,10,Middle,heavy_breathing,13,11,0.8461538461538461,1.0,1.0,1.0,0.98587584,True
+heavy_breathing,Right_Heavy Breathing_4_VID_20261019_101021,4,Right,heavy_breathing,14,11,0.7857142857142857,0.6880952,1.0,1.0,0.8970238,True
+heavy_breathing,Middle_Heavy Breathing_4_VID_20261019_101053,4,Middle,heavy_breathing,13,10,0.7692307692307693,1.0,1.0,0.9269231,1.0,True
+heavy_breathing,Middle_Control_47_VID_20261024_152334,47,Middle,control,7,5,0.7142857142857143,0.94107145,1.0,1.0,1.0,True
+heavy_breathing,Right_Control_29_VID_20261021_122358,29,Right,control,7,5,0.7142857142857143,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Control_5_IMG_2876,5,Left,control,7,5,0.7142857142857143,0.0,1.0,1.0,1.0,True
+heavy_breathing,Middle_Control_26_VID_20261021_092828,26,Middle,control,7,5,0.7142857142857143,1.0,1.0,0.32500002,0.9928571,True
+heavy_breathing,Middle_Heavy Breathing_28_VID_20261021_095347,28,Middle,heavy_breathing,14,10,0.7142857142857143,1.0,1.0,0.0,1.0,True
+heavy_breathing,Left_Control_4_IMG_2867,4,Left,control,7,5,0.7142857142857143,0.84999996,1.0,0.084523804,0.9976191,True
+heavy_breathing,Left_Heavy Breathing_2_Participant-2,2,Left,heavy_breathing,13,9,0.6923076923076923,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Heavy Breathing_38_IMG_3190,38,Left,heavy_breathing,13,9,0.6923076923076923,1.0,1.0,1.0,0.9891026,True
+heavy_breathing,Left_Control_9_IMG_2911,9,Left,control,7,4,0.5714285714285714,1.0,1.0,0.0,1.0,True
+heavy_breathing,Right_Control_23_VID_20261019_155755,23,Right,control,7,4,0.5714285714285714,1.0,1.0,1.0,0.8904762,True
+heavy_breathing,Middle_Control_35_VID_20261023_092726,35,Middle,control,7,4,0.5714285714285714,0.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Control_41_IMG_3212,41,Left,control,7,4,0.5714285714285714,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Control_24_IMG_3038,24,Left,control,7,4,0.5714285714285714,0.0023809525,1.0,1.0,1.0,True
+heavy_breathing,Right_Heavy Breathing_19_VID_20261019_150506,19,Right,heavy_breathing,13,7,0.5384615384615384,0.98717946,1.0,1.0,1.0,True
+heavy_breathing,Middle_Heavy Breathing_34_VID_20261023_091557,34,Middle,heavy_breathing,13,7,0.5384615384615384,1.0,1.0,1.0,1.0,True
+heavy_breathing,Left_Heavy Breathing_51_IMG_3316,51,Left,heavy_breathing,13,6,0.46153846153846156,0.8923077,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_46_IMG_4072,46,Right,control,7,3,0.42857142857142855,0.0,1.0,0.2761905,0.72380954,False
+heavy_breathing,Right_Control_32_VID_20261021_125651,32,Right,control,7,3,0.42857142857142855,1.0,1.0,1.0,0.7285714,False
+heavy_breathing,Right_Control_45_IMG_4062,45,Right,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_4_VID_20261019_100814,4,Right,control,7,3,0.42857142857142855,0.36666664,1.0,1.0,0.06666667,False
+heavy_breathing,Left_Control_23_IMG_3030,23,Left,control,7,3,0.42857142857142855,1.0,1.0,0.9690476,1.0,False
+heavy_breathing,Middle_Control_4_VID_20261019_100844,4,Middle,control,7,3,0.42857142857142855,0.89285713,1.0,0.9547619,0.7690476,False
+heavy_breathing,Right_Control_13_VID_20261019_135130,13,Right,control,7,3,0.42857142857142855,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_25_VID_20261019_161957,25,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_15_VID_20261019_140627,15,Middle,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_29_IMG_3106,29,Left,control,7,3,0.42857142857142855,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_9_VID_20261019_124140,9,Right,control,7,3,0.42857142857142855,0.0,1.0,1.0,0.5928572,False
+heavy_breathing,Left_Control_2_IMG_3229,2,Left,control,7,3,0.42857142857142855,1.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Control_12_VID_20261019_134459,12,Right,control,10,4,0.4,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_21_VID_20261019_152159,21,Right,heavy_breathing,13,5,0.38461538461538464,0.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_46_IMG_3272,46,Left,heavy_breathing,13,5,0.38461538461538464,0.089743584,1.0,0.9403846,0.062179487,False
+heavy_breathing,Right_Heavy Breathing_40_VID_20261023_140756,40,Right,heavy_breathing,13,5,0.38461538461538464,0.0,1.0,1.0,0.0474359,False
+heavy_breathing,Middle_Heavy Breathing_33_VID_20261021_130922,33,Middle,heavy_breathing,13,5,0.38461538461538464,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_10_VID_20261019_125150,10,Right,control,8,3,0.375,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_47_VID_20261024_152542,47,Right,heavy_breathing,13,4,0.3076923076923077,0.0,1.0,1.0,0.0780303,False
+heavy_breathing,Middle_Heavy Breathing_27_VID_20261021_094222,27,Middle,heavy_breathing,13,4,0.3076923076923077,1.0,1.0,0.98846155,0.9788462,False
+heavy_breathing,Middle_Heavy Breathing_12_VID_20261019_134736,12,Middle,heavy_breathing,13,4,0.3076923076923077,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_2_VID_20261023_145529,2,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_29_VID_20261021_122429,29,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_43_IMG_3238,43,Left,control,7,2,0.2857142857142857,1.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_1_P1_HeavyBreathing,1,Right,heavy_breathing,14,4,0.2857142857142857,0.59077376,1.0,1.0,0.061011907,False
+heavy_breathing,Left_Control_32_IMG_3133,32,Left,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_6_VID_20261019_103157,6,Right,heavy_breathing,14,4,0.2857142857142857,0.0,1.0,0.005952381,1.0,False
+heavy_breathing,Right_Control_2_VID_20261023_145458,2,Right,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_24_VID_20261019_161006,24,Middle,control,7,2,0.2857142857142857,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_5_VID_20261019_101751,5,Right,control,8,2,0.25,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_28_VID_20261021_095315,28,Right,heavy_breathing,13,3,0.23076923076923078,1.0,1.0,0.7551282,0.7980769,False
+heavy_breathing,Left_Heavy Breathing_27_IMG_3091,27,Left,heavy_breathing,13,3,0.23076923076923078,1.0,1.0,0.9070513,0.98782057,False
+heavy_breathing,Right_Heavy Breathing_41_VID_20261023_142600,41,Right,heavy_breathing,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_44_VID_20261023_152719,44,Middle,heavy_breathing,13,3,0.23076923076923078,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_5_VID_20261019_102035,5,Middle,heavy_breathing,14,3,0.21428571428571427,1.0,1.0,1.0,0.070758305,False
+heavy_breathing,Right_Heavy Breathing_10_VID_20261019_125435,10,Right,heavy_breathing,13,2,0.15384615384615385,0.0,1.0,1.0,0.13589743,False
+heavy_breathing,Left_Heavy Breathing_13_IMG_2948,13,Left,heavy_breathing,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_20_IMG_3009,20,Left,heavy_breathing,13,2,0.15384615384615385,1.0,1.0,0.7602564,1.0,False
+heavy_breathing,Left_Heavy Breathing_35_IMG_3166,35,Left,heavy_breathing,13,2,0.15384615384615385,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_48_VID_20261024_153618,48,Right,heavy_breathing,13,2,0.15384615384615385,0.0,1.0,0.97692305,1.0,False
+heavy_breathing,Right_Heavy Breathing_33_VID_20261021_130852,33,Right,heavy_breathing,13,2,0.15384615384615385,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_25_VID_20261019_162216,25,Right,heavy_breathing,13,2,0.15384615384615385,0.9967948,1.0,0.0,0.0,False
+heavy_breathing,Right_Control_34_VID_20261023_091248,34,Right,control,7,1,0.14285714285714285,0.66190475,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_31_VID_20261021_124713,31,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_13_VID_20261019_135201,13,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_32_VID_20261021_125721,32,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_3_VID_20261019_093735,3,Middle,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_39_VID_20261023_132825,39,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,0.64523804,False
+heavy_breathing,Right_Control_21_VID_20261019_151952,21,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_26_VID_20261021_092757,26,Right,control,7,1,0.14285714285714285,0.0,1.0,0.9904762,0.123809524,False
+heavy_breathing,Right_Control_3_VID_20261019_093705,3,Right,control,7,1,0.14285714285714285,1.0,1.0,1.0,0.03690476,False
+heavy_breathing,Right_Control_20_VID_20261019_151130,20,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,0.97261906,False
+heavy_breathing,Right_Control_43_VID_20261023_151300,43,Right,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_13_IMG_2945,13,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_15_IMG_2962,15,Left,control,7,1,0.14285714285714285,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_15_VID_20261019_140556,15,Right,control,7,1,0.14285714285714285,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_27_VID_20261021_093928,27,Right,control,7,1,0.14285714285714285,1.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Control_22_VID_20261019_154811,22,Right,control,8,1,0.125,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_48_VID_20261024_153402,48,Right,control,8,1,0.125,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_32_VID_20261021_125918,32,Right,heavy_breathing,13,1,0.07692307692307693,0.6576923,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_27_VID_20261021_094151,27,Right,heavy_breathing,13,1,0.07692307692307693,1.0,1.0,0.99615383,0.8923077,False
+heavy_breathing,Right_Heavy Breathing_51_VID_20261024_155758,51,Right,heavy_breathing,13,1,0.07692307692307693,0.0,1.0,0.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_45_VID_20261024_115118,45,Middle,heavy_breathing,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_36_VID_20261023_093930,36,Middle,heavy_breathing,13,1,0.07692307692307693,0.0,1.0,1.0,0.0,False
+heavy_breathing,Middle_Heavy Breathing_42_VID_20261023_150106,42,Middle,heavy_breathing,13,1,0.07692307692307693,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_51_VID_20261024_155828,51,Middle,heavy_breathing,13,1,0.07692307692307693,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_35_VID_20261023_093008,35,Middle,heavy_breathing,13,1,0.07692307692307693,0.9346154,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_48_IMG_3292,48,Left,heavy_breathing,13,1,0.07692307692307693,0.96666664,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_15_VID_20261019_140843,15,Right,heavy_breathing,13,1,0.07692307692307693,0.9895833,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_32_VID_20261021_125950,32,Middle,heavy_breathing,14,1,0.07142857142857142,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_10_IMG_2919,10,Left,control,8,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Control_12_IMG_2937,12,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_14_IMG_2953,14,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_49_VID_20261024_154308,49,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_46_IMG_4076,46,Right,heavy_breathing,14,0,0.0,0.0,1.0,1.0,0.011309524,False
+heavy_breathing,Right_Heavy Breathing_45_IMG_4065,45,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_43_VID_20261023_151514,43,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,0.9512821,False
+heavy_breathing,Right_Heavy Breathing_42_VID_20261023_150035,42,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_18_VID_20261019_145454,18,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_17_VID_20261019_144636,17,Right,heavy_breathing,13,0,0.0,0.975641,1.0,0.52307695,0.72692305,False
+heavy_breathing,Right_Heavy Breathing_16_VID_20261019_143121,16,Right,heavy_breathing,14,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_14_VID_20261019_140020,14,Right,heavy_breathing,14,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_13_VID_20261019_135328,13,Right,heavy_breathing,14,0,0.0,0.23511903,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_19_IMG_2997,19,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_8_VID_20261019_123257,8,Right,heavy_breathing,14,0,0.0,0.0,1.0,1.0,0.9452381,False
+heavy_breathing,Right_Heavy Breathing_3_VID_20261019_094733,3,Right,heavy_breathing,14,0,0.0,1.0,1.0,0.9976191,0.47857141,False
+heavy_breathing,Left_Control_11_IMG_2929,11,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_38_VID_20261023_095740,38,Right,heavy_breathing,13,0,0.0,0.7205128,1.0,0.99871796,0.003846154,False
+heavy_breathing,Right_Heavy Breathing_37_VID_20261023_094847,37,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Heavy Breathing_36_VID_20261023_093859,36,Right,heavy_breathing,14,0,0.0,0.9916667,1.0,0.50357145,0.49761906,False
+heavy_breathing,Right_Heavy Breathing_35_VID_20261023_092937,35,Right,heavy_breathing,13,0,0.0,0.975641,1.0,1.0,0.8782052,False
+heavy_breathing,Right_Heavy Breathing_34_VID_20261023_091526,34,Right,heavy_breathing,13,0,0.0,0.78846157,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_37_IMG_3182,37,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_36_IMG_3174,36,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.11025642,0.88974357,False
+heavy_breathing,Left_Heavy Breathing_33_IMG_3144,33,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_32_IMG_3136,32,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_16_VID_20261019_142943,16,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_14_VID_20261019_135850,14,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_12_VID_20261019_134532,12,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_11_VID_20261019_133652,11,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_10_VID_20261019_125221,10,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_9_IMG_2914,9,Left,heavy_breathing,13,0,0.0,0.5621795,1.0,0.3448718,1.0,False
+heavy_breathing,Left_Heavy Breathing_7_IMG_2897,7,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_6_IMG_2889,6,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_5_IMG_2879,5,Left,heavy_breathing,13,0,0.0,0.98525643,1.0,1.0,0.00064102566,False
+heavy_breathing,Left_Heavy Breathing_50_IMG_3308,50,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_4_IMG_2870,4,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.7698718,1.0,False
+heavy_breathing,Left_Heavy Breathing_49_IMG_3300,49,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_30_VID_20261021_123642,30,Middle,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Middle_Control_28_VID_20261021_095050,28,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_27_VID_20261021_093959,27,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_22_VID_20261019_154840,22,Middle,control,6,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_21_VID_20261019_152023,21,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_20_VID_20261019_151201,20,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_1_VID_20261023_145413,1,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_19_VID_20261019_150335,19,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_18_VID_20261019_145320,18,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_17_VID_20261019_144441,17,Middle,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Middle_Control_46_VID_20261024_120056,46,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_45_VID_20261024_114902,45,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_44_VID_20261023_152509,44,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_43_VID_20261023_151331,43,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_42_VID_20261023_145855,42,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_41_VID_20261023_142414,41,Middle,control,7,0,0.0,0.35,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_40_VID_20261023_140551,40,Middle,control,7,0,0.0,0.0,1.0,0.9071428,0.16071428,False
+heavy_breathing,Middle_Control_39_VID_20261023_132856,39,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_38_VID_20261023_095558,38,Middle,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+heavy_breathing,Middle_Control_37_VID_20261023_094711,37,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_36_VID_20261023_093708,36,Middle,control,7,0,0.0,1.0,1.0,0.96250004,0.037499998,False
+heavy_breathing,Middle_Control_34_VID_20261023_091320,34,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_33_VID_20261021_130658,33,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_17_VID_20261019_144708,17,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.9807692,0.25192308,False
+heavy_breathing,Middle_Heavy Breathing_16_VID_20261019_143153,16,Middle,heavy_breathing,13,0,0.0,0.8923077,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_15_VID_20261019_140914,15,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.998077,1.0,False
+heavy_breathing,Middle_Heavy Breathing_14_VID_20261019_140051,14,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.99038464,1.0,False
+heavy_breathing,Middle_Heavy Breathing_13_VID_20261019_135400,13,Middle,heavy_breathing,14,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_11_VID_20261019_133909,11,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,0.9625,False
+heavy_breathing,Middle_Control_7_VID_20261019_104741,7,Middle,control,7,0,0.0,0.84999996,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_6_VID_20261019_103003,6,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_5_VID_20261019_101823,5,Middle,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_51_VID_20261024_155622,51,Middle,control,7,0,0.0,0.6464286,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_50_VID_20261024_154851,50,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_49_VID_20261024_154139,49,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Control_48_VID_20261024_153432,48,Middle,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_25_IMG_3046,25,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_30_VID_20261021_123950,30,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_2_VID_20261017_125241,2,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_29_VID_20261021_122700,29,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_26_VID_20261021_093055,26,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.005769231,1.0,False
+heavy_breathing,Middle_Heavy Breathing_25_VID_20261019_162247,25,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_39_VID_20261023_133104,39,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_24_VID_20261019_161217,24,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.44615385,0.63653845,False
+heavy_breathing,Middle_Heavy Breathing_23_VID_20261019_160112,23,Middle,heavy_breathing,13,0,0.0,0.99903846,1.0,0.9644231,0.9519231,False
+heavy_breathing,Middle_Heavy Breathing_21_VID_20261019_152229,21,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_22_VID_20261019_155202,22,Middle,heavy_breathing,13,0,0.0,0.9019231,1.0,0.6980769,0.99615383,False
+heavy_breathing,Middle_Heavy Breathing_1_1,1,Middle,heavy_breathing,14,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Middle_Heavy Breathing_19_VID_20261019_150537,19,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_18_VID_20261019_145525,18,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_20_VID_20261019_151411,20,Middle,heavy_breathing,14,0,0.0,1.0,1.0,0.83750004,1.0,False
+heavy_breathing,Left_Control_39_IMG_3195,39,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Control_38_IMG_3187,38,Left,control,7,0,0.0,1.0,1.0,0.0,0.0,False
+heavy_breathing,Left_Control_37_IMG_3179,37,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Control_36_IMG_3171,36,Left,control,7,0,0.0,1.0,1.0,1.0,0.32142857,False
+heavy_breathing,Left_Control_35_IMG_3163,35,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_34_IMG_3155,34,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_33_IMG_3141,33,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_31_VID_20261021_124945,31,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_22_IMG_3026,22,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_21_IMG_3017,21,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.9474359,1.0,False
+heavy_breathing,Left_Heavy Breathing_1_Participant-1,1,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_19_IMG_3001,19,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_18_IMG_2991,18,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_47_IMG_3283,47,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_45_IMG_3263,45,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_44_IMG_3249,44,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_43_IMG_3241,43,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_42_IMG_3233,42,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_41_IMG_3216,41,Left,heavy_breathing,13,0,0.0,0.9967948,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_40_IMG_3206,40,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.09102564,0.9538461,False
+heavy_breathing,Left_Heavy Breathing_3_IMG_2866,3,Left,heavy_breathing,13,0,0.0,0.9564103,1.0,0.9897436,0.7141026,False
+heavy_breathing,Left_Heavy Breathing_39_IMG_3198,39,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_30_IMG_3116,30,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Control_31_IMG_3125,31,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_28_IMG_3097,28,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_27_IMG_3088,27,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_47_VID_20261024_152613,47,Middle,heavy_breathing,13,0,0.0,0.9461539,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_26_IMG_3080,26,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_43_VID_20261023_151545,43,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_41_VID_20261023_142631,41,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_40_VID_20261023_140827,40,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,0.99038464,False
+heavy_breathing,Middle_Heavy Breathing_46_VID_20261024_120312,46,Middle,heavy_breathing,13,0,0.0,0.42115384,1.0,1.0,0.0134615395,False
+heavy_breathing,Middle_Heavy Breathing_3_VID_20261019_094804,3,Middle,heavy_breathing,13,0,0.0,1.0,1.0,0.9634615,0.751923,False
+heavy_breathing,Middle_Heavy Breathing_39_VID_20261023_133136,39,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_38_VID_20261023_095811,38,Middle,heavy_breathing,13,0,0.0,0.0,1.0,0.9682692,1.0,False
+heavy_breathing,Right_Control_14_VID_20261019_135820,14,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_11_VID_20261019_133621,11,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_9_VID_20261019_124427,9,Middle,heavy_breathing,13,0,0.0,0.9846154,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_8_VID_20261019_123327,8,Middle,heavy_breathing,13,0,0.0,0.6488673,1.0,1.0,0.9835698,False
+heavy_breathing,Middle_Heavy Breathing_7_VID_20261019_104955,7,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,0.9826384,False
+heavy_breathing,Middle_Heavy Breathing_6_VID_20261019_103228,6,Middle,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_7_IMG_2894,7,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Left_Control_6_IMG_2886,6,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_51_IMG_3313,51,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_50_IMG_3305,50,Left,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_31_IMG_3128,31,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_30_IMG_3120,30,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_29_IMG_3109,29,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_28_IMG_3101,28,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.7032051,1.0,False
+heavy_breathing,Left_Heavy Breathing_26_IMG_3083,26,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.0012820513,0.99871796,False
+heavy_breathing,Left_Heavy Breathing_25_IMG_3051,25,Left,heavy_breathing,13,0,0.0,0.89358974,1.0,0.13461539,0.04871795,False
+heavy_breathing,Left_Heavy Breathing_24_IMG_3041,24,Left,heavy_breathing,13,0,0.0,0.0,1.0,0.016025642,0.9833333,False
+heavy_breathing,Left_Heavy Breathing_23_IMG_3033,23,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.34871796,0.99871796,False
+heavy_breathing,Middle_Heavy Breathing_50_VID_20261024_155059,50,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_49_VID_20261024_154339,49,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Middle_Heavy Breathing_48_VID_20261024_153650,48,Middle,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_28_VID_20261021_095020,28,Right,control,7,0,0.0,1.0,1.0,1.0,0.13571429,False
+heavy_breathing,Right_Control_25_VID_20261019_161926,25,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_24_VID_20261019_160936,24,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_1_VID_20261023_145342,1,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_19_VID_20261019_150304,19,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_18_VID_20261019_145250,18,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_17_VID_20261019_144410,17,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Control_16_VID_20261019_142911,16,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_44_VID_20261023_152438,44,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_42_VID_20261023_145824,42,Right,control,7,0,0.0,0.102380954,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_41_VID_20261023_142343,41,Right,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_40_VID_20261023_140520,40,Right,control,7,0,0.0,0.0,1.0,0.57857144,0.75357145,False
+heavy_breathing,Right_Control_38_VID_20261023_095528,38,Right,control,7,0,0.0,0.0,1.0,0.0,0.0,False
+heavy_breathing,Right_Control_37_VID_20261023_094640,37,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Control_36_VID_20261023_093637,36,Right,control,7,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Left_Control_3_IMG_2857,3,Left,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_7_VID_20261019_104924,7,Right,heavy_breathing,14,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_5_VID_20261019_102003,5,Right,heavy_breathing,14,0,0.0,0.0,1.0,1.0,0.7916666,False
+heavy_breathing,Right_Heavy Breathing_50_VID_20261024_155028,50,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,0.995338,False
+heavy_breathing,Left_Heavy Breathing_17_IMG_2982,17,Left,heavy_breathing,16,0,0.0,1.0,1.0,0.059895836,0.9927083,False
+heavy_breathing,Left_Heavy Breathing_16_IMG_2973,16,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_15_IMG_2965,15,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_14_IMG_2956,14,Left,heavy_breathing,10,0,0.0,1.0,1.0,0.99833333,1.0,False
+heavy_breathing,Left_Heavy Breathing_12_IMG_2940,12,Left,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Heavy Breathing_11_IMG_2932,11,Left,heavy_breathing,13,0,0.0,0.9474359,1.0,1.0,0.99358976,False
+heavy_breathing,Left_Heavy Breathing_10_IMG_2922,10,Left,heavy_breathing,13,0,0.0,1.0,1.0,0.69551283,1.0,False
+heavy_breathing,Left_Control_8_IMG_2902,8,Left,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_35_VID_20261023_092656,35,Right,control,7,0,0.0,0.0,1.0,1.0,0.9928571,False
+heavy_breathing,Right_Control_33_VID_20261021_130628,33,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_31_VID_20261021_124643,31,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_30_VID_20261021_123612,30,Right,control,7,0,0.0,1.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_12_VID_20261019_134705,12,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_11_VID_20261019_133839,11,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,0.9948718,False
+heavy_breathing,Right_Control_8_VID_20261019_123023,8,Right,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Control_7_VID_20261019_104710,7,Right,control,8,0,0.0,0.0,1.0,1.0,0.0020833334,False
+heavy_breathing,Right_Control_6_VID_20261019_102933,6,Right,control,8,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_51_VID_20261024_155551,51,Right,control,7,0,0.0,0.0,1.0,0.0,1.0,False
+heavy_breathing,Right_Control_50_VID_20261024_154820,50,Right,control,7,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_22_IMG_3022,22,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_21_IMG_3014,21,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_20_IMG_3006,20,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_18_IMG_2988,18,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_49_IMG_3297,49,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_48_IMG_3288,48,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_47_IMG_3280,47,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_46_IMG_3269,46,Left,control,7,0,0.0,0.0,1.0,1.0,0.0,False
+heavy_breathing,Left_Control_45_IMG_3260,45,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_44_IMG_3246,44,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_42_IMG_3230,42,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_40_IMG_3203,40,Left,control,7,0,0.0,1.0,1.0,0.17261906,0.79404765,False
+heavy_breathing,Right_Control_49_VID_20261024_154108,49,Right,control,7,0,0.0,0.3482143,1.0,1.0,1.0,False
+heavy_breathing,Right_Control_47_VID_20261024_152302,47,Right,control,9,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_17_IMG_2978,17,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_26_VID_20261021_093024,26,Right,heavy_breathing,13,0,0.0,0.91410255,1.0,1.0,0.060256407,False
+heavy_breathing,Right_Heavy Breathing_24_VID_20261019_161146,24,Right,heavy_breathing,13,0,0.0,0.98653847,1.0,0.74038464,0.24935898,False
+heavy_breathing,Right_Heavy Breathing_23_VID_20261019_160042,23,Right,heavy_breathing,13,0,0.0,1.0,1.0,0.35512823,0.99871796,False
+heavy_breathing,Right_Heavy Breathing_22_VID_20261019_155132,22,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,0.0,False
+heavy_breathing,Right_Heavy Breathing_20_VID_20261019_151338,20,Right,heavy_breathing,14,0,0.0,0.3702381,1.0,1.0,0.54404765,False
+heavy_breathing,Right_Heavy Breathing_9_VID_20261019_124356,9,Right,heavy_breathing,14,0,0.0,0.0,1.0,1.0,0.25773808,False
+heavy_breathing,Right_Heavy Breathing_31_VID_20261021_124914,31,Right,heavy_breathing,13,0,0.0,0.7474359,1.0,1.0,0.9974359,False
+heavy_breathing,Right_Heavy Breathing_30_VID_20261021_123920,30,Right,heavy_breathing,13,0,0.0,0.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_2_P2_HeavyBreathing,2,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Right_Heavy Breathing_29_VID_20261021_122630,29,Right,heavy_breathing,13,0,0.0,1.0,1.0,1.0,1.0,False
+heavy_breathing,Left_Control_1_IMG_3228,1,Left,control,7,0,0.0,1.0,1.0,1.0,1.0,False
